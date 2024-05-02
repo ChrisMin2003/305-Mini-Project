@@ -8,7 +8,8 @@ ENTITY bouncy_ball IS
 	PORT
 		( pb1, pb2, clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-		  red, green, blue 			: OUT std_logic);		
+		  red, green, blue 			: OUT std_logic;
+		  left_button : IN std_logic);		
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -39,17 +40,33 @@ Blue <=  not ball_on;
 
 Move_Ball: process (vert_sync)  	
 begin
-	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then			
-		-- Bounce off top or bottom of the screen
-		if ( ('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479,10) - size) ) then
-			ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2,10);
-		elsif (ball_y_pos <= size) then 
-			ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
-		end if;
-		-- Compute next ball Y position
-		ball_y_pos <= ball_y_pos + ball_y_motion;
-	end if;
+			-- Move ball once every vertical sync
+        if (rising_edge(vert_sync)) then
+            -- Check if the left button is clicked
+            if (left_button = '1') then
+                move_up_flag <= '1'; -- Set the flag to move the ball upwards
+                move_up_counter <= (OTHERS => '0'); -- Reset the counter
+            end if;
+
+            -- Move the ball upwards for 1 second if the flag is set
+            if (move_up_flag = '1') then
+                move_up_counter <= move_up_counter + 1; -- Increment the counter
+                ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2, 10); -- Move upwards
+                if (move_up_counter >= 25000000) then -- 1 second at 25MHz clock
+                    move_up_flag <= '0'; -- Reset the flag
+                end if;
+            else
+                -- Bounce off top or bottom of the screen
+                if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
+                    ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2, 10);
+                elsif (ball_y_pos <= size) then
+                    ball_y_motion <= CONV_STD_LOGIC_VECTOR(2, 10);
+                end if;
+            end if;
+
+            -- Compute next ball Y position
+            ball_y_pos <= ball_y_pos + ball_y_motion;
+        end if;
 end process Move_Ball;
 
 END behavior;
