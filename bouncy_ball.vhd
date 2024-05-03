@@ -22,7 +22,6 @@ SIGNAL ball_y_motion			   : std_logic_vector(9 DOWNTO 0);
 
 BEGIN           
 
-ball_destroyed <= '0';
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
@@ -39,27 +38,29 @@ Green <= (not pb2) and (not ball_on);
 Blue <=  not ball_on;
 
 
-Move_Ball: process (vert_sync)  	
+Move_Ball: process (vert_sync)
+		variable move_up_flag : std_logic;
+		variable move_up_counter : unsigned(31 downto 0);
 begin
 			-- Move ball once every vertical sync
         if (rising_edge(vert_sync)) then
             -- Check if the left button is clicked
             if (left_button = '1') then
-                move_up_flag <= '1'; -- Set the flag to move the ball upwards
-                move_up_counter <= (OTHERS => '0'); -- Reset the counter
+                move_up_flag := '1'; -- Set the flag to move the ball upwards
+                move_up_counter := (OTHERS => '0'); -- Reset the counter
             end if;
 
             -- Move the ball upwards for 1 second if the flag is set
             if (move_up_flag = '1' and ball_destroyed = '0') then
-                move_up_counter <= move_up_counter + 1; -- Increment the counter
+                move_up_counter := move_up_counter + 1; -- Increment the counter
                 ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2, 10); -- Move upwards
                 if (move_up_counter >= 25000000) then -- 1 second at 25MHz clock
-                    move_up_flag <= '0'; -- Reset the flag
+                    move_up_flag := '0'; -- Reset the flag
                 end if;
             else
                 -- Bounce off top or bottom of the screen
                 if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
-                    ball_y_motion <= '0';
+                    ball_y_motion <= "0000000000";
 						  ball_destroyed <= '1';
                 else
                     ball_y_motion <= CONV_STD_LOGIC_VECTOR(2, 10);
