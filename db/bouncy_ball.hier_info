@@ -8,8 +8,6 @@ blue_out <= VGA_SYNC:inst1.blue_out
 horiz_sync_out <= VGA_SYNC:inst1.horiz_sync_out
 vert_sync_out <= VGA_SYNC:inst1.vert_sync_out
 LEDR[0] <= MOUSE:inst4.left_button
-pb1 => ~NO_FANOUT~
-pb2 => ~NO_FANOUT~
 
 
 |Block1|VGA_SYNC:inst1
@@ -279,8 +277,6 @@ zdbfbclk <> <GND>
 
 
 |Block1|bouncy_ball:inst2
-pb1 => red.DATAIN
-pb2 => green.IN1
 clk => ~NO_FANOUT~
 vert_sync => ball_y_pos[0].CLK
 vert_sync => ball_y_pos[1].CLK
@@ -292,6 +288,7 @@ vert_sync => ball_y_pos[6].CLK
 vert_sync => ball_y_pos[7].CLK
 vert_sync => ball_y_pos[8].CLK
 vert_sync => ball_y_pos[9].CLK
+vert_sync => ball_destroyed.CLK
 vert_sync => ball_y_motion[0].CLK
 vert_sync => ball_y_motion[1].CLK
 vert_sync => ball_y_motion[2].CLK
@@ -375,8 +372,8 @@ pixel_column[8] => Add0.IN14
 pixel_column[8] => LessThan1.IN16
 pixel_column[9] => Add0.IN13
 pixel_column[9] => LessThan1.IN15
-red <= pb1.DB_MAX_OUTPUT_PORT_TYPE
-green <= green.DB_MAX_OUTPUT_PORT_TYPE
+red <= ball_on.DB_MAX_OUTPUT_PORT_TYPE
+green <= ball_on.DB_MAX_OUTPUT_PORT_TYPE
 blue <= ball_on.DB_MAX_OUTPUT_PORT_TYPE
 left_button => move_up_flag.OUTPUTSELECT
 left_button => move_up_counter.OUTPUTSELECT

@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync	: IN std_logic;
+		( clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		  red, green, blue 			: OUT std_logic;
 		  left_button : IN std_logic);		
@@ -16,15 +16,16 @@ architecture behavior of bouncy_ball is
 
 SIGNAL ball_on, ball_destroyed: std_logic;
 SIGNAL size 					   : std_logic_vector(9 DOWNTO 0);  
-SIGNAL ball_y_pos				   : std_logic_vector(9 DOWNTO 0);
-SiGNAL ball_x_pos				   : std_logic_vector(10 DOWNTO 0);
+SIGNAL ball_y_pos             : std_logic_vector(9 DOWNTO 0);
+SiGNAL ball_x_pos             : std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion			   : std_logic_vector(9 DOWNTO 0);
 
-BEGIN           
+BEGIN     
 
-size <= CONV_STD_LOGIC_VECTOR(8,10);
+size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
-ball_x_pos <= CONV_STD_LOGIC_VECTOR(590,11);
+ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
+
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
 					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) )  else	-- y_pos - size <= pixel_row <= y_pos + size
@@ -33,8 +34,8 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
-Red <=  pb1;
-Green <= (not pb2) and (not ball_on);
+Red <=  ball_on;
+Green <= ball_on;
 Blue <=  not ball_on;
 
 
@@ -51,7 +52,7 @@ begin
             end if;
 
             -- Move the ball upwards for 1 second if the flag is set
-            if (move_up_flag = '1') then
+            if (move_up_flag = '1' and ball_destroyed = '0') then
                 move_up_counter := move_up_counter + 1; -- Increment the counter
                 ball_y_motion <= - CONV_STD_LOGIC_VECTOR(5, 10); -- Move upwards
                 if (move_up_counter >= 15) then
@@ -62,13 +63,18 @@ begin
                 if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
                     ball_y_motion <= "0000000000";
 						  ball_destroyed <= '1';
-                else
+					 else
                     ball_y_motion <= CONV_STD_LOGIC_VECTOR(2, 10);
                 end if;
             end if;
 
             -- Compute next ball Y position
-            ball_y_pos <= ball_y_pos + ball_y_motion;
+				if (ball_destroyed = '1') then
+						ball_y_pos <= CONV_STD_LOGIC_VECTOR(240,10);
+						ball_destroyed <= '0';
+				else
+						ball_y_pos <= ball_y_pos + ball_y_motion;
+				end if;
         end if;
 end process Move_Ball;
 
