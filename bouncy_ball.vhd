@@ -14,13 +14,23 @@ END bouncy_ball;
 
 architecture behavior of bouncy_ball is
 
-SIGNAL ball_on, ball_destroyed: std_logic;
-SIGNAL size 					   : std_logic_vector(9 DOWNTO 0);  
-SIGNAL ball_y_pos             : std_logic_vector(9 DOWNTO 0);
-SiGNAL ball_x_pos             : std_logic_vector(10 DOWNTO 0);
-SIGNAL ball_y_motion			   : std_logic_vector(9 DOWNTO 0);
+SIGNAL ball_on, ball_destroyed         : std_logic;
+SIGNAL size 					            : std_logic_vector(9 DOWNTO 0);  
+SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0);
+SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0);
+SIGNAL ball_y_motion			            : std_logic_vector(9 DOWNTO 0);
+SIGNAL green_pipe                      : std_logic;
 
-BEGIN     
+component pipe is 
+	port(clk, vert_sync	: IN std_logic;
+          pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+		  green			: OUT std_logic);
+end component;
+
+BEGIN 
+
+--Pipe generation
+pipe1: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, green => green_pipe);   
 
 size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
@@ -35,8 +45,8 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
 Red <=  ball_on;
-Green <= ball_on;
-Blue <=  not ball_on;
+Green <= ball_on or green_pipe;
+Blue <=  not ball_on and not green_pipe;
 
 
 Move_Ball: process (vert_sync)
@@ -51,7 +61,7 @@ begin
                 move_up_counter := (OTHERS => '0'); -- Reset the counter
             end if;
 
-            -- Move the ball upwards for 1 second if the flag is set
+            -- Move the ball upwards for 1 second if the flag is set and the bird is not destroyed
             if (move_up_flag = '1' and ball_destroyed = '0') then
                 move_up_counter := move_up_counter + 1; -- Increment the counter
                 ball_y_motion <= - CONV_STD_LOGIC_VECTOR(5, 10); -- Move upwards
@@ -59,7 +69,7 @@ begin
                     move_up_flag := '0'; -- Reset the flag
                 end if;
             else
-                -- Reach bottom of screen or keep falling
+                -- Reach bottom of screen and destroy or keep falling
                 if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
                     ball_y_motion <= "0000000000";
 						  ball_destroyed <= '1';

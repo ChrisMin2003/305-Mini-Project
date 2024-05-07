@@ -418,7 +418,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 168 400 360 544)
+	(rect 168 376 360 520)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst2" (rect 8 128 30 145)(font "Intel Clear" ))
 	(port
@@ -494,14 +494,6 @@ refer to the applicable agreement for further details.
 	(pt 504 240)
 )
 (connector
-	(pt 168 432)
-	(pt 136 432)
-)
-(connector
-	(pt 136 344)
-	(pt 136 432)
-)
-(connector
 	(pt 136 344)
 	(pt 504 344)
 )
@@ -510,30 +502,12 @@ refer to the applicable agreement for further details.
 	(pt 504 392)
 )
 (connector
-	(pt 168 448)
-	(pt 80 448)
-)
-(connector
-	(pt 80 448)
-	(pt 80 576)
-)
-(connector
 	(pt 80 576)
 	(pt 816 576)
 )
 (connector
 	(pt 816 456)
 	(pt 728 456)
-)
-(connector
-	(pt 168 464)
-	(pt 96 464)
-	(bus)
-)
-(connector
-	(pt 96 560)
-	(pt 96 464)
-	(bus)
 )
 (connector
 	(pt 96 560)
@@ -548,11 +522,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 800 472)
 	(pt 728 472)
-	(bus)
-)
-(connector
-	(pt 168 480)
-	(pt 112 480)
 	(bus)
 )
 (connector
@@ -571,11 +540,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 816 496)
 	(pt 816 576)
-)
-(connector
-	(pt 112 480)
-	(pt 112 552)
-	(bus)
 )
 (connector
 	(pt 112 552)
@@ -618,14 +582,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 168 496)
-	(pt 32 496)
-)
-(connector
-	(pt 32 600)
-	(pt 32 496)
-)
-(connector
 	(pt 32 600)
 	(pt 1048 600)
 )
@@ -651,39 +607,63 @@ refer to the applicable agreement for further details.
 )
 (connector
 	(pt 824 240)
-	(pt 864 240)
+	(pt 856 240)
+)
+(connector
+	(pt 136 408)
+	(pt 168 408)
+)
+(connector
+	(pt 136 344)
+	(pt 136 408)
+)
+(connector
+	(pt 80 424)
+	(pt 168 424)
+)
+(connector
+	(pt 80 576)
+	(pt 80 424)
+)
+(connector
+	(pt 96 440)
+	(pt 168 440)
+	(bus)
+)
+(connector
+	(pt 96 560)
+	(pt 96 440)
+	(bus)
+)
+(connector
+	(pt 112 456)
+	(pt 168 456)
+	(bus)
+)
+(connector
+	(pt 112 552)
+	(pt 112 456)
+	(bus)
+)
+(connector
+	(pt 32 472)
+	(pt 168 472)
+)
+(connector
+	(pt 32 600)
+	(pt 32 472)
 )
 (connector
 	(pt 504 408)
 	(pt 360 408)
 )
 (connector
-	(pt 360 408)
-	(pt 360 432)
-)
-(connector
+	(pt 360 424)
 	(pt 504 424)
-	(pt 416 424)
 )
 (connector
-	(pt 416 424)
-	(pt 416 448)
-)
-(connector
-	(pt 416 448)
-	(pt 360 448)
-)
-(connector
-	(pt 456 440)
+	(pt 360 440)
 	(pt 504 440)
-)
-(connector
-	(pt 456 440)
-	(pt 456 464)
-)
-(connector
-	(pt 456 464)
-	(pt 360 464)
 )
 (junction (pt 504 344))
 (junction (pt 816 496))

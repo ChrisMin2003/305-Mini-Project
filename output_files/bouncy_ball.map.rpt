@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bouncy_ball
-Tue May 07 12:53:05 2024
+Tue May 07 13:52:55 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 07 12:53:05 2024           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 07 13:52:55 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
@@ -177,6 +177,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                        ; Library ;
 +----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------------+---------+
+; pipe.vhd                         ; yes             ; User VHDL File                     ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd         ;         ;
 ; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/Block1.bdf       ;         ;
 ; vga_sync.vhd                     ; yes             ; User VHDL File                     ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd     ;         ;
 ; mouse.vhd                        ; yes             ; User VHDL File                     ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd        ;         ;
@@ -193,14 +194,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 116                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 127                                                                  ;
 ;                                             ;                                                                      ;
-; Combinational ALUT usage for logic          ; 200                                                                  ;
+; Combinational ALUT usage for logic          ; 218                                                                  ;
 ;     -- 7 input functions                    ; 1                                                                    ;
-;     -- 6 input functions                    ; 23                                                                   ;
-;     -- 5 input functions                    ; 23                                                                   ;
-;     -- 4 input functions                    ; 23                                                                   ;
-;     -- <=3 input functions                  ; 130                                                                  ;
+;     -- 6 input functions                    ; 29                                                                   ;
+;     -- 5 input functions                    ; 21                                                                   ;
+;     -- 4 input functions                    ; 25                                                                   ;
+;     -- <=3 input functions                  ; 142                                                                  ;
 ;                                             ;                                                                      ;
 ; Dedicated logic registers                   ; 157                                                                  ;
 ;                                             ;                                                                      ;
@@ -213,7 +214,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                      ;
 ; Maximum fan-out node                        ; pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 77                                                                   ;
-; Total fan-out                               ; 1182                                                                 ;
+; Total fan-out                               ; 1240                                                                 ;
 ; Average fan-out                             ; 3.13                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------+
 
@@ -223,10 +224,11 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-------------+--------------+
-; |Block1                            ; 200 (1)             ; 157 (0)                   ; 0                 ; 0          ; 9    ; 0            ; |Block1                                                       ; Block1      ; work         ;
+; |Block1                            ; 218 (1)             ; 157 (0)                   ; 0                 ; 0          ; 9    ; 0            ; |Block1                                                       ; Block1      ; work         ;
 ;    |MOUSE:inst4|                   ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                           ; MOUSE       ; work         ;
-;    |VGA_SYNC:inst1|                ; 40 (40)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                        ; VGA_SYNC    ; work         ;
-;    |bouncy_ball:inst2|             ; 109 (109)           ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                     ; bouncy_ball ; work         ;
+;    |VGA_SYNC:inst1|                ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                        ; VGA_SYNC    ; work         ;
+;    |bouncy_ball:inst2|             ; 126 (110)           ; 46 (46)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                     ; bouncy_ball ; work         ;
+;       |pipe:pipe1|                 ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                          ; pipe        ; work         ;
 ;    |pll2:inst|                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst                                             ; pll2        ; pll2         ;
 ;       |pll2_0002:pll2_inst|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst                         ; pll2_0002   ; pll2         ;
 ;          |altera_pll:altera_pll_i| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i ; altera_pll  ; work         ;
@@ -575,25 +577,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 44                          ;
 ;     plain             ; 31                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 200                         ;
-;     arith             ; 73                          ;
-;         1 data inputs ; 31                          ;
+; arriav_lcell_comb     ; 218                         ;
+;     arith             ; 83                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 40                          ;
 ;         2 data inputs ; 42                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 126                         ;
+;     normal            ; 134                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
 ;         2 data inputs ; 38                          ;
-;         3 data inputs ; 13                          ;
-;         4 data inputs ; 23                          ;
-;         5 data inputs ; 23                          ;
-;         6 data inputs ; 23                          ;
+;         3 data inputs ; 15                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 29                          ;
 ; boundary_port         ; 9                           ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.60                        ;
-; Average LUT depth     ; 2.66                        ;
+; Average LUT depth     ; 2.78                        ;
 +-----------------------+-----------------------------+
 
 
@@ -612,10 +615,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 07 12:52:59 2024
+    Info: Processing started: Tue May 07 13:52:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305-Mini-Project -c bouncy_ball
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pipe.vhd
+    Info (12022): Found design unit 1: pipe-pipe_gen File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 13
+    Info (12023): Found entity 1: pipe File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file block1.bdf
     Info (12023): Found entity 1: Block1
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
@@ -711,6 +717,7 @@ Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pl
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst2"
+Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst2|pipe:pipe1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 33
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst4"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 151
@@ -754,16 +761,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 292 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 308 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 6 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 282 logic cells
+    Info (21061): Implemented 298 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4933 megabytes
-    Info: Processing ended: Tue May 07 12:53:05 2024
+    Info: Peak virtual memory: 4935 megabytes
+    Info: Processing ended: Tue May 07 13:52:55 2024
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
 
 
