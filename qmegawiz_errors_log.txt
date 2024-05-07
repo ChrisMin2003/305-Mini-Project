@@ -1,0 +1,6 @@
+
+
+C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL.v
+
+May 07 11AM:58:31>: Megafunction PLL Intel FPGA IP v18.1 is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

@@ -1,12 +1,13 @@
 |Block1
 red_out <= VGA_SYNC:inst1.red_out
-clk => PLL:inst.refclk
+clk => pll2:inst.refclk
 PS2_DAT <> MOUSE:inst4.mouse_data
 PS2_CLK <> MOUSE:inst4.mouse_clk
 green_out <= VGA_SYNC:inst1.green_out
 blue_out <= VGA_SYNC:inst1.blue_out
 horiz_sync_out <= VGA_SYNC:inst1.horiz_sync_out
 vert_sync_out <= VGA_SYNC:inst1.vert_sync_out
+LEDR[0] <= MOUSE:inst4.left_button
 pb1 => ~NO_FANOUT~
 pb2 => ~NO_FANOUT~
 
@@ -91,21 +92,21 @@ pixel_column[8] <= pixel_column[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 pixel_column[9] <= pixel_column[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|PLL:inst
-refclk => refclk.IN1
-rst => rst.IN1
-outclk_0 <= PLL_0002:pll_inst.outclk_0
-locked <= PLL_0002:pll_inst.locked
+|Block1|pll2:inst
+refclk => pll2_0002:pll2_inst.refclk
+rst => pll2_0002:pll2_inst.rst
+outclk_0 <= pll2_0002:pll2_inst.outclk_0
+locked <= pll2_0002:pll2_inst.locked
 
 
-|Block1|PLL:inst|PLL_0002:pll_inst
+|Block1|pll2:inst|pll2_0002:pll2_inst
 refclk => refclk.IN1
 rst => rst.IN1
 outclk_0 <= altera_pll:altera_pll_i.outclk
 locked <= altera_pll:altera_pll_i.locked
 
 
-|Block1|PLL:inst|PLL_0002:pll_inst|altera_pll:altera_pll_i
+|Block1|pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i
 refclk => general[0].gpll.I_REFCLK
 refclk1 => ~NO_FANOUT~
 fbclk => ~NO_FANOUT~
@@ -291,7 +292,6 @@ vert_sync => ball_y_pos[6].CLK
 vert_sync => ball_y_pos[7].CLK
 vert_sync => ball_y_pos[8].CLK
 vert_sync => ball_y_pos[9].CLK
-vert_sync => ball_destroyed.CLK
 vert_sync => ball_y_motion[0].CLK
 vert_sync => ball_y_motion[1].CLK
 vert_sync => ball_y_motion[2].CLK

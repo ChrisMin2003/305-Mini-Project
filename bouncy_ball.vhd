@@ -51,14 +51,14 @@ begin
             end if;
 
             -- Move the ball upwards for 1 second if the flag is set
-            if (move_up_flag = '1' and ball_destroyed = '0') then
+            if (move_up_flag = '1') then
                 move_up_counter := move_up_counter + 1; -- Increment the counter
-                ball_y_motion <= - CONV_STD_LOGIC_VECTOR(2, 10); -- Move upwards
-                if (move_up_counter >= 25000000) then -- 1 second at 25MHz clock
+                ball_y_motion <= - CONV_STD_LOGIC_VECTOR(5, 10); -- Move upwards
+                if (move_up_counter >= 15) then
                     move_up_flag := '0'; -- Reset the flag
                 end if;
             else
-                -- Bounce off top or bottom of the screen
+                -- Reach bottom of screen or keep falling
                 if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
                     ball_y_motion <= "0000000000";
 						  ball_destroyed <= '1';
