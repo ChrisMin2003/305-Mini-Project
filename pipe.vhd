@@ -12,7 +12,9 @@ ENTITY pipe IS
 END pipe;
 
 architecture pipe_gen of pipe is
+type random_y_array is array (0 to 9) of integer;
 
+SIGNAL randoms                         : random_y_array;
 SIGNAL pipe_up_on, pipe_down_on        : std_logic;
 SIGNAL pipe_y_interval                 : std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_x_size                     : std_logic_vector(9 DOWNTO 0);
@@ -20,12 +22,24 @@ SIGNAL pipe_up_y_edge, pipe_down_y_edge: std_logic_vector(9 DOWNTO 0);
 SiGNAL pipe_le_x_edge                  : std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion                   : std_logic_vector(9 DOWNTO 0);
 
+-- Populate the array
+randoms(0) <= 100;
+randoms(1) <= 287;
+randoms(2) <= 152;
+randoms(3) <= 369;
+randoms(4) <= 127;
+randoms(5) <= 320;
+randoms(6) <= 86;
+randoms(7) <= 199;
+randoms(8) <= 317;
+randoms(9) <= 400;
+
 BEGIN
 
 pipe_x_size <= CONV_STD_LOGIC_VECTOR(30,10);
 
 
-pipe_y_interval <= CONV_STD_LOGIC_VECTOR(200,10);
+pipe_y_interval <= CONV_STD_LOGIC_VECTOR(randoms(0),10);
 
 
 pipe_up_y_edge <= CONV_STD_LOGIC_VECTOR(100, 10);
