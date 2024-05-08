@@ -14,6 +14,9 @@ END bouncy_ball;
 
 architecture behavior of bouncy_ball is
 
+type random_interval_array is array (0 to 9) of integer;
+
+SIGNAL intervals                       : random_interval_array;
 SIGNAL ball_on, ball_destroyed         : std_logic;
 SIGNAL size 					            : std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0);
@@ -21,6 +24,19 @@ SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion			            : std_logic_vector(9 DOWNTO 0);
 SIGNAL green_pipe                      : std_logic;
 
+-- Populate the array
+intervals(0) <= 100;
+intervals(1) <= 287;
+intervals(2) <= 152;
+intervals(3) <= 369;
+intervals(4) <= 127;
+intervals(5) <= 320;
+intervals(6) <= 86;
+intervals(7) <= 199;
+intervals(8) <= 317;
+intervals(9) <= 400;
+
+-- Pipe generation
 component pipe is 
 	port(clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
