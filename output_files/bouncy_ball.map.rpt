@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bouncy_ball
-Thu May 09 16:01:22 2024
+Thu May 09 16:12:58 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -55,7 +55,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 09 16:01:22 2024           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 09 16:12:58 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
@@ -175,8 +175,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -202,14 +201,14 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 296                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 305                                                                  ;
 ;                                             ;                                                                      ;
-; Combinational ALUT usage for logic          ; 497                                                                  ;
+; Combinational ALUT usage for logic          ; 504                                                                  ;
 ;     -- 7 input functions                    ; 1                                                                    ;
-;     -- 6 input functions                    ; 89                                                                   ;
-;     -- 5 input functions                    ; 49                                                                   ;
-;     -- 4 input functions                    ; 54                                                                   ;
-;     -- <=3 input functions                  ; 304                                                                  ;
+;     -- 6 input functions                    ; 99                                                                   ;
+;     -- 5 input functions                    ; 46                                                                   ;
+;     -- 4 input functions                    ; 42                                                                   ;
+;     -- <=3 input functions                  ; 316                                                                  ;
 ;                                             ;                                                                      ;
 ; Dedicated logic registers                   ; 167                                                                  ;
 ;                                             ;                                                                      ;
@@ -222,7 +221,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                      ;
 ; Maximum fan-out node                        ; pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 77                                                                   ;
-; Total fan-out                               ; 2238                                                                 ;
+; Total fan-out                               ; 2263                                                                 ;
 ; Average fan-out                             ; 3.24                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------+
 
@@ -232,16 +231,16 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-------------+--------------+
-; |Block1                            ; 497 (1)             ; 167 (0)                   ; 0                 ; 6          ; 9    ; 0            ; |Block1                                                       ; Block1      ; work         ;
+; |Block1                            ; 504 (1)             ; 167 (0)                   ; 0                 ; 6          ; 9    ; 0            ; |Block1                                                       ; Block1      ; work         ;
 ;    |MOUSE:inst4|                   ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                           ; MOUSE       ; work         ;
-;    |VGA_SYNC:inst1|                ; 42 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                        ; VGA_SYNC    ; work         ;
-;    |bouncy_ball:inst2|             ; 404 (127)           ; 56 (46)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                     ; bouncy_ball ; work         ;
-;       |pipe:pipe1|                 ; 67 (67)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                          ; pipe        ; work         ;
-;       |pipe:pipe2|                 ; 40 (40)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                          ; pipe        ; work         ;
+;    |VGA_SYNC:inst1|                ; 47 (47)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                        ; VGA_SYNC    ; work         ;
+;    |bouncy_ball:inst2|             ; 406 (123)           ; 56 (46)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                     ; bouncy_ball ; work         ;
+;       |pipe:pipe1|                 ; 56 (56)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                          ; pipe        ; work         ;
+;       |pipe:pipe2|                 ; 53 (53)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                          ; pipe        ; work         ;
 ;       |pipe:pipe3|                 ; 42 (42)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                          ; pipe        ; work         ;
-;       |pipe:pipe4|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                          ; pipe        ; work         ;
-;       |pipe:pipe5|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                          ; pipe        ; work         ;
-;       |pipe:pipe6|                 ; 42 (42)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe6                          ; pipe        ; work         ;
+;       |pipe:pipe4|                 ; 45 (45)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                          ; pipe        ; work         ;
+;       |pipe:pipe5|                 ; 44 (44)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                          ; pipe        ; work         ;
+;       |pipe:pipe6|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe6                          ; pipe        ; work         ;
 ;    |pll2:inst|                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst                                             ; pll2        ; pll2         ;
 ;       |pll2_0002:pll2_inst|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst                         ; pll2_0002   ; pll2         ;
 ;          |altera_pll:altera_pll_i| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i ; altera_pll  ; work         ;
@@ -735,27 +734,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 44                          ;
 ;     plain             ; 41                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 497                         ;
+; arriav_lcell_comb     ; 504                         ;
 ;     arith             ; 239                         ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 127                         ;
 ;         2 data inputs ; 104                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 257                         ;
+;     normal            ; 264                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 54                          ;
-;         5 data inputs ; 49                          ;
-;         6 data inputs ; 89                          ;
+;         2 data inputs ; 48                          ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 42                          ;
+;         5 data inputs ; 46                          ;
+;         6 data inputs ; 99                          ;
 ; arriav_mac            ; 6                           ;
 ; boundary_port         ; 9                           ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 4.62                        ;
+; Average LUT depth     ; 4.75                        ;
 +-----------------------+-----------------------------+
 
 
@@ -774,7 +773,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu May 09 16:01:16 2024
+    Info: Processing started: Thu May 09 16:12:52 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305-Mini-Project -c bouncy_ball
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -921,16 +920,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 592 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 600 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 6 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 576 logic cells
+    Info (21061): Implemented 584 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 6 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4983 megabytes
-    Info: Processing ended: Thu May 09 16:01:22 2024
+    Info: Peak virtual memory: 4949 megabytes
+    Info: Processing ended: Thu May 09 16:12:58 2024
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:04
 

@@ -52,7 +52,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
 Red <=  ball_on;
-Green <= ball_on or green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6;
+Green <= ball_on or not ball_on or green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6;
 Blue <= not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
 
 Move_Ball: process (vert_sync)
@@ -80,7 +80,7 @@ begin
                     ball_y_motion <= "0000000000";
 						  ball_destroyed <= '1';
 					 else
-                    ball_y_motion <= CONV_STD_LOGIC_VECTOR(2, 10);
+                    ball_y_motion <= CONV_STD_LOGIC_VECTOR(4, 10);
                 end if;
             end if;
 
