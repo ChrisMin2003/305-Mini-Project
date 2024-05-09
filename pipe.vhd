@@ -9,7 +9,9 @@ ENTITY pipe IS
 		( clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			 pipe_num  : IN integer;
-		  green 			: OUT std_logic);		
+		  green 			: OUT std_logic;
+		  top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
+		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));		
 END pipe;
 
 architecture pipe_gen of pipe is
@@ -61,4 +63,9 @@ begin
 		pipe_le_x_edge <= pipe_le_x_edge + pipe_x_motion;
 	end if;
 end process Move_pipe;
+
+top_y_pos <= pipe_up_y_edge;
+bottom_y_pos <= pipe_down_y_edge;
+left_x_pos <= pipe_le_x_edge;
+
 END pipe_gen;

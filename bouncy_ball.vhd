@@ -13,31 +13,48 @@ ENTITY bouncy_ball IS
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
+type y_pos_array is array (0 to 5) of std_logic_vector(9 DOWNTO 0);
+type x_pos_array is array (0 to 5) of std_logic_vector(10 DOWNTO 0);
 
+SIGNAL y_pos_up, y_pos_down            : y_pos_array;
+SIGNAL x_pos                           : x_pos_array;
 SIGNAL ball_on, ball_destroyed         : std_logic;
 SIGNAL size 					            : std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0);
-SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0);
+SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(220, 11);
 SIGNAL ball_y_motion			            : std_logic_vector(9 DOWNTO 0);
-SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6,green_pipe7,green_pipe8,green_pipe9,green_pipe10   : std_logic;
+SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6   : std_logic;
 
 -- Pipe generation
 component pipe is 
 	port(clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			 pipe_num  : IN integer;
-		  green			: OUT std_logic);
+		  green 			: OUT std_logic;
+		  top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
+		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));
 end component;
 
 BEGIN 
 
 --Pipe generation
-pipe1: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 0, green => green_pipe1);
-pipe2: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 1, green => green_pipe2);
-pipe3: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 2, green => green_pipe3);
-pipe4: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 3, green => green_pipe4);
-pipe5: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 4, green => green_pipe5);
-pipe6: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, green => green_pipe6);
+pipe1: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 0, 
+							green => green_pipe1, top_y_pos => y_pos_up(0), bottom_y_pos => y_pos_down(0), left_x_pos => x_pos(0));
+							
+pipe2: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 1, 
+							green => green_pipe2, top_y_pos => y_pos_up(1), bottom_y_pos => y_pos_down(1), left_x_pos => x_pos(1));
+							
+pipe3: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 2, 
+							green => green_pipe3, top_y_pos => y_pos_up(2), bottom_y_pos => y_pos_down(2), left_x_pos => x_pos(2));
+							
+pipe4: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 3, 
+							green => green_pipe4, top_y_pos => y_pos_up(3), bottom_y_pos => y_pos_down(3), left_x_pos => x_pos(3));
+							
+pipe5: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 4, 
+							green => green_pipe5, top_y_pos => y_pos_up(4), bottom_y_pos => y_pos_down(4), left_x_pos => x_pos(4));
+							
+pipe6: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, 
+							green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
