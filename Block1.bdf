@@ -420,7 +420,7 @@ refer to the applicable agreement for further details.
 (symbol
 	(rect 168 376 360 520)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
-	(text "inst2" (rect 8 128 30 145)(font "Intel Clear" ))
+	(text "inst2" (rect 8 128 31 140)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -457,24 +457,31 @@ refer to the applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96))
 	)
 	(port
+		(pt 0 112)
+		(input)
+		(text "right_button" (rect 0 0 57 12)(font "Arial" ))
+		(text "right_button" (rect 21 107 78 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
 		(pt 192 32)
 		(output)
 		(text "red" (rect 0 0 15 12)(font "Arial" ))
-		(text "red" (rect 159 27 174 39)(font "Arial" ))
+		(text "red" (rect 159 27 171 39)(font "Arial" ))
 		(line (pt 192 32)(pt 176 32))
 	)
 	(port
 		(pt 192 48)
 		(output)
 		(text "green" (rect 0 0 27 12)(font "Arial" ))
-		(text "green" (rect 149 43 176 55)(font "Arial" ))
+		(text "green" (rect 149 43 171 55)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48))
 	)
 	(port
 		(pt 192 64)
 		(output)
 		(text "blue" (rect 0 0 20 12)(font "Arial" ))
-		(text "blue" (rect 155 59 175 71)(font "Arial" ))
+		(text "blue" (rect 155 59 171 71)(font "Arial" ))
 		(line (pt 192 64)(pt 176 64))
 	)
 	(drawing
@@ -606,10 +613,6 @@ refer to the applicable agreement for further details.
 	(pt 984 224)
 )
 (connector
-	(pt 824 240)
-	(pt 856 240)
-)
-(connector
 	(pt 136 408)
 	(pt 168 408)
 )
@@ -664,6 +667,30 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 360 440)
 	(pt 504 440)
+)
+(connector
+	(pt 168 488)
+	(pt 168 640)
+)
+(connector
+	(pt 1080 640)
+	(pt 168 640)
+)
+(connector
+	(pt 1080 640)
+	(pt 1080 256)
+)
+(connector
+	(pt 1080 256)
+	(pt 872 256)
+)
+(connector
+	(pt 872 256)
+	(pt 872 240)
+)
+(connector
+	(pt 824 240)
+	(pt 872 240)
 )
 (junction (pt 504 344))
 (junction (pt 816 496))

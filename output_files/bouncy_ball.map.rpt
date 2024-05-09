@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bouncy_ball
-Thu May 09 15:26:27 2024
+Thu May 09 16:01:22 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -21,19 +21,15 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Parameter Settings for User Entity Instance: pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i
- 16. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe10"
- 17. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe9"
- 18. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe8"
- 19. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe7"
- 20. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6"
- 21. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe5"
- 22. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe4"
- 23. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe3"
- 24. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe2"
- 25. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe1"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 16. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6"
+ 17. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe5"
+ 18. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe4"
+ 19. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe3"
+ 20. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe2"
+ 21. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe1"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -59,7 +55,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May 09 15:26:27 2024           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 09 16:01:22 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
@@ -69,7 +65,7 @@ refer to the applicable agreement for further details.
 ; Total pins                      ; 9                                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 10                                              ;
+; Total DSP Blocks                ; 6                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs              ; 0                                               ;
@@ -206,28 +202,28 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 401                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 296                                                                  ;
 ;                                             ;                                                                      ;
-; Combinational ALUT usage for logic          ; 646                                                                  ;
+; Combinational ALUT usage for logic          ; 497                                                                  ;
 ;     -- 7 input functions                    ; 1                                                                    ;
-;     -- 6 input functions                    ; 149                                                                  ;
-;     -- 5 input functions                    ; 56                                                                   ;
+;     -- 6 input functions                    ; 89                                                                   ;
+;     -- 5 input functions                    ; 49                                                                   ;
 ;     -- 4 input functions                    ; 54                                                                   ;
-;     -- <=3 input functions                  ; 386                                                                  ;
+;     -- <=3 input functions                  ; 304                                                                  ;
 ;                                             ;                                                                      ;
 ; Dedicated logic registers                   ; 167                                                                  ;
 ;                                             ;                                                                      ;
 ; I/O pins                                    ; 9                                                                    ;
 ;                                             ;                                                                      ;
-; Total DSP Blocks                            ; 10                                                                   ;
+; Total DSP Blocks                            ; 6                                                                    ;
 ;                                             ;                                                                      ;
 ; Total PLLs                                  ; 1                                                                    ;
 ;     -- PLLs                                 ; 1                                                                    ;
 ;                                             ;                                                                      ;
 ; Maximum fan-out node                        ; pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 77                                                                   ;
-; Total fan-out                               ; 2841                                                                 ;
-; Average fan-out                             ; 3.37                                                                 ;
+; Total fan-out                               ; 2238                                                                 ;
+; Average fan-out                             ; 3.24                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------+
 
 
@@ -236,20 +232,16 @@ refer to the applicable agreement for further details.
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                           ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------+-------------+--------------+
-; |Block1                            ; 646 (1)             ; 167 (0)                   ; 0                 ; 10         ; 9    ; 0            ; |Block1                                                       ; Block1      ; work         ;
+; |Block1                            ; 497 (1)             ; 167 (0)                   ; 0                 ; 6          ; 9    ; 0            ; |Block1                                                       ; Block1      ; work         ;
 ;    |MOUSE:inst4|                   ; 50 (50)             ; 63 (63)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                           ; MOUSE       ; work         ;
-;    |VGA_SYNC:inst1|                ; 44 (44)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                        ; VGA_SYNC    ; work         ;
-;    |bouncy_ball:inst2|             ; 551 (111)           ; 56 (46)                   ; 0                 ; 10         ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                     ; bouncy_ball ; work         ;
-;       |pipe:pipe10|                ; 52 (52)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe10                         ; pipe        ; work         ;
-;       |pipe:pipe1|                 ; 50 (50)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                          ; pipe        ; work         ;
+;    |VGA_SYNC:inst1|                ; 42 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                        ; VGA_SYNC    ; work         ;
+;    |bouncy_ball:inst2|             ; 404 (127)           ; 56 (46)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                     ; bouncy_ball ; work         ;
+;       |pipe:pipe1|                 ; 67 (67)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                          ; pipe        ; work         ;
 ;       |pipe:pipe2|                 ; 40 (40)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                          ; pipe        ; work         ;
-;       |pipe:pipe3|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                          ; pipe        ; work         ;
-;       |pipe:pipe4|                 ; 42 (42)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                          ; pipe        ; work         ;
-;       |pipe:pipe5|                 ; 41 (41)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                          ; pipe        ; work         ;
+;       |pipe:pipe3|                 ; 42 (42)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                          ; pipe        ; work         ;
+;       |pipe:pipe4|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                          ; pipe        ; work         ;
+;       |pipe:pipe5|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                          ; pipe        ; work         ;
 ;       |pipe:pipe6|                 ; 42 (42)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe6                          ; pipe        ; work         ;
-;       |pipe:pipe7|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe7                          ; pipe        ; work         ;
-;       |pipe:pipe8|                 ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe8                          ; pipe        ; work         ;
-;       |pipe:pipe9|                 ; 44 (44)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe9                          ; pipe        ; work         ;
 ;    |pll2:inst|                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst                                             ; pll2        ; pll2         ;
 ;       |pll2_0002:pll2_inst|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst                         ; pll2_0002   ; pll2         ;
 ;          |altera_pll:altera_pll_i| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i ; altera_pll  ; work         ;
@@ -262,10 +254,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------------+
 ; Statistic                       ; Number Used ;
 +---------------------------------+-------------+
-; Two Independent 18x18           ; 10          ;
-; Total number of DSP blocks      ; 10          ;
+; Two Independent 18x18           ; 6           ;
+; Total number of DSP blocks      ; 6           ;
 ;                                 ;             ;
-; Fixed Point Unsigned Multiplier ; 10          ;
+; Fixed Point Unsigned Multiplier ; 6           ;
 +---------------------------------+-------------+
 
 
@@ -293,141 +285,89 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                               ;
-+---------------------------------------------------+--------------------------------------------------------------+
-; Register name                                     ; Reason for Removal                                           ;
-+---------------------------------------------------+--------------------------------------------------------------+
-; bouncy_ball:inst2|ball_y_motion[2]                ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe10|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe10|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_x_motion[1..9]  ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_x_motion[0]     ; Stuck at GND due to stuck port data_in                       ;
-; MOUSE:inst4|CHAROUT[4..7]                         ; Stuck at VCC due to stuck port data_in                       ;
-; MOUSE:inst4|CHAROUT[3]                            ; Stuck at GND due to stuck port data_in                       ;
-; MOUSE:inst4|CHAROUT[2]                            ; Stuck at VCC due to stuck port data_in                       ;
-; MOUSE:inst4|CHAROUT[0,1]                          ; Stuck at GND due to stuck port data_in                       ;
-; MOUSE:inst4|SHIFTOUT[10]                          ; Stuck at VCC due to stuck port data_in                       ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[0]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[10]   ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[10] ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[9]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[9]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[8]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[8]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[7]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[7]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[6]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[6]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[5]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[5]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[4]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[4]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[3]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[3]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[2]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[2]  ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe7|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe8|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|pipe:pipe9|pipe_le_x_edge[1]    ; Merged with bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[1]  ;
-; bouncy_ball:inst2|ball_y_motion[3..9]             ; Merged with bouncy_ball:inst2|ball_y_motion[0]               ;
-; bouncy_ball:inst2|pipe:pipe10|pipe_le_x_edge[0]   ; Stuck at GND due to stuck port data_in                       ;
-; VGA_SYNC:inst1|pixel_row[9]                       ; Stuck at GND due to stuck port data_in                       ;
-; Total Number of Removed Registers = 218           ;                                                              ;
-+---------------------------------------------------+--------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                             ;
++--------------------------------------------------+-------------------------------------------------------------+
+; Register name                                    ; Reason for Removal                                          ;
++--------------------------------------------------+-------------------------------------------------------------+
+; bouncy_ball:inst2|ball_y_motion[2]               ; Stuck at GND due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe1|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe1|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
+; MOUSE:inst4|CHAROUT[4..7]                        ; Stuck at VCC due to stuck port data_in                      ;
+; MOUSE:inst4|CHAROUT[3]                           ; Stuck at GND due to stuck port data_in                      ;
+; MOUSE:inst4|CHAROUT[2]                           ; Stuck at VCC due to stuck port data_in                      ;
+; MOUSE:inst4|CHAROUT[0,1]                         ; Stuck at GND due to stuck port data_in                      ;
+; MOUSE:inst4|SHIFTOUT[10]                         ; Stuck at VCC due to stuck port data_in                      ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[0]   ; Merged with bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[0]   ; Merged with bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[0]   ; Merged with bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]  ;
+; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[0]   ; Merged with bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[0]   ; Merged with bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[10]  ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[10] ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[10]  ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[10] ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[10]  ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[10] ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[10]  ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[10] ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[10]  ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[10] ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[9]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[9]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[9]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[9]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[9]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[8]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[8]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[8]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[8]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[8]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[8]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[8]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[8]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[8]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[8]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[7]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[7]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[7]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[7]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[7]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[6]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[6]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[6]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[6]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[6]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[6]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[6]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[6]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[6]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[6]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[5]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[5]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[5]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[5]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[5]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[5]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[5]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[5]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[5]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[5]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[4]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[4]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[4]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[4]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[4]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[4]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[4]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[4]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[4]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[4]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[3]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[3]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[3]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[3]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[3]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[3]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[3]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[3]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[3]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[3]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[2]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[2]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[2]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[2]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[2]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[2]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[2]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[2]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[2]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[2]  ;
+; bouncy_ball:inst2|pipe:pipe2|pipe_le_x_edge[1]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[1]  ;
+; bouncy_ball:inst2|pipe:pipe3|pipe_le_x_edge[1]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[1]  ;
+; bouncy_ball:inst2|pipe:pipe4|pipe_le_x_edge[1]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[1]  ;
+; bouncy_ball:inst2|pipe:pipe5|pipe_le_x_edge[1]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[1]  ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[1]   ; Merged with bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[1]  ;
+; bouncy_ball:inst2|ball_y_motion[3..9]            ; Merged with bouncy_ball:inst2|ball_y_motion[0]              ;
+; bouncy_ball:inst2|pipe:pipe6|pipe_le_x_edge[0]   ; Stuck at GND due to stuck port data_in                      ;
+; VGA_SYNC:inst1|pixel_row[9]                      ; Stuck at GND due to stuck port data_in                      ;
+; Total Number of Removed Registers = 134          ;                                                             ;
++--------------------------------------------------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -445,19 +385,21 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; MOUSE:inst4|send_char                  ; 3       ;
-; MOUSE:inst4|SHIFTOUT[3]                ; 1       ;
-; MOUSE:inst4|SHIFTOUT[5]                ; 1       ;
-; MOUSE:inst4|SHIFTOUT[6]                ; 1       ;
-; MOUSE:inst4|SHIFTOUT[7]                ; 1       ;
-; MOUSE:inst4|SHIFTOUT[8]                ; 1       ;
-; Total number of inverted registers = 6 ;         ;
-+----------------------------------------+---------+
++----------------------------------------------------------+
+; Inverted Register Statistics                             ;
++------------------------------------------------+---------+
+; Inverted Register                              ; Fan out ;
++------------------------------------------------+---------+
+; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9] ; 7       ;
+; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7] ; 7       ;
+; MOUSE:inst4|send_char                          ; 3       ;
+; MOUSE:inst4|SHIFTOUT[3]                        ; 1       ;
+; MOUSE:inst4|SHIFTOUT[5]                        ; 1       ;
+; MOUSE:inst4|SHIFTOUT[6]                        ; 1       ;
+; MOUSE:inst4|SHIFTOUT[7]                        ; 1       ;
+; MOUSE:inst4|SHIFTOUT[8]                        ; 1       ;
+; Total number of inverted registers = 8         ;         ;
++------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -716,50 +658,6 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe10" ;
-+-----------------+-------+----------+----------------------+
-; Port            ; Type  ; Severity ; Details              ;
-+-----------------+-------+----------+----------------------+
-; pipe_num[31..4] ; Input ; Info     ; Stuck at GND         ;
-; pipe_num[2..1]  ; Input ; Info     ; Stuck at GND         ;
-; pipe_num[3]     ; Input ; Info     ; Stuck at VCC         ;
-; pipe_num[0]     ; Input ; Info     ; Stuck at VCC         ;
-+-----------------+-------+----------+----------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe9" ;
-+-----------------+-------+----------+---------------------+
-; Port            ; Type  ; Severity ; Details             ;
-+-----------------+-------+----------+---------------------+
-; pipe_num[31..4] ; Input ; Info     ; Stuck at GND        ;
-; pipe_num[2..0]  ; Input ; Info     ; Stuck at GND        ;
-; pipe_num[3]     ; Input ; Info     ; Stuck at VCC        ;
-+-----------------+-------+----------+---------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe8" ;
-+-----------------+-------+----------+---------------------+
-; Port            ; Type  ; Severity ; Details             ;
-+-----------------+-------+----------+---------------------+
-; pipe_num[2..0]  ; Input ; Info     ; Stuck at VCC        ;
-; pipe_num[31..3] ; Input ; Info     ; Stuck at GND        ;
-+-----------------+-------+----------+---------------------+
-
-
-+----------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe7" ;
-+-----------------+-------+----------+---------------------+
-; Port            ; Type  ; Severity ; Details             ;
-+-----------------+-------+----------+---------------------+
-; pipe_num[2..1]  ; Input ; Info     ; Stuck at VCC        ;
-; pipe_num[31..3] ; Input ; Info     ; Stuck at GND        ;
-; pipe_num[0]     ; Input ; Info     ; Stuck at GND        ;
-+-----------------+-------+----------+---------------------+
-
-
 +----------------------------------------------------------+
 ; Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6" ;
 +-----------------+-------+----------+---------------------+
@@ -837,27 +735,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 44                          ;
 ;     plain             ; 41                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 646                         ;
-;     arith             ; 303                         ;
-;         0 data inputs ; 11                          ;
-;         1 data inputs ; 150                         ;
-;         2 data inputs ; 142                         ;
+; arriav_lcell_comb     ; 497                         ;
+;     arith             ; 239                         ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 127                         ;
+;         2 data inputs ; 104                         ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 342                         ;
+;     normal            ; 257                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 47                          ;
-;         3 data inputs ; 29                          ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 16                          ;
 ;         4 data inputs ; 54                          ;
-;         5 data inputs ; 56                          ;
-;         6 data inputs ; 149                         ;
-; arriav_mac            ; 10                          ;
+;         5 data inputs ; 49                          ;
+;         6 data inputs ; 89                          ;
+; arriav_mac            ; 6                           ;
 ; boundary_port         ; 9                           ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.90                        ;
-; Average LUT depth     ; 5.12                        ;
+; Average LUT depth     ; 4.62                        ;
 +-----------------------+-----------------------------+
 
 
@@ -876,7 +774,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Thu May 09 15:26:20 2024
+    Info: Processing started: Thu May 09 16:01:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305-Mini-Project -c bouncy_ball
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -979,6 +877,7 @@ Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pl
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst2"
 Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst2|pipe:pipe1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 35
+Warning (10540): VHDL Signal Declaration warning at pipe.vhd(25): used explicit default value for signal "pipe_x_interval" because signal was never assigned a value File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 25
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst4"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 25
 Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 151
@@ -1022,17 +921,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 745 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 592 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 6 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 725 logic cells
+    Info (21061): Implemented 576 logic cells
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 10 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
-    Info: Peak virtual memory: 4959 megabytes
-    Info: Processing ended: Thu May 09 15:26:27 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21062): Implemented 6 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4983 megabytes
+    Info: Processing ended: Thu May 09 16:01:22 2024
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
