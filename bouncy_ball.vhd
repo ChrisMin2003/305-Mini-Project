@@ -19,19 +19,29 @@ SIGNAL size 					            : std_logic_vector(9 DOWNTO 0);
 SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0);
 SIGNAL ball_y_motion			            : std_logic_vector(9 DOWNTO 0);
-SIGNAL green_pipe                      : std_logic;
+SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6,green_pipe7,green_pipe8,green_pipe9,green_pipe10   : std_logic;
 
 -- Pipe generation
 component pipe is 
 	port(clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+			 pipe_num  : IN integer;
 		  green			: OUT std_logic);
 end component;
 
 BEGIN 
 
 --Pipe generation
-pipe1: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, green => green_pipe);   
+pipe1: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 0, green => green_pipe1);
+pipe2: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 1, green => green_pipe2);
+pipe3: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 2, green => green_pipe3);
+pipe4: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 3, green => green_pipe4);
+pipe5: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 4, green => green_pipe5);
+pipe6: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, green => green_pipe6);
+pipe7: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 6, green => green_pipe7);
+pipe8: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 7, green => green_pipe8);
+pipe9: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 8, green => green_pipe9);
+pipe10: pipe port map(clk => clk, vert_sync => vert_sync, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 9, green => green_pipe10);
 
 size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
@@ -46,8 +56,8 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 -- Colours for pixel data on video signal
 -- Changing the background and ball colour by pushbuttons
 Red <=  ball_on;
-Green <= ball_on or green_pipe;
-Blue <=  not ball_on and not green_pipe;
+Green <= ball_on or green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6 or green_pipe7 or green_pipe8 or green_pipe9 or green_pipe10;
+Blue <=  not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6 or green_pipe7 or green_pipe8 or green_pipe9 or green_pipe10);
 
 
 Move_Ball: process (vert_sync)

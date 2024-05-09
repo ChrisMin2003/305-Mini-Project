@@ -8,6 +8,7 @@ ENTITY pipe IS
 	PORT
 		( clk, vert_sync	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+			 pipe_num  : IN integer;
 		  green 			: OUT std_logic);		
 END pipe;
 
@@ -22,6 +23,8 @@ SIGNAL pipe_up_y_edge, pipe_down_y_edge: std_logic_vector(9 DOWNTO 0);
 SiGNAL pipe_le_x_edge                  : std_logic_vector(10 DOWNTO 0);
 SIGNAL pipe_x_motion                   : std_logic_vector(9 DOWNTO 0);
 
+BEGIN
+
 -- Populate the array
 randoms(0) <= 100;
 randoms(1) <= 287;
@@ -34,22 +37,20 @@ randoms(7) <= 199;
 randoms(8) <= 317;
 randoms(9) <= 400;
 
-BEGIN
-
-pipe_x_size <= CONV_STD_LOGIC_VECTOR(30,10);
+pipe_x_size <= CONV_STD_LOGIC_VECTOR(20,10);
 
 
-pipe_y_interval <= CONV_STD_LOGIC_VECTOR(randoms(0),10);
+pipe_y_interval <= CONV_STD_LOGIC_VECTOR(160,10);
 
 
-pipe_up_y_edge <= CONV_STD_LOGIC_VECTOR(100, 10);
+pipe_up_y_edge <= CONV_STD_LOGIC_VECTOR(randoms(pipe_num), 10);
 pipe_down_y_edge <= pipe_up_y_edge + pipe_y_interval;
 
-pipe_up_on <= '1' when ( ('0' & pipe_le_x_edge <= '0' & pixel_column + pipe_x_size) and ('0' & pixel_column <= '0' & pipe_le_x_edge + pipe_x_size)
+pipe_up_on <= '1' when ( ('0' & (pipe_le_x_edge + 100 * pipe_num) <= '0' & pixel_column + pipe_x_size) and ('0' & pixel_column <= '0' & (pipe_le_x_edge + 100 * pipe_num) + pipe_x_size)
 					and ('0' & pixel_row <= '0' & pipe_up_y_edge))  else
 			'0';
 			
-pipe_down_on <= '1' when ( ('0' & pipe_le_x_edge <= '0' & pixel_column + pipe_x_size) and ('0' & pixel_column <= '0' & pipe_le_x_edge + pipe_x_size)
+pipe_down_on <= '1' when ( ('0' & (pipe_le_x_edge + 100 * pipe_num) <= '0' & pixel_column + pipe_x_size) and ('0' & pixel_column <= '0' & (pipe_le_x_edge + 100 * pipe_num) + pipe_x_size)
 					and ('0' & pipe_down_y_edge <= '0' & pixel_row))  else
 			'0';
 
