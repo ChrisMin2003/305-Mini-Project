@@ -16,13 +16,18 @@ architecture behavior of bouncy_ball is
 type y_pos_array is array (0 to 5) of std_logic_vector(9 DOWNTO 0);
 type x_pos_array is array (0 to 5) of std_logic_vector(10 DOWNTO 0);
 
+-- Signal for detecting collisions
 SIGNAL y_pos_up, y_pos_down            : y_pos_array;
 SIGNAL x_pos                           : x_pos_array;
+
+--Signals for the bird
 SIGNAL ball_on, ball_destroyed         : std_logic;
 SIGNAL size 					            : std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0);
 SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(220, 11);
 SIGNAL ball_y_motion			            : std_logic_vector(9 DOWNTO 0);
+
+-- Portmap output instances
 SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6   : std_logic;
 
 -- Pipe generation
@@ -95,8 +100,11 @@ begin
                 -- Reach bottom of screen and destroy or keep falling
                 if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
                     ball_y_motion <= "0000000000";
-						  ball_destroyed <= '1';
 					 else
+							-- The for loop for detecting collision
+							-- To collide it has to satisfy:
+							-- 	- (Bird y position + size >= upper pipe y edge) OR (Bird y position - size <= lower pipe y edge)
+							--		- (Bird x positon + size >= left pipe x edge) and (Bird x positon - size <= right pipe x edge)
                     ball_y_motion <= CONV_STD_LOGIC_VECTOR(4, 10);
                 end if;
             end if;
