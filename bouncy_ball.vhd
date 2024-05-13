@@ -84,7 +84,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 			
 			
 Red <=  (ball_on);
-Green <= (ball_on or not ball_on or green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) and not sw1;
+Green <= ((ball_on or not ball_on) and not sw1) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
 Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not sw1;
 
 
