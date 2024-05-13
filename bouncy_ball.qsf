@@ -268,6 +268,12 @@ set_location_assignment PIN_J8 -to VGA_G[3]
 set_location_assignment PIN_H8 -to VGA_HS
 set_location_assignment PIN_A5 -to VGA_R[3]
 set_location_assignment PIN_G8 -to VGA_VS
+set_global_assignment -name VHDL_FILE display_lives.vhd
+set_global_assignment -name VHDL_FILE minute_counter.vhd
+set_global_assignment -name VHDL_FILE BCD_to_7Seg.vhd
+set_global_assignment -name VHDL_FILE BCD_Counter.vhd
+set_global_assignment -name SOURCE_FILE pll2.cmp
+set_global_assignment -name SOURCE_FILE PLL.cmp
 set_global_assignment -name VHDL_FILE pipe.vhd
 set_global_assignment -name BDF_FILE Block1.bdf
 set_global_assignment -name VHDL_FILE vga_sync.vhd
