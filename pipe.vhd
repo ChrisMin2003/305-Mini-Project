@@ -6,7 +6,7 @@ USE IEEE.MATH_REAL.all;
 
 ENTITY pipe IS
 	PORT
-		( clk, vert_sync, start_flag	: IN std_logic;
+		( clk, vert_sync, start_flag, pause_flag	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			 pipe_num  : IN integer;
 		  green 			: OUT std_logic;
@@ -25,6 +25,7 @@ SIGNAL pipe_up_y_edge, pipe_down_y_edge: std_logic_vector(9 DOWNTO 0);
 SiGNAL pipe_le_x_edge                  : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(640, 11);
 SIGNAL pipe_x_motion                   : std_logic_vector(9 DOWNTO 0);
 SIGNAL pipe_x_interval                 : integer := 340;
+
 
 BEGIN
 
@@ -58,12 +59,14 @@ Green <= pipe_up_on or pipe_down_on;
 
 Move_pipe : process(vert_sync)
 begin
-	if (rising_edge(vert_sync) and start_flag = '1') then
+	if (rising_edge(vert_sync) and start_flag = '1' and pause_flag = '0') then
 		pipe_x_motion <= - CONV_STD_LOGIC_VECTOR(2, 10);
 
 		pipe_le_x_edge <= pipe_le_x_edge + pipe_x_motion;
 		
-	end if;
+	elsif rising_edge(vert_sync) and start_flag = '1' and pause_flag = '1' then
+        -- Do nothing (game is paused)
+    end if;
 end process Move_pipe;
 
 top_y_pos <= pipe_up_y_edge;

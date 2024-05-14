@@ -47,8 +47,7 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_location_assignment PIN_M9 -to clk
 set_location_assignment PIN_U7 -to pb1
-set_location_assignment PIN_W9 -to pb2
-set_location_assignment PIN_H13 -to CLOCK2_50
+set_location_assignment PIN_M7 -to pb2
 set_location_assignment PIN_E10 -to CLOCK3_50
 set_location_assignment PIN_V15 -to CLOCK4_50
 set_location_assignment PIN_M9 -to CLOCK_50
@@ -206,8 +205,6 @@ set_location_assignment PIN_C1 -to HEX5[4]
 set_location_assignment PIN_C2 -to HEX5[5]
 set_location_assignment PIN_W19 -to HEX5[6]
 set_location_assignment PIN_U7 -to KEY[0]
-set_location_assignment PIN_W9 -to KEY[1]
-set_location_assignment PIN_M7 -to KEY[2]
 set_location_assignment PIN_M6 -to KEY[3]
 set_location_assignment PIN_AA2 -to LEDR[0]
 set_location_assignment PIN_AA1 -to LEDR[1]
@@ -268,6 +265,7 @@ set_location_assignment PIN_J8 -to VGA_G[3]
 set_location_assignment PIN_H8 -to VGA_HS
 set_location_assignment PIN_A5 -to VGA_R[3]
 set_location_assignment PIN_G8 -to VGA_VS
+set_global_assignment -name VHDL_FILE bird_rom.vhd
 set_global_assignment -name VHDL_FILE display_lives.vhd
 set_global_assignment -name VHDL_FILE minute_counter.vhd
 set_global_assignment -name VHDL_FILE BCD_to_7Seg.vhd
