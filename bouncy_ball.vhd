@@ -10,7 +10,7 @@ ENTITY bouncy_ball IS
           pixel_row, pixel_column   : IN std_logic_vector(9 DOWNTO 0);
             font_row, font_col        : IN STD_LOGIC_VECTOR(2 downto 0);
           red, green, blue          : OUT std_logic;
-			 cur_point                 : OUT std_logic;
+			 cur_point                 : OUT integer;
           left_button : IN std_logic);      
 END bouncy_ball;
 
@@ -30,7 +30,11 @@ SIGNAL size                                 : std_logic_vector(9 DOWNTO 0);
 SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10);
 SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(220, 11);
 SIGNAL ball_y_motion                        : std_logic_vector(9 DOWNTO 0);
-SIGNAL point : std_logic := '0';
+SIGNAL point : integer := 0;
+
+-- Flags for tracking score increment
+TYPE pipe_score_flag_array IS ARRAY (0 TO 5) OF BOOLEAN;
+SIGNAL pipe_score_flag       : pipe_score_flag_array := (others => FALSE);
 
 -- Portmap output instances
 SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6   : std_logic;
@@ -111,7 +115,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
             
 Red <=  (ball_on);
 Green <= ((ball_on or not ball_on) and not sw1) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
-Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not sw1 and not point;
+Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not sw1;
 
 
 Move_Ball: process (vert_sync)
@@ -121,6 +125,11 @@ begin
 
             -- Move ball once every vertical sync
         if (rising_edge(vert_sync) and start_flag = '1') then
+		  
+		  
+		  
+		  
+		  
 		  -- The for loop for detecting collision
         -- To collide it has to satisfy:
         --  - (Bird y position + size >= upper pipe y edge) OR (Bird y position - size <= lower pipe y edge)
@@ -131,9 +140,15 @@ begin
 					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15) then
 							ball_destroyed <= '1';
                end if;
-					if(ball_x_pos = x_pos(i) + 15) then 
-						point <= '1';
-					end if;
+					
+                -- Check if the left side of the ball has passed through the right edge of the pipe
+                if ball_x_pos - size <= x_pos(i) + 15 and ball_x_pos + ball_y_motion > x_pos(i) + 15 then
+                   if not pipe_score_flag(i) then
+                        point <= point + 1; -- Increment point
+                        pipe_score_flag(i) <= true; -- Set flag to true
+                    end if;
+                end if;
+					 
             end loop;
 				
             -- Check if the left button is clicked
@@ -146,9 +161,8 @@ begin
             if (move_up_flag = '1' and ball_destroyed = '0') then
                 move_up_counter := move_up_counter + 1; -- Increment the counter
                 ball_y_motion <= - CONV_STD_LOGIC_VECTOR(5, 10); -- Move upwards
-                -- Check if the left side of the ball has passed through the right edge of the pipe
-                if ball_x_pos - size <= x_pos(i) + 15 and ball_x_pos + ball_y_motion > x_pos(i) + 15 then
-                    point <= point + 1; -- Increment point
+					 if (move_up_counter >= 15) then
+                    move_up_flag := '0'; -- Reset the flag
                 end if;
             else
                 -- Reach bottom of screen and destroy or keep falling
@@ -166,6 +180,12 @@ begin
                 else
                         ball_y_pos <= ball_y_pos + ball_y_motion;
                 end if;
+					 
+					-- Reset pipe_score_flag array after each scoring cycle
+					if (move_up_flag = '0') then
+						pipe_score_flag <= (others => FALSE);
+					end if;
+					 
 
         end if;
 		  

@@ -9,7 +9,8 @@ ENTITY display_text IS
 		pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 		font_row, font_col	:	IN STD_LOGIC_VECTOR (2 DOWNTO 0);
 		clock,vert_sync      : IN STD_LOGIC;
-		output_char       	: OUT STD_LOGIC
+		output_char       	: OUT STD_LOGIC;
+		cur_point            : IN integer
 	);
 END display_text;
 
@@ -46,7 +47,7 @@ character_address(2) <= CONV_STD_LOGIC_VECTOR(15, 6); -- O
 character_address(3) <= CONV_STD_LOGIC_VECTOR(18, 6); -- R
 character_address(4) <= CONV_STD_LOGIC_VECTOR(5, 6); -- E
 character_address(5) <= CONV_STD_LOGIC_VECTOR(48, 6); -- 0
-character_address(6) <= CONV_STD_LOGIC_VECTOR(48, 6); -- 0
+character_address(6) <= CONV_STD_LOGIC_VECTOR(48+cur_point, 6); -- 0
 
 start_x_pos(0) <= CONV_STD_LOGIC_VECTOR(16, 11);
 start_x_pos(1) <= CONV_STD_LOGIC_VECTOR(32, 11);
