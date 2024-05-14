@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bouncy_ball
-Tue May 14 12:19:52 2024
+Tue May 14 16:15:31 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -96,16 +96,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 14 12:19:52 2024           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 14 16:15:31 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 195                                             ;
+; Total registers                 ; 196                                             ;
 ; Total pins                      ; 19                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 832                                             ;
+; Total block memory bits         ; 768                                             ;
 ; Total DSP Blocks                ; 6                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -221,39 +221,39 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
-; bird_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd           ;         ;
-; display_lives.vhd                ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd      ;         ;
-; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd        ;         ;
-; pipe.vhd                         ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd               ;         ;
-; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File      ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/Block1.bdf             ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd           ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd              ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd           ;         ;
-; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL/PLL_0002.v         ; PLL     ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd        ;         ;
-; pll2.vhd                         ; yes             ; User Wizard-Generated File             ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd               ; pll2    ;
-; pll2/pll2_0002.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v       ; pll2    ;
-; display_text.vhd                 ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd       ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/tcgrom.mif             ;         ;
-; db/altsyncram_hvf1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf ;         ;
-; Bird.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/Bird.mif               ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                  ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------+---------+
+; bird_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird_rom.vhd           ;         ;
+; display_lives.vhd                ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_lives.vhd      ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/BCD_to_7Seg.vhd        ;         ;
+; pipe.vhd                         ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pipe.vhd               ;         ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File      ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/Block1.bdf             ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/vga_sync.vhd           ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd              ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/char_rom.vhd           ;         ;
+; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/PLL/PLL_0002.v         ; PLL     ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd        ;         ;
+; pll2.vhd                         ; yes             ; User Wizard-Generated File             ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2.vhd               ; pll2    ;
+; pll2/pll2_0002.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2/pll2_0002.v       ; pll2    ;
+; display_text.vhd                 ; yes             ; User VHDL File                         ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_text.vhd       ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                                ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                              ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                 ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                              ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                              ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                               ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                  ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                  ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/tcgrom.mif             ;         ;
+; db/altsyncram_hvf1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf ;         ;
+; bird.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird.mif               ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -261,20 +261,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 378                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 454                                                                  ;
 ;                                             ;                                                                      ;
-; Combinational ALUT usage for logic          ; 606                                                                  ;
-;     -- 7 input functions                    ; 1                                                                    ;
-;     -- 6 input functions                    ; 142                                                                  ;
-;     -- 5 input functions                    ; 46                                                                   ;
-;     -- 4 input functions                    ; 60                                                                   ;
-;     -- <=3 input functions                  ; 357                                                                  ;
+; Combinational ALUT usage for logic          ; 729                                                                  ;
+;     -- 7 input functions                    ; 3                                                                    ;
+;     -- 6 input functions                    ; 170                                                                  ;
+;     -- 5 input functions                    ; 65                                                                   ;
+;     -- 4 input functions                    ; 59                                                                   ;
+;     -- <=3 input functions                  ; 432                                                                  ;
 ;                                             ;                                                                      ;
-; Dedicated logic registers                   ; 195                                                                  ;
+; Dedicated logic registers                   ; 196                                                                  ;
 ;                                             ;                                                                      ;
 ; I/O pins                                    ; 19                                                                   ;
 ; Total MLAB memory bits                      ; 0                                                                    ;
-; Total block memory bits                     ; 832                                                                  ;
+; Total block memory bits                     ; 768                                                                  ;
 ;                                             ;                                                                      ;
 ; Total DSP Blocks                            ; 6                                                                    ;
 ;                                             ;                                                                      ;
@@ -282,8 +282,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                    ;
 ;                                             ;                                                                      ;
 ; Maximum fan-out node                        ; pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 183                                                                  ;
-; Total fan-out                               ; 3265                                                                 ;
+; Maximum fan-out                             ; 174                                                                  ;
+; Total fan-out                               ; 3659                                                                 ;
 ; Average fan-out                             ; 3.43                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------+
 
@@ -293,41 +293,38 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Block1                                      ; 606 (1)             ; 195 (0)                   ; 832               ; 6          ; 19   ; 0            ; |Block1                                                                                                   ; Block1          ; work         ;
+; |Block1                                      ; 729 (1)             ; 196 (0)                   ; 768               ; 6          ; 19   ; 0            ; |Block1                                                                                                   ; Block1          ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|BCD_to_SevenSeg:inst7                                                                             ; BCD_to_SevenSeg ; work         ;
 ;    |MOUSE:inst4|                             ; 83 (83)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                                                                       ; MOUSE           ; work         ;
-;    |VGA_SYNC:inst1|                          ; 42 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                                                                    ; VGA_SYNC        ; work         ;
-;    |bouncy_ball:inst6|                       ; 423 (141)           ; 57 (47)                   ; 64                ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst6                                                                                 ; bouncy_ball     ; work         ;
-;       |bird_rom:bird1|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|bird_rom:bird1                                                                  ; bird_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component                                  ; altsyncram      ; work         ;
-;             |altsyncram_hvf1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated   ; altsyncram_hvf1 ; work         ;
+;    |VGA_SYNC:inst1|                          ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                                                                    ; VGA_SYNC        ; work         ;
+;    |bouncy_ball:inst6|                       ; 554 (277)           ; 58 (48)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst6                                                                                 ; bouncy_ball     ; work         ;
 ;       |pipe:pipe1|                           ; 58 (58)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe1                                                                      ; pipe            ; work         ;
-;       |pipe:pipe2|                           ; 58 (58)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe2                                                                      ; pipe            ; work         ;
-;       |pipe:pipe3|                           ; 42 (42)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe3                                                                      ; pipe            ; work         ;
+;       |pipe:pipe2|                           ; 54 (54)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe2                                                                      ; pipe            ; work         ;
+;       |pipe:pipe3|                           ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe3                                                                      ; pipe            ; work         ;
 ;       |pipe:pipe4|                           ; 45 (45)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe4                                                                      ; pipe            ; work         ;
-;       |pipe:pipe5|                           ; 40 (40)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe5                                                                      ; pipe            ; work         ;
-;       |pipe:pipe6|                           ; 37 (37)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe6                                                                      ; pipe            ; work         ;
-;    |display_lives:inst8|                     ; 23 (12)             ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8                                                                               ; display_lives   ; work         ;
+;       |pipe:pipe5|                           ; 38 (38)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe5                                                                      ; pipe            ; work         ;
+;       |pipe:pipe6|                           ; 39 (39)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst6|pipe:pipe6                                                                      ; pipe            ; work         ;
+;    |display_lives:inst8|                     ; 19 (5)              ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8                                                                               ; display_lives   ; work         ;
 ;       |char_rom:char1|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1                                                                ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
 ;       |char_rom:char2|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2                                                                ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char3|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3                                                                ; char_rom        ; work         ;
+;       |char_rom:char3|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3                                                                ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char4|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4                                                                ; char_rom        ; work         ;
+;       |char_rom:char4|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4                                                                ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char5|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5                                                                ; char_rom        ; work         ;
+;       |char_rom:char5|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5                                                                ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;    |display_text:inst9|                      ; 27 (13)             ; 0 (0)                     ; 448               ; 0          ; 0    ; 0            ; |Block1|display_text:inst9                                                                                ; display_text    ; work         ;
+;    |display_text:inst9|                      ; 20 (5)              ; 0 (0)                     ; 448               ; 0          ; 0    ; 0            ; |Block1|display_text:inst9                                                                                ; display_text    ; work         ;
 ;       |char_rom:char1|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1                                                                 ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char2|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2                                                                 ; char_rom        ; work         ;
+;       |char_rom:char2|                       ; 4 (4)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2                                                                 ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
 ;       |char_rom:char3|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3                                                                 ; char_rom        ; work         ;
@@ -339,7 +336,7 @@ refer to the applicable agreement for further details.
 ;       |char_rom:char5|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5                                                                 ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char6|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6                                                                 ; char_rom        ; work         ;
+;       |char_rom:char6|                       ; 1 (1)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6                                                                 ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
 ;       |char_rom:char7|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7                                                                 ; char_rom        ; work         ;
@@ -357,7 +354,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
 ; Name                                                                                                         ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF        ;
 +--------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------+
-; bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|ALTSYNCRAM   ; AUTO ; ROM  ; 512          ; 16           ; --           ; --           ; 8192 ; Bird.mif   ;
 ; display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
 ; display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
 ; display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 512          ; 8            ; --           ; --           ; 4096 ; tcgrom.mif ;
@@ -414,7 +410,6 @@ Encoding Type:  One-Hot
 +--------------------------------------------------+-------------------------------------------------------------+
 ; Register name                                    ; Reason for Removal                                          ;
 +--------------------------------------------------+-------------------------------------------------------------+
-; bouncy_ball:inst6|ball_destroyed                 ; Stuck at GND due to stuck port data_in                      ;
 ; bouncy_ball:inst6|pipe:pipe6|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
 ; bouncy_ball:inst6|pipe:pipe6|pipe_x_motion[0]    ; Stuck at GND due to stuck port data_in                      ;
 ; bouncy_ball:inst6|pipe:pipe5|pipe_x_motion[1..9] ; Stuck at VCC due to stuck port data_in                      ;
@@ -491,7 +486,7 @@ Encoding Type:  One-Hot
 ; bouncy_ball:inst6|pipe:pipe1|pipe_le_x_edge[0]   ; Stuck at GND due to stuck port data_in                      ;
 ; MOUSE:inst4|cursor_row[9]                        ; Stuck at GND due to stuck port data_in                      ;
 ; VGA_SYNC:inst1|pixel_row[9]                      ; Stuck at GND due to stuck port data_in                      ;
-; Total Number of Removed Registers = 136          ;                                                             ;
+; Total Number of Removed Registers = 135          ;                                                             ;
 +--------------------------------------------------+-------------------------------------------------------------+
 
 
@@ -500,12 +495,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 195   ;
+; Total registers                              ; 196   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 42    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 156   ;
+; Number of registers using Clock Enable       ; 158   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -515,10 +510,10 @@ Encoding Type:  One-Hot
 +------------------------------------------------+---------+
 ; Inverted Register                              ; Fan out ;
 +------------------------------------------------+---------+
-; bouncy_ball:inst6|ball_y_pos[7]                ; 4       ;
-; bouncy_ball:inst6|ball_y_pos[6]                ; 4       ;
-; bouncy_ball:inst6|ball_y_pos[5]                ; 5       ;
-; bouncy_ball:inst6|ball_y_pos[4]                ; 4       ;
+; bouncy_ball:inst6|ball_y_pos[7]                ; 5       ;
+; bouncy_ball:inst6|ball_y_pos[4]                ; 5       ;
+; bouncy_ball:inst6|ball_y_pos[6]                ; 6       ;
+; bouncy_ball:inst6|ball_y_pos[5]                ; 6       ;
 ; bouncy_ball:inst6|pipe:pipe1|pipe_le_x_edge[9] ; 7       ;
 ; bouncy_ball:inst6|pipe:pipe1|pipe_le_x_edge[7] ; 7       ;
 ; MOUSE:inst4|send_char                          ; 3       ;
@@ -536,13 +531,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Block1|MOUSE:inst4|new_cursor_row[0]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Block1|VGA_SYNC:inst1|v_count[7]               ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[8]               ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[4]               ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Block1|MOUSE:inst4|new_cursor_row[2]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Block1|VGA_SYNC:inst1|v_count[9]               ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[3]               ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[5]               ;
 ; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Block1|display_text:inst9|char_rom:char7|Mux0  ;
-; 8:1                ; 6 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |Block1|display_lives:inst8|char_rom:char5|Mux0 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Block1|BCD_to_SevenSeg:inst7|SevenSeg_out[0]   ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |Block1|display_lives:inst8|char_rom:char5|Mux0 ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Block1|BCD_to_SevenSeg:inst7|SevenSeg_out[5]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -1855,94 +1850,77 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe6"                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_num[31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pipe_num[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; pipe_num[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pipe_num[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; top_y_pos       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bottom_y_pos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; left_x_pos      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe6" ;
++-----------------+-------+----------+---------------------+
+; Port            ; Type  ; Severity ; Details             ;
++-----------------+-------+----------+---------------------+
+; pipe_num[31..3] ; Input ; Info     ; Stuck at GND        ;
+; pipe_num[2]     ; Input ; Info     ; Stuck at VCC        ;
+; pipe_num[1]     ; Input ; Info     ; Stuck at GND        ;
+; pipe_num[0]     ; Input ; Info     ; Stuck at VCC        ;
++-----------------+-------+----------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe5"                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_num[31..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pipe_num[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pipe_num[2]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; top_y_pos       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bottom_y_pos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; left_x_pos      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe5" ;
++-----------------+-------+----------+---------------------+
+; Port            ; Type  ; Severity ; Details             ;
++-----------------+-------+----------+---------------------+
+; pipe_num[31..3] ; Input ; Info     ; Stuck at GND        ;
+; pipe_num[1..0]  ; Input ; Info     ; Stuck at GND        ;
+; pipe_num[2]     ; Input ; Info     ; Stuck at VCC        ;
++-----------------+-------+----------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe4"                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_num[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; pipe_num[31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; top_y_pos       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bottom_y_pos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; left_x_pos      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe4" ;
++-----------------+-------+----------+---------------------+
+; Port            ; Type  ; Severity ; Details             ;
++-----------------+-------+----------+---------------------+
+; pipe_num[1..0]  ; Input ; Info     ; Stuck at VCC        ;
+; pipe_num[31..2] ; Input ; Info     ; Stuck at GND        ;
++-----------------+-------+----------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe3"                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_num[31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pipe_num[1]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; pipe_num[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; top_y_pos       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bottom_y_pos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; left_x_pos      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe3" ;
++-----------------+-------+----------+---------------------+
+; Port            ; Type  ; Severity ; Details             ;
++-----------------+-------+----------+---------------------+
+; pipe_num[31..2] ; Input ; Info     ; Stuck at GND        ;
+; pipe_num[1]     ; Input ; Info     ; Stuck at VCC        ;
+; pipe_num[0]     ; Input ; Info     ; Stuck at GND        ;
++-----------------+-------+----------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe2"                                                                  ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_num[31..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pipe_num[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; top_y_pos       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bottom_y_pos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; left_x_pos      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe2" ;
++-----------------+-------+----------+---------------------+
+; Port            ; Type  ; Severity ; Details             ;
++-----------------+-------+----------+---------------------+
+; pipe_num[31..1] ; Input ; Info     ; Stuck at GND        ;
+; pipe_num[0]     ; Input ; Info     ; Stuck at VCC        ;
++-----------------+-------+----------+---------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe1"                                                               ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; pipe_num     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; top_y_pos    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; bottom_y_pos ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; left_x_pos   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|pipe:pipe1" ;
++----------+-------+----------+----------------------------+
+; Port     ; Type  ; Severity ; Details                    ;
++----------+-------+----------+----------------------------+
+; pipe_num ; Input ; Info     ; Stuck at GND               ;
++----------+-------+----------+----------------------------+
 
 
-+--------------------------------------------------------------+
-; Port Connectivity Checks: "bouncy_ball:inst6|bird_rom:bird1" ;
-+--------------+-------+----------+----------------------------+
-; Port         ; Type  ; Severity ; Details                    ;
-+--------------+-------+----------+----------------------------+
-; bird_address ; Input ; Info     ; Stuck at GND               ;
-+--------------+-------+----------+----------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "bouncy_ball:inst6|bird_rom:bird1"                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; bird_address   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rom_mux_output ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -2086,40 +2064,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 195                         ;
+; arriav_ff             ; 196                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 89                          ;
+;     ENA               ; 91                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     ENA SLD           ; 42                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 28                          ;
+;     plain             ; 27                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 608                         ;
-;     arith             ; 239                         ;
+; arriav_lcell_comb     ; 731                         ;
+;     arith             ; 313                         ;
 ;         0 data inputs ; 8                           ;
-;         1 data inputs ; 126                         ;
-;         2 data inputs ; 105                         ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 358                         ;
+;         1 data inputs ; 201                         ;
+;         2 data inputs ; 104                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 405                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 60                          ;
-;         3 data inputs ; 35                          ;
-;         4 data inputs ; 60                          ;
-;         5 data inputs ; 46                          ;
-;         6 data inputs ; 142                         ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 59                          ;
+;         5 data inputs ; 65                          ;
+;         6 data inputs ; 170                         ;
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
 ; arriav_mac            ; 6                           ;
 ; boundary_port         ; 19                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 104                         ;
+; stratixv_ram_block    ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.60                        ;
-; Average LUT depth     ; 4.75                        ;
+; Average LUT depth     ; 4.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -2138,65 +2116,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 14 12:19:45 2024
+    Info: Processing started: Tue May 14 16:15:24 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305-Mini-Project -c bouncy_ball
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bird_rom.vhd
-    Info (12022): Found design unit 1: bird_rom-SYN File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 20
-    Info (12023): Found entity 1: bird_rom File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 9
+    Info (12022): Found design unit 1: bird_rom-SYN File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird_rom.vhd Line: 20
+    Info (12023): Found entity 1: bird_rom File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file display_lives.vhd
-    Info (12022): Found design unit 1: display_lives-display File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 18
-    Info (12023): Found entity 1: display_lives File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 6
+    Info (12022): Found design unit 1: display_lives-display File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_lives.vhd Line: 18
+    Info (12023): Found entity 1: display_lives File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_lives.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file minute_counter.vhd
-    Info (12022): Found design unit 1: minute_counter-rtl File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/minute_counter.vhd Line: 17
-    Info (12023): Found entity 1: minute_counter File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/minute_counter.vhd Line: 5
+    Info (12022): Found design unit 1: minute_counter-rtl File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/minute_counter.vhd Line: 17
+    Info (12023): Found entity 1: minute_counter File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/minute_counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd Line: 10
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd Line: 5
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/BCD_to_7Seg.vhd Line: 10
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/BCD_to_7Seg.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_counter.vhd
-    Info (12022): Found design unit 1: BCD_counter-rtl File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_Counter.vhd Line: 15
-    Info (12023): Found entity 1: BCD_counter File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_Counter.vhd Line: 5
+    Info (12022): Found design unit 1: BCD_counter-rtl File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/BCD_Counter.vhd Line: 15
+    Info (12023): Found entity 1: BCD_counter File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/BCD_Counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipe.vhd
-    Info (12022): Found design unit 1: pipe-pipe_gen File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 17
-    Info (12023): Found entity 1: pipe File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 7
+    Info (12022): Found design unit 1: pipe-pipe_gen File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pipe.vhd Line: 17
+    Info (12023): Found entity 1: pipe File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pipe.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file block1.bdf
     Info (12023): Found entity 1: Block1
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/ball.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: PLL File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL.v Line: 8
+    Info (12023): Found entity 1: PLL File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/PLL.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: PLL_0002 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL/PLL_0002.v Line: 2
+    Info (12023): Found entity 1: PLL_0002 File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/PLL/PLL_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 16
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 17
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file pll2.vhd
-    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 20
-    Info (12023): Found entity 1: pll2 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 11
+    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2.vhd Line: 20
+    Info (12023): Found entity 1: pll2 File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll2/pll2_0002.v
-    Info (12023): Found entity 1: pll2_0002 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 2
+    Info (12023): Found entity 1: pll2_0002 File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2/pll2_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file display_text.vhd
-    Info (12022): Found design unit 1: display_text-display File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 18
-    Info (12023): Found entity 1: display_text File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 6
+    Info (12022): Found design unit 1: display_text-display File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_text.vhd Line: 18
+    Info (12023): Found entity 1: display_text File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_text.vhd Line: 6
 Info (12127): Elaborating entity "Block1" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst"
-Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst|pll2_0002:pll2_inst" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
+Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst|pll2_0002:pll2_inst" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2/pll2_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2/pll2_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pll2/pll2_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2258,10 +2236,10 @@ Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pl
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "display_lives" for hierarchy "display_lives:inst8"
-Info (12128): Elaborating entity "char_rom" for hierarchy "display_lives:inst8|char_rom:char1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 62
-Info (12128): Elaborating entity "altsyncram" for hierarchy "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
+Info (12128): Elaborating entity "char_rom" for hierarchy "display_lives:inst8|char_rom:char1" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/display_lives.vhd Line: 62
+Info (12128): Elaborating entity "altsyncram" for hierarchy "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -2277,21 +2255,17 @@ Info (12133): Instantiated megafunction "display_lives:inst8|char_rom:char1|alts
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "display_text" for hierarchy "display_text:inst9"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst6"
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(21): object "y_pos_up" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(21): object "y_pos_down" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 21
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(22): object "x_pos" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(127): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(127): signal "game_paused" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(161): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 161
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(161): signal "game_paused" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 161
-Info (12128): Elaborating entity "bird_rom" for hierarchy "bouncy_ball:inst6|bird_rom:bird1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 84
-Info (12128): Elaborating entity "altsyncram" for hierarchy "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
+Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(26): object "ball_on1" assigned a value but never read File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 26
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(123): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 123
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(171): signal "point" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 171
+Info (12128): Elaborating entity "bird_rom" for hierarchy "bouncy_ball:inst6|bird_rom:bird1" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 80
+Info (12128): Elaborating entity "altsyncram" for hierarchy "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bird_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -2307,49 +2281,51 @@ Info (12133): Instantiated megafunction "bouncy_ball:inst6|bird_rom:bird1|altsyn
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hvf1.tdf
-    Info (12023): Found entity 1: altsyncram_hvf1 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_hvf1 File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_hvf1" for hierarchy "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Warning (113028): 496 out of 512 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/Bird.mif Line: 1
-    Warning (113027): Addresses ranging from 16 to 511 are not initialized File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/Bird.mif Line: 1
-Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst6|pipe:pipe1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 88
-Warning (10540): VHDL Signal Declaration warning at pipe.vhd(27): used explicit default value for signal "pipe_x_interval" because signal was never assigned a value File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at pipe.vhd(62): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 62
-Warning (10492): VHDL Process Statement warning at pipe.vhd(62): signal "pause_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 62
-Warning (10492): VHDL Process Statement warning at pipe.vhd(67): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 67
-Warning (10492): VHDL Process Statement warning at pipe.vhd(67): signal "pause_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 67
+Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst6|pipe:pipe1" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/bouncy_ball.vhd Line: 84
+Warning (10540): VHDL Signal Declaration warning at pipe.vhd(27): used explicit default value for signal "pipe_x_interval" because signal was never assigned a value File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pipe.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at pipe.vhd(62): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/pipe.vhd Line: 62
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst4"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 157
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 157
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst7"
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[8]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 202
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[9]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 223
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[10]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 244
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[11]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 265
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[12]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 286
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[13]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 307
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[14]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 328
-        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[15]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 349
-Info (13000): Registers with preset signals will power-up high File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 146
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[0]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 34
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[1]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 55
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[2]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 76
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[3]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 97
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[4]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 118
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[5]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 139
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[6]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 160
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[7]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 181
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[8]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 202
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[9]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 223
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[10]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 244
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[11]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 265
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[12]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 286
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[13]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 307
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[14]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 328
+        Warning (14320): Synthesized away node "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[15]" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_hvf1.tdf Line: 349
+Info (13000): Registers with preset signals will power-up high File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char7|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "bouncy_ball:inst6|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char7|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Downloads/305-Mini-Project-main/305-Mini-Project-main/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -2384,18 +2360,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 826 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 941 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 696 logic cells
-    Info (21064): Implemented 104 RAM segments
+    Info (21061): Implemented 819 logic cells
+    Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 61 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
     Info: Peak virtual memory: 4995 megabytes
-    Info: Processing ended: Tue May 14 12:19:52 2024
+    Info: Processing ended: Tue May 14 16:15:31 2024
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
