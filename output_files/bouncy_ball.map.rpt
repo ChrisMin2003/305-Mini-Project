@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bouncy_ball
-Tue May 14 16:51:14 2024
+Tue May 14 18:04:48 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -18,46 +18,46 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  10. Analysis & Synthesis IP Cores Summary
  11. State Machine - |Block1|MOUSE:inst4|mouse_state
  12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 18. Source assignments for display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 19. Source assignments for display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 20. Source assignments for display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 21. Source assignments for display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 22. Source assignments for display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 23. Source assignments for display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 24. Source assignments for display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 25. Source assignments for display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 26. Source assignments for display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 27. Source assignments for display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 28. Source assignments for display_text:inst9|char_rom:char7|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
- 29. Source assignments for bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated
- 30. Parameter Settings for User Entity Instance: pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i
- 31. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component
- 32. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component
- 33. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component
- 34. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component
- 35. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component
- 36. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char1|altsyncram:altsyncram_component
- 37. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char2|altsyncram:altsyncram_component
- 38. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char3|altsyncram:altsyncram_component
- 39. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char4|altsyncram:altsyncram_component
- 40. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char5|altsyncram:altsyncram_component
- 41. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char6|altsyncram:altsyncram_component
- 42. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char7|altsyncram:altsyncram_component
- 43. Parameter Settings for User Entity Instance: bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component
- 44. altsyncram Parameter Settings by Entity Instance
- 45. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6"
- 46. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe5"
- 47. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe4"
- 48. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe3"
- 49. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe2"
- 50. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe1"
- 51. Port Connectivity Checks: "bouncy_ball:inst2|bird_rom:bird1"
- 52. Port Connectivity Checks: "display_text:inst9|char_rom:char6"
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 17. Source assignments for display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 18. Source assignments for display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 19. Source assignments for display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 20. Source assignments for display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 21. Source assignments for display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 22. Source assignments for display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 23. Source assignments for display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 24. Source assignments for display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 25. Source assignments for display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 26. Source assignments for display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 27. Source assignments for display_text:inst9|char_rom:char7|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated
+ 28. Source assignments for bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated
+ 29. Parameter Settings for User Entity Instance: pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i
+ 30. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component
+ 31. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component
+ 32. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component
+ 33. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component
+ 34. Parameter Settings for User Entity Instance: display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component
+ 35. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char1|altsyncram:altsyncram_component
+ 36. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char2|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char3|altsyncram:altsyncram_component
+ 38. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char4|altsyncram:altsyncram_component
+ 39. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char5|altsyncram:altsyncram_component
+ 40. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char6|altsyncram:altsyncram_component
+ 41. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char7|altsyncram:altsyncram_component
+ 42. Parameter Settings for User Entity Instance: bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component
+ 43. Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Mod0
+ 44. Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Div0
+ 45. altsyncram Parameter Settings by Entity Instance
+ 46. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6"
+ 47. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe5"
+ 48. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe4"
+ 49. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe3"
+ 50. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe2"
+ 51. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe1"
+ 52. Port Connectivity Checks: "bouncy_ball:inst2|bird_rom:bird1"
  53. Port Connectivity Checks: "display_text:inst9|char_rom:char5"
  54. Port Connectivity Checks: "display_text:inst9|char_rom:char4"
  55. Port Connectivity Checks: "display_text:inst9|char_rom:char3"
@@ -96,16 +96,16 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 14 16:51:14 2024           ;
+; Analysis & Synthesis Status     ; Successful - Tue May 14 18:04:48 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 207                                             ;
+; Total registers                 ; 233                                             ;
 ; Total pins                      ; 19                                              ;
 ; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 4,800                                           ;
+; Total block memory bits         ; 8,832                                           ;
 ; Total DSP Blocks                ; 6                                               ;
 ; Total HSSI RX PCSs              ; 0                                               ;
 ; Total HSSI PMA RX Deserializers ; 0                                               ;
@@ -220,7 +220,10 @@ refer to the applicable agreement for further details.
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processors 6-16        ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -256,6 +259,17 @@ refer to the applicable agreement for further details.
 ; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/tcgrom.mif             ;         ;
 ; db/altsyncram_hvf1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf ;         ;
 ; bird.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird.mif               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; db/lpm_divide_uio.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_uio.tdf  ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_4dg.tdf ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_o2f.tdf   ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_4p9.tdf     ;         ;
+; db/lpm_divide_bpo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_bpo.tdf  ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_kbg.tdf ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_ove.tdf   ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_kn9.tdf     ;         ;
 +----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
 
 
@@ -264,20 +278,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 480                                                                  ;
+; Estimate of Logic utilization (ALMs needed) ; 1379                                                                 ;
 ;                                             ;                                                                      ;
-; Combinational ALUT usage for logic          ; 759                                                                  ;
+; Combinational ALUT usage for logic          ; 2595                                                                 ;
 ;     -- 7 input functions                    ; 3                                                                    ;
-;     -- 6 input functions                    ; 191                                                                  ;
-;     -- 5 input functions                    ; 59                                                                   ;
-;     -- 4 input functions                    ; 62                                                                   ;
-;     -- <=3 input functions                  ; 444                                                                  ;
+;     -- 6 input functions                    ; 153                                                                  ;
+;     -- 5 input functions                    ; 80                                                                   ;
+;     -- 4 input functions                    ; 623                                                                  ;
+;     -- <=3 input functions                  ; 1736                                                                 ;
 ;                                             ;                                                                      ;
-; Dedicated logic registers                   ; 207                                                                  ;
+; Dedicated logic registers                   ; 233                                                                  ;
 ;                                             ;                                                                      ;
 ; I/O pins                                    ; 19                                                                   ;
 ; Total MLAB memory bits                      ; 0                                                                    ;
-; Total block memory bits                     ; 4800                                                                 ;
+; Total block memory bits                     ; 8832                                                                 ;
 ;                                             ;                                                                      ;
 ; Total DSP Blocks                            ; 6                                                                    ;
 ;                                             ;                                                                      ;
@@ -286,69 +300,79 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                      ;
 ; Maximum fan-out node                        ; pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 174                                                                  ;
-; Total fan-out                               ; 3873                                                                 ;
-; Average fan-out                             ; 3.49                                                                 ;
+; Total fan-out                               ; 9605                                                                 ;
+; Average fan-out                             ; 3.23                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name     ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Block1                                      ; 759 (1)             ; 207 (0)                   ; 4800              ; 6          ; 19   ; 0            ; |Block1                                                                                                   ; Block1          ; work         ;
-;    |BCD_to_SevenSeg:inst7|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|BCD_to_SevenSeg:inst7                                                                             ; BCD_to_SevenSeg ; work         ;
-;    |MOUSE:inst4|                             ; 83 (83)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                                                                       ; MOUSE           ; work         ;
-;    |VGA_SYNC:inst1|                          ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                                                                    ; VGA_SYNC        ; work         ;
-;    |bouncy_ball:inst2|                       ; 583 (308)           ; 69 (59)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                                                                 ; bouncy_ball     ; work         ;
-;       |pipe:pipe1|                           ; 61 (61)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                                                                      ; pipe            ; work         ;
-;       |pipe:pipe2|                           ; 53 (53)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                                                                      ; pipe            ; work         ;
-;       |pipe:pipe3|                           ; 41 (41)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                                                                      ; pipe            ; work         ;
-;       |pipe:pipe4|                           ; 43 (43)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                                                                      ; pipe            ; work         ;
-;       |pipe:pipe5|                           ; 38 (38)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                                                                      ; pipe            ; work         ;
-;       |pipe:pipe6|                           ; 39 (39)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe6                                                                      ; pipe            ; work         ;
-;    |display_lives:inst8|                     ; 19 (5)              ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8                                                                               ; display_lives   ; work         ;
-;       |char_rom:char1|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1                                                                ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char2|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2                                                                ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char3|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3                                                                ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char4|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4                                                                ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char5|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5                                                                ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
-;    |display_text:inst9|                      ; 21 (6)              ; 0 (0)                     ; 4480              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9                                                                                ; display_text    ; work         ;
-;       |char_rom:char1|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char2|                       ; 4 (4)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char3|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char4|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char4                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char4|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char5|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char6|                       ; 1 (1)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;       |char_rom:char7|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7                                                                 ; char_rom        ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7|altsyncram:altsyncram_component                                 ; altsyncram      ; work         ;
-;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated  ; altsyncram_d5g1 ; work         ;
-;    |pll2:inst|                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst                                                                                         ; pll2            ; pll2         ;
-;       |pll2_0002:pll2_inst|                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst                                                                     ; pll2_0002       ; pll2         ;
-;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                             ; altera_pll      ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                              ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |Block1                                      ; 2595 (1)            ; 233 (0)                   ; 8832              ; 6          ; 19   ; 0            ; |Block1                                                                                                                 ; Block1          ; work         ;
+;    |BCD_to_SevenSeg:inst7|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|BCD_to_SevenSeg:inst7                                                                                           ; BCD_to_SevenSeg ; work         ;
+;    |MOUSE:inst4|                             ; 83 (83)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                                                                                     ; MOUSE           ; work         ;
+;    |VGA_SYNC:inst1|                          ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                                                                                  ; VGA_SYNC        ; work         ;
+;    |bouncy_ball:inst2|                       ; 565 (331)           ; 95 (85)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                                                                               ; bouncy_ball     ; work         ;
+;       |pipe:pipe1|                           ; 49 (49)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe2|                           ; 45 (45)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe3|                           ; 34 (34)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe4|                           ; 35 (35)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe5|                           ; 35 (35)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe6|                           ; 36 (36)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe6                                                                                    ; pipe            ; work         ;
+;    |display_lives:inst8|                     ; 19 (5)              ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8                                                                                             ; display_lives   ; work         ;
+;       |char_rom:char1|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1                                                                              ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component                                              ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char2|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2                                                                              ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component                                              ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char3|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3                                                                              ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component                                              ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char4|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4                                                                              ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component                                              ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char5|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5                                                                              ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component                                              ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1 ; work         ;
+;    |display_text:inst9|                      ; 1875 (55)           ; 0 (0)                     ; 8512              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9                                                                                              ; display_text    ; work         ;
+;       |char_rom:char1|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char2|                       ; 4 (4)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char3|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char4|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char4                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char4|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char5|                       ; 2 (2)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char6|                       ; 1 (1)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |char_rom:char7|                       ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7                                                                               ; char_rom        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7|altsyncram:altsyncram_component                                               ; altsyncram      ; work         ;
+;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|char_rom:char7|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated                ; altsyncram_d5g1 ; work         ;
+;       |lpm_divide:Div0|                      ; 462 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Div0                                                                              ; lpm_divide      ; work         ;
+;          |lpm_divide_bpo:auto_generated|     ; 462 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Div0|lpm_divide_bpo:auto_generated                                                ; lpm_divide_bpo  ; work         ;
+;             |abs_divider_kbg:divider|        ; 462 (11)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider                        ; abs_divider_kbg ; work         ;
+;                |alt_u_div_ove:divider|       ; 419 (419)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|alt_u_div_ove:divider  ; alt_u_div_ove   ; work         ;
+;                |lpm_abs_4p9:my_abs_num|      ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Div0|lpm_divide_bpo:auto_generated|abs_divider_kbg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
+;       |lpm_divide:Mod0|                      ; 1343 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Mod0                                                                              ; lpm_divide      ; work         ;
+;          |lpm_divide_uio:auto_generated|     ; 1343 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                ; lpm_divide_uio  ; work         ;
+;             |abs_divider_4dg:divider|        ; 1343 (13)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                        ; abs_divider_4dg ; work         ;
+;                |alt_u_div_o2f:divider|       ; 1298 (1298)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider  ; alt_u_div_o2f   ; work         ;
+;                |lpm_abs_4p9:my_abs_num|      ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|display_text:inst9|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num ; lpm_abs_4p9     ; work         ;
+;    |pll2:inst|                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst                                                                                                       ; pll2            ; pll2         ;
+;       |pll2_0002:pll2_inst|                  ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst                                                                                   ; pll2_0002       ; pll2         ;
+;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i                                                           ; altera_pll      ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -489,29 +513,8 @@ Encoding Type:  One-Hot
 ; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[0]   ; Stuck at GND due to stuck port data_in                      ;
 ; MOUSE:inst4|cursor_row[9]                        ; Stuck at GND due to stuck port data_in                      ;
 ; VGA_SYNC:inst1|pixel_row[9]                      ; Stuck at GND due to stuck port data_in                      ;
-; bouncy_ball:inst2|point[6..31]                   ; Lost fanout                                                 ;
-; Total Number of Removed Registers = 161          ;                                                             ;
+; Total Number of Removed Registers = 135          ;                                                             ;
 +--------------------------------------------------+-------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                        ;
-+------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
-; Register name                                  ; Reason for Removal        ; Registers Removed due to This Register                                                ;
-+------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[0] ; Stuck at GND              ; bouncy_ball:inst2|point[31], bouncy_ball:inst2|point[30],                             ;
-;                                                ; due to stuck port data_in ; bouncy_ball:inst2|point[29], bouncy_ball:inst2|point[28],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[27], bouncy_ball:inst2|point[26],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[25], bouncy_ball:inst2|point[24],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[23], bouncy_ball:inst2|point[22],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[21], bouncy_ball:inst2|point[20],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[19], bouncy_ball:inst2|point[18],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[17], bouncy_ball:inst2|point[16],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[15], bouncy_ball:inst2|point[14],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[13], bouncy_ball:inst2|point[12],                             ;
-;                                                ;                           ; bouncy_ball:inst2|point[11], bouncy_ball:inst2|point[10], bouncy_ball:inst2|point[9], ;
-;                                                ;                           ; bouncy_ball:inst2|point[8], bouncy_ball:inst2|point[7], bouncy_ball:inst2|point[6]    ;
-+------------------------------------------------+---------------------------+---------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -519,12 +522,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 207   ;
+; Total registers                              ; 233   ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 42    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 169   ;
+; Number of registers using Clock Enable       ; 195   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -535,11 +538,11 @@ Encoding Type:  One-Hot
 ; Inverted Register                              ; Fan out ;
 +------------------------------------------------+---------+
 ; bouncy_ball:inst2|ball_y_pos[7]                ; 5       ;
+; bouncy_ball:inst2|ball_y_pos[6]                ; 5       ;
+; bouncy_ball:inst2|ball_y_pos[5]                ; 7       ;
 ; bouncy_ball:inst2|ball_y_pos[4]                ; 5       ;
-; bouncy_ball:inst2|ball_y_pos[6]                ; 6       ;
-; bouncy_ball:inst2|ball_y_pos[5]                ; 6       ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9] ; 7       ;
 ; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7] ; 7       ;
+; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9] ; 7       ;
 ; MOUSE:inst4|send_char                          ; 3       ;
 ; MOUSE:inst4|SHIFTOUT[3]                        ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[5]                        ; 1       ;
@@ -555,12 +558,12 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Block1|MOUSE:inst4|new_cursor_row[1]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Block1|VGA_SYNC:inst1|v_count[9]               ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[9]               ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[7]               ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |Block1|bouncy_ball:inst2|point[2]              ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Block1|display_text:inst9|char_rom:char6|Mux0  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Block1|MOUSE:inst4|new_cursor_row[5]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Block1|VGA_SYNC:inst1|v_count[7]               ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[0]               ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[6]               ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |Block1|bouncy_ball:inst2|point[28]             ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Block1|display_text:inst9|char_rom:char7|Mux0  ;
 ; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |Block1|display_lives:inst8|char_rom:char5|Mux0 ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Block1|BCD_to_SevenSeg:inst7|SevenSeg_out[0]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
@@ -1723,6 +1726,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 32             ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_uio ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------+
+; Parameter Name         ; Value          ; Type                                      ;
++------------------------+----------------+-------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                   ;
+; LPM_WIDTHD             ; 5              ; Untyped                                   ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                   ;
+; LPM_PIPELINE           ; 0              ; Untyped                                   ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                   ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                   ;
+; CBXI_PARAMETER         ; lpm_divide_bpo ; Untyped                                   ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                   ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                   ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                              ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                            ;
++------------------------+----------------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                               ;
 +-------------------------------------------+--------------------------------------------------------------------+
@@ -1949,16 +1998,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------------------+
-; Port Connectivity Checks: "display_text:inst9|char_rom:char6" ;
-+-------------------------+-------+----------+------------------+
-; Port                    ; Type  ; Severity ; Details          ;
-+-------------------------+-------+----------+------------------+
-; character_address[5..4] ; Input ; Info     ; Stuck at VCC     ;
-; character_address[3..0] ; Input ; Info     ; Stuck at GND     ;
-+-------------------------+-------+----------+------------------+
-
-
-+---------------------------------------------------------------+
 ; Port Connectivity Checks: "display_text:inst9|char_rom:char5" ;
 +-------------------------+-------+----------+------------------+
 ; Port                    ; Type  ; Severity ; Details          ;
@@ -2079,40 +2118,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 207                         ;
+; arriav_ff             ; 233                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 102                         ;
+;     ENA               ; 128                         ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     ENA SLD           ; 42                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 27                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 761                         ;
-;     arith             ; 319                         ;
-;         0 data inputs ; 8                           ;
-;         1 data inputs ; 207                         ;
-;         2 data inputs ; 104                         ;
+; arriav_lcell_comb     ; 2597                        ;
+;     arith             ; 1250                        ;
+;         0 data inputs ; 123                         ;
+;         1 data inputs ; 295                         ;
+;         2 data inputs ; 201                         ;
+;         3 data inputs ; 297                         ;
+;         4 data inputs ; 334                         ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 429                         ;
+;     normal            ; 1324                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
-;         2 data inputs ; 64                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 62                          ;
-;         5 data inputs ; 59                          ;
-;         6 data inputs ; 191                         ;
-;     shared            ; 10                          ;
-;         1 data inputs ; 1                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 695                         ;
+;         3 data inputs ; 96                          ;
+;         4 data inputs ; 289                         ;
+;         5 data inputs ; 80                          ;
+;         6 data inputs ; 153                         ;
+;     shared            ; 20                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 9                           ;
 ;         2 data inputs ; 9                           ;
 ; arriav_mac            ; 6                           ;
 ; boundary_port         ; 19                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 96                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.60                        ;
-; Average LUT depth     ; 4.87                        ;
+; Max LUT depth         ; 86.60                       ;
+; Average LUT depth     ; 48.24                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2121,7 +2163,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -2131,7 +2173,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 14 16:51:07 2024
+    Info: Processing started: Tue May 14 18:04:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305-Mini-Project -c bouncy_ball
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -2278,7 +2320,7 @@ Info (12128): Elaborating entity "display_text" for hierarchy "display_text:inst
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst2"
 Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(26): object "ball_on1" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 26
 Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(127): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(192): signal "point" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 192
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(183): signal "point" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 183
 Info (12128): Elaborating entity "bird_rom" for hierarchy "bouncy_ball:inst2|bird_rom:bird1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 84
 Info (12128): Elaborating entity "altsyncram" for hierarchy "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
 Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
@@ -2328,10 +2370,42 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[13]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 307
         Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[14]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 328
         Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[15]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 349
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_text:inst9|Mod0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_text:inst9|Div0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
+Info (12130): Elaborated megafunction instantiation "display_text:inst9|lpm_divide:Mod0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+Info (12133): Instantiated megafunction "display_text:inst9|lpm_divide:Mod0" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_uio.tdf
+    Info (12023): Found entity 1: lpm_divide_uio File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_uio.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
+    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_4dg.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_o2f.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_4p9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "display_text:inst9|lpm_divide:Div0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
+Info (12133): Instantiated megafunction "display_text:inst9|lpm_divide:Div0" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
+    Info (12023): Found entity 1: lpm_divide_bpo File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_bpo.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_kbg.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
+    Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_ove.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_kn9.tdf Line: 22
 Info (13000): Registers with preset signals will power-up high File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 26 registers lost all their fanouts during netlist optimizations.
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
@@ -2341,7 +2415,6 @@ Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_tex
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char6|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
@@ -2377,18 +2450,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 971 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2807 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 849 logic cells
+    Info (21061): Implemented 2685 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 6 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Peak virtual memory: 4988 megabytes
-    Info: Processing ended: Tue May 14 16:51:14 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 5021 megabytes
+    Info: Processing ended: Tue May 14 18:04:48 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:05
 
 

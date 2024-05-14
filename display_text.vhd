@@ -37,8 +37,18 @@ SIGNAL temp1 ,temp2, temp3,temp4,temp5,temp6,temp7 : std_logic;
 SIGNAL char_size : std_logic_vector(9 DOWNTO 0);
 SIGNAL start_x_pos : x_position;
 SIGNAL start_y_pos : std_logic_vector(9 DOWNTO 0);
+SIGNAL cur_ones, cur_tens : integer;
 
 begin
+
+cur_ones <= INTEGER(cur_point MOD 10);
+cur_tens <= INTEGER(cur_point / 10);
+
+
+
+
+
+
 char_size <= CONV_STD_LOGIC_VECTOR(15, 10);
 
 character_address(0) <= CONV_STD_LOGIC_VECTOR(19, 6); -- S
@@ -46,8 +56,8 @@ character_address(1) <= CONV_STD_LOGIC_VECTOR(3, 6); -- C
 character_address(2) <= CONV_STD_LOGIC_VECTOR(15, 6); -- O
 character_address(3) <= CONV_STD_LOGIC_VECTOR(18, 6); -- R
 character_address(4) <= CONV_STD_LOGIC_VECTOR(5, 6); -- E
-character_address(5) <= CONV_STD_LOGIC_VECTOR(48, 6); -- 0
-character_address(6) <= CONV_STD_LOGIC_VECTOR(48+cur_point, 6); -- 0
+character_address(5) <= CONV_STD_LOGIC_VECTOR(48 + cur_tens, 6); -- 0
+character_address(6) <= CONV_STD_LOGIC_VECTOR(48 + cur_ones, 6); -- 0
 
 start_x_pos(0) <= CONV_STD_LOGIC_VECTOR(16, 11);
 start_x_pos(1) <= CONV_STD_LOGIC_VECTOR(32, 11);

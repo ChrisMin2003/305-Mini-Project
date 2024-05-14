@@ -125,16 +125,8 @@ begin
 
             -- Move ball once every vertical sync
         if (rising_edge(vert_sync) and start_flag = '1') then
-		  
-		  
-		  
-		  
-		  
 		  -- The for loop for detecting collision
-        -- To collide it has to satisfy:
-        --  - (Bird y position + size >= upper pipe y edge) OR (Bird y position - size <= lower pipe y edge)
-        --      - (Bird x positon + size >= left pipe x edge) and (Bird x positon - size <= right pipe x edge)
-        -- If the above conditions are satisfied, the bird is destroyed
+
             for i in 0 to 5 loop
 					if (ball_y_pos + size >= y_pos_down(i) or ball_y_pos - size <= y_pos_up(i)) 
 					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15) then
@@ -146,6 +138,11 @@ begin
                    if not pipe_score_flag(i) then
                         point <= point + 1; -- Increment point
                         pipe_score_flag(i) <= true; -- Set flag to true
+								if (i = 0) then
+									pipe_score_flag(5) <= false;
+								else 
+									pipe_score_flag(i-1) <= false;
+								end if;
                     end if;
                 end if;
 					 
@@ -180,17 +177,12 @@ begin
                 else
                         ball_y_pos <= ball_y_pos + ball_y_motion;
                 end if;
-					 
-					-- Reset pipe_score_flag array after each scoring cycle
-					if (move_up_flag = '0') then
-						pipe_score_flag <= (others => FALSE);
-					end if;
-					 
 
         end if;
 		  
 		  cur_point <= point;
     
 end process Move_Ball;
+
 
 END behavior;
