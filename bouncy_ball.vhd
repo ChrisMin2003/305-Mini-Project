@@ -12,7 +12,8 @@ ENTITY bouncy_ball IS
           red, green, blue          : OUT std_logic;
 			 cur_point      : OUT integer;
 			 cur_lives      : OUT integer;
-          left_button : IN std_logic);      
+          left_button : IN std_logic;
+			 start       : OUT std_logic);      
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -118,7 +119,7 @@ ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
 
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size)   -- x_pos - size <= pixel_column <= x_pos + size
-                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size))  else -- y_pos - size <= pixel_row <= y_pos + size
+                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0'))  else -- y_pos - size <= pixel_row <= y_pos + size
             '0';
             
             
@@ -154,6 +155,7 @@ begin
 								invin_counter <= 1;
 								
 							else 
+								lives <= lives - 1; 
 								ball_destroyed <= '1';
 							end if;
 
@@ -208,6 +210,7 @@ begin
 		  
 		  cur_point <= point;
 		  cur_lives <= lives;
+		  start <= start_flag;
     
 end process Move_Ball;
 

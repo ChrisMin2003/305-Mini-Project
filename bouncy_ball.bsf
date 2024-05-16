@@ -121,6 +121,20 @@ refer to the applicable agreement for further details.
 		(text "cur_point[31..0]" (rect 151 75 211 87)(font "Arial" ))
 		(line (pt 232 80)(pt 216 80)(line_width 3))
 	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "cur_lives[31..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "cur_lives[31..0]" (rect 151 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
+	(port
+		(pt 232 112)
+		(output)
+		(text "start" (rect 0 0 17 12)(font "Arial" ))
+		(text "start" (rect 194 107 211 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 216 192)(line_width 1))
 	)

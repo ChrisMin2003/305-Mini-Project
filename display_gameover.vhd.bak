@@ -33,7 +33,7 @@ end component;
 
 SIGNAL char_on1,char_on2,char_on3,char_on4,char_on5 : STD_LOGIC;
 SIGNAL character_address : score_word_array;
-SIGNAL temp1 ,temp2, temp3,temp4,temp5 : std_logic;
+SIGNAL temp1 ,temp2, temp3,temp4,temp5,temp6,temp7 : std_logic;
 SIGNAL char_size : std_logic_vector(9 DOWNTO 0);
 SIGNAL start_x_pos : x_position;
 SIGNAL start_y_pos : std_logic_vector(9 DOWNTO 0);
