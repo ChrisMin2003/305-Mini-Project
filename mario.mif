@@ -1,0 +1,29 @@
+-- Created with Parker Dillmann's im2mif file converter.
+-- www.longhornengineer.com
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=16;
+DEPTH=16;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+0	:	0000	;
+1	:	0000	;
+2	:	0300	;
+3	:	1700	;
+4	:	1300	;
+5	:	0F00	;
+6	:	0F00	;
+7	:	8400	;
+8	:	8200	;
+9	:	0300	;
+10	:	1F00	;
+11	:	1F00	;
+12	:	1F00	;
+13	:	1F00	;
+14	:	0000	;
+15	:	0000	;
+END;

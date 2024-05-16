@@ -113,13 +113,13 @@ pipe5: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_fla
 pipe6: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, 
                             green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
 
-size <= CONV_STD_LOGIC_VECTOR(8,10);
+size <= CONV_STD_LOGIC_VECTOR(100,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
 
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size)   -- x_pos - size <= pixel_column <= x_pos + size
-                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0'))  else -- y_pos - size <= pixel_row <= y_pos + size
+                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0') and (ball_on1 = '1'))  else -- y_pos - size <= pixel_row <= y_pos + size
             '0';
             
             
