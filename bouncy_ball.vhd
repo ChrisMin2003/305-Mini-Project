@@ -10,7 +10,8 @@ ENTITY bouncy_ball IS
           pixel_row, pixel_column   : IN std_logic_vector(9 DOWNTO 0);
             font_row, font_col        : IN STD_LOGIC_VECTOR(2 downto 0);
           red, green, blue          : OUT std_logic;
-			 cur_point                 : OUT integer;
+			 cur_point      : OUT integer;
+			 cur_lives      : OUT integer;
           left_button : IN std_logic);      
 END bouncy_ball;
 
@@ -31,6 +32,7 @@ SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0) := CONV_ST
 SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(220, 11);
 SIGNAL ball_y_motion                        : std_logic_vector(9 DOWNTO 0);
 SIGNAL point : integer := 0;
+SIGNAL lives : integer := 3;
 
 -- Flags for tracking score increment
 TYPE pipe_score_flag_array IS ARRAY (0 TO 5) OF BOOLEAN;
@@ -38,6 +40,10 @@ SIGNAL pipe_score_flag       : pipe_score_flag_array := (others => FALSE);
 
 -- Portmap output instances
 SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6   : std_logic;
+
+-- Invincibility tracker
+SIGNAL invin_flag : std_logic;
+SIGNAL invin_counter : integer;
 
 -- Pipe generation
 component pipe is 
@@ -80,6 +86,9 @@ BEGIN
             end if;
         end if;
     end process;
+	 
+
+	 
      
 bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_col => font_col, clock => clk, rom_mux_output => ball_on1);
 
@@ -113,7 +122,7 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
             '0';
             
             
-Red <=  (ball_on);
+Red <= ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 10), 1)(0));
 Green <= ((ball_on or not ball_on) and not sw1) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
 Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not sw1;
 
@@ -125,12 +134,29 @@ begin
 
             -- Move ball once every vertical sync
         if (rising_edge(vert_sync) and start_flag = '1') then
+			
+			if (invin_counter > 200) then
+				invin_counter <= 0;
+				invin_flag <= '0';
+			elsif (invin_flag  = '1') then 
+				invin_counter <= invin_counter + 1;
+			end if;
+		  
 		  -- The for loop for detecting collision
 
             for i in 0 to 5 loop
 					if (ball_y_pos + size >= y_pos_down(i) or ball_y_pos - size <= y_pos_up(i)) 
-					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15) then
-							ball_destroyed <= '1';
+					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15)
+					and (invin_flag = '0') then
+							if (lives > 1) then 
+								lives <= lives - 1; 
+								invin_flag <= '1';
+								invin_counter <= 1;
+								
+							else 
+								ball_destroyed <= '1';
+							end if;
+
                end if;
 					
                 -- Check if the left side of the ball has passed through the right edge of the pipe
@@ -181,6 +207,7 @@ begin
         end if;
 		  
 		  cur_point <= point;
+		  cur_lives <= lives;
     
 end process Move_Ball;
 

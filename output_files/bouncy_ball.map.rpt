@@ -1,5 +1,5 @@
 Analysis & Synthesis report for bouncy_ball
-Tue May 14 18:04:48 2024
+Thu May 16 13:13:57 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -48,29 +48,30 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
  40. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char6|altsyncram:altsyncram_component
  41. Parameter Settings for User Entity Instance: display_text:inst9|char_rom:char7|altsyncram:altsyncram_component
  42. Parameter Settings for User Entity Instance: bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component
- 43. Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Mod0
- 44. Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Div0
- 45. altsyncram Parameter Settings by Entity Instance
- 46. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6"
- 47. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe5"
- 48. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe4"
- 49. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe3"
- 50. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe2"
- 51. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe1"
- 52. Port Connectivity Checks: "bouncy_ball:inst2|bird_rom:bird1"
- 53. Port Connectivity Checks: "display_text:inst9|char_rom:char5"
- 54. Port Connectivity Checks: "display_text:inst9|char_rom:char4"
- 55. Port Connectivity Checks: "display_text:inst9|char_rom:char3"
- 56. Port Connectivity Checks: "display_text:inst9|char_rom:char2"
- 57. Port Connectivity Checks: "display_text:inst9|char_rom:char1"
- 58. Port Connectivity Checks: "display_lives:inst8|char_rom:char5"
- 59. Port Connectivity Checks: "display_lives:inst8|char_rom:char4"
- 60. Port Connectivity Checks: "display_lives:inst8|char_rom:char3"
- 61. Port Connectivity Checks: "display_lives:inst8|char_rom:char2"
- 62. Port Connectivity Checks: "display_lives:inst8|char_rom:char1"
- 63. Post-Synthesis Netlist Statistics for Top Partition
- 64. Elapsed Time Per Partition
- 65. Analysis & Synthesis Messages
+ 43. Parameter Settings for Inferred Entity Instance: bouncy_ball:inst2|lpm_divide:Mod0
+ 44. Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Mod0
+ 45. Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Div0
+ 46. altsyncram Parameter Settings by Entity Instance
+ 47. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe6"
+ 48. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe5"
+ 49. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe4"
+ 50. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe3"
+ 51. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe2"
+ 52. Port Connectivity Checks: "bouncy_ball:inst2|pipe:pipe1"
+ 53. Port Connectivity Checks: "bouncy_ball:inst2|bird_rom:bird1"
+ 54. Port Connectivity Checks: "display_text:inst9|char_rom:char5"
+ 55. Port Connectivity Checks: "display_text:inst9|char_rom:char4"
+ 56. Port Connectivity Checks: "display_text:inst9|char_rom:char3"
+ 57. Port Connectivity Checks: "display_text:inst9|char_rom:char2"
+ 58. Port Connectivity Checks: "display_text:inst9|char_rom:char1"
+ 59. Port Connectivity Checks: "display_lives:inst8|char_rom:char5"
+ 60. Port Connectivity Checks: "display_lives:inst8|char_rom:char4"
+ 61. Port Connectivity Checks: "display_lives:inst8|char_rom:char3"
+ 62. Port Connectivity Checks: "display_lives:inst8|char_rom:char2"
+ 63. Port Connectivity Checks: "display_lives:inst8|char_rom:char1"
+ 64. Post-Synthesis Netlist Statistics for Top Partition
+ 65. Elapsed Time Per Partition
+ 66. Analysis & Synthesis Messages
 
 
 
@@ -96,13 +97,13 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 14 18:04:48 2024           ;
+; Analysis & Synthesis Status     ; Successful - Thu May 16 13:13:57 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 233                                             ;
+; Total registers                 ; 298                                             ;
 ; Total pins                      ; 19                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 8,832                                           ;
@@ -227,50 +228,50 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
-; bird_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd           ;         ;
-; display_lives.vhd                ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd      ;         ;
-; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd        ;         ;
-; pipe.vhd                         ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd               ;         ;
-; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File      ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/Block1.bdf             ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd           ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd              ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd           ;         ;
-; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL/PLL_0002.v         ; PLL     ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd        ;         ;
-; pll2.vhd                         ; yes             ; User Wizard-Generated File             ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd               ; pll2    ;
-; pll2/pll2_0002.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v       ; pll2    ;
-; display_text.vhd                 ; yes             ; User VHDL File                         ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd       ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/tcgrom.mif             ;         ;
-; db/altsyncram_hvf1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf ;         ;
-; bird.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird.mif               ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
-; db/lpm_divide_uio.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_uio.tdf  ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_4dg.tdf ;         ;
-; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_o2f.tdf   ;         ;
-; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_4p9.tdf     ;         ;
-; db/lpm_divide_bpo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_bpo.tdf  ;         ;
-; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_kbg.tdf ;         ;
-; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_ove.tdf   ;         ;
-; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_kn9.tdf     ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                  ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                    ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
+; bird_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird_rom.vhd           ;         ;
+; display_lives.vhd                ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_lives.vhd      ;         ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd        ;         ;
+; pipe.vhd                         ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pipe.vhd               ;         ;
+; Block1.bdf                       ; yes             ; User Block Diagram/Schematic File      ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/Block1.bdf             ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/vga_sync.vhd           ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd              ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/char_rom.vhd           ;         ;
+; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/PLL/PLL_0002.v         ; PLL     ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd        ;         ;
+; pll2.vhd                         ; yes             ; User Wizard-Generated File             ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2.vhd               ; pll2    ;
+; pll2/pll2_0002.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v       ; pll2    ;
+; display_text.vhd                 ; yes             ; User VHDL File                         ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd       ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                                                  ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                         ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                   ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                 ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                    ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                    ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                  ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/tcgrom.mif             ;         ;
+; db/altsyncram_hvf1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf ;         ;
+; bird.mif                         ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird.mif               ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc                                               ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                           ;         ;
+; db/lpm_divide_uio.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_divide_uio.tdf  ;         ;
+; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/abs_divider_4dg.tdf ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/alt_u_div_o2f.tdf   ;         ;
+; db/lpm_abs_4p9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_abs_4p9.tdf     ;         ;
+; db/lpm_divide_bpo.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_divide_bpo.tdf  ;         ;
+; db/abs_divider_kbg.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/abs_divider_kbg.tdf ;         ;
+; db/alt_u_div_ove.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/alt_u_div_ove.tdf   ;         ;
+; db/lpm_abs_kn9.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_abs_kn9.tdf     ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -278,16 +279,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                ;
 +---------------------------------------------+----------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 1379                                                                 ;
+; Estimate of Logic utilization (ALMs needed) ; 2111                                                                 ;
 ;                                             ;                                                                      ;
-; Combinational ALUT usage for logic          ; 2595                                                                 ;
+; Combinational ALUT usage for logic          ; 4025                                                                 ;
 ;     -- 7 input functions                    ; 3                                                                    ;
-;     -- 6 input functions                    ; 153                                                                  ;
-;     -- 5 input functions                    ; 80                                                                   ;
-;     -- 4 input functions                    ; 623                                                                  ;
-;     -- <=3 input functions                  ; 1736                                                                 ;
+;     -- 6 input functions                    ; 187                                                                  ;
+;     -- 5 input functions                    ; 65                                                                   ;
+;     -- 4 input functions                    ; 1075                                                                 ;
+;     -- <=3 input functions                  ; 2695                                                                 ;
 ;                                             ;                                                                      ;
-; Dedicated logic registers                   ; 233                                                                  ;
+; Dedicated logic registers                   ; 298                                                                  ;
 ;                                             ;                                                                      ;
 ; I/O pins                                    ; 19                                                                   ;
 ; Total MLAB memory bits                      ; 0                                                                    ;
@@ -300,8 +301,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                      ;
 ; Maximum fan-out node                        ; pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 174                                                                  ;
-; Total fan-out                               ; 9605                                                                 ;
-; Average fan-out                             ; 3.23                                                                 ;
+; Total fan-out                               ; 14387                                                                ;
+; Average fan-out                             ; 3.22                                                                 ;
 +---------------------------------------------+----------------------------------------------------------------------+
 
 
@@ -310,18 +311,23 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Block1                                      ; 2595 (1)            ; 233 (0)                   ; 8832              ; 6          ; 19   ; 0            ; |Block1                                                                                                                 ; Block1          ; work         ;
+; |Block1                                      ; 4025 (1)            ; 298 (0)                   ; 8832              ; 6          ; 19   ; 0            ; |Block1                                                                                                                 ; Block1          ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|BCD_to_SevenSeg:inst7                                                                                           ; BCD_to_SevenSeg ; work         ;
-;    |MOUSE:inst4|                             ; 83 (83)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                                                                                     ; MOUSE           ; work         ;
+;    |MOUSE:inst4|                             ; 82 (82)             ; 90 (90)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|MOUSE:inst4                                                                                                     ; MOUSE           ; work         ;
 ;    |VGA_SYNC:inst1|                          ; 45 (45)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Block1|VGA_SYNC:inst1                                                                                                  ; VGA_SYNC        ; work         ;
-;    |bouncy_ball:inst2|                       ; 565 (331)           ; 95 (85)                   ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                                                                               ; bouncy_ball     ; work         ;
-;       |pipe:pipe1|                           ; 49 (49)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                                                                                    ; pipe            ; work         ;
-;       |pipe:pipe2|                           ; 45 (45)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                                                                                    ; pipe            ; work         ;
-;       |pipe:pipe3|                           ; 34 (34)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                                                                                    ; pipe            ; work         ;
-;       |pipe:pipe4|                           ; 35 (35)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                                                                                    ; pipe            ; work         ;
-;       |pipe:pipe5|                           ; 35 (35)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                                                                                    ; pipe            ; work         ;
+;    |bouncy_ball:inst2|                       ; 1995 (434)          ; 160 (150)                 ; 0                 ; 6          ; 0    ; 0            ; |Block1|bouncy_ball:inst2                                                                                               ; bouncy_ball     ; work         ;
+;       |lpm_divide:Mod0|                      ; 1322 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|lpm_divide:Mod0                                                                               ; lpm_divide      ; work         ;
+;          |lpm_divide_uio:auto_generated|     ; 1322 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|lpm_divide:Mod0|lpm_divide_uio:auto_generated                                                 ; lpm_divide_uio  ; work         ;
+;             |abs_divider_4dg:divider|        ; 1322 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider                         ; abs_divider_4dg ; work         ;
+;                |alt_u_div_o2f:divider|       ; 1290 (1290)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|alt_u_div_o2f:divider   ; alt_u_div_o2f   ; work         ;
+;                |lpm_abs_4p9:my_abs_num|      ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|lpm_divide:Mod0|lpm_divide_uio:auto_generated|abs_divider_4dg:divider|lpm_abs_4p9:my_abs_num  ; lpm_abs_4p9     ; work         ;
+;       |pipe:pipe1|                           ; 50 (50)             ; 10 (10)                   ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe1                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe2|                           ; 46 (46)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe2                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe3|                           ; 35 (35)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe3                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe4|                           ; 36 (36)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe4                                                                                    ; pipe            ; work         ;
+;       |pipe:pipe5|                           ; 36 (36)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe5                                                                                    ; pipe            ; work         ;
 ;       |pipe:pipe6|                           ; 36 (36)             ; 0 (0)                     ; 0                 ; 1          ; 0    ; 0            ; |Block1|bouncy_ball:inst2|pipe:pipe6                                                                                    ; pipe            ; work         ;
-;    |display_lives:inst8|                     ; 19 (5)              ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8                                                                                             ; display_lives   ; work         ;
+;    |display_lives:inst8|                     ; 20 (6)              ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8                                                                                             ; display_lives   ; work         ;
 ;       |char_rom:char1|                       ; 3 (3)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1                                                                              ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component                                              ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |Block1|display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated               ; altsyncram_d5g1 ; work         ;
@@ -522,12 +528,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 233   ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 298   ;
+; Number of registers using Synchronous Clear  ; 50    ;
 ; Number of registers using Synchronous Load   ; 42    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 195   ;
+; Number of registers using Clock Enable       ; 260   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -541,15 +547,19 @@ Encoding Type:  One-Hot
 ; bouncy_ball:inst2|ball_y_pos[6]                ; 5       ;
 ; bouncy_ball:inst2|ball_y_pos[5]                ; 7       ;
 ; bouncy_ball:inst2|ball_y_pos[4]                ; 5       ;
-; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7] ; 7       ;
+; bouncy_ball:inst2|invin_counter[31]            ; 33      ;
+; bouncy_ball:inst2|invin_counter[0]             ; 3       ;
+; bouncy_ball:inst2|lives[1]                     ; 2       ;
 ; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[9] ; 7       ;
+; bouncy_ball:inst2|pipe:pipe1|pipe_le_x_edge[7] ; 7       ;
 ; MOUSE:inst4|send_char                          ; 3       ;
+; bouncy_ball:inst2|lives[0]                     ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[3]                        ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[5]                        ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[6]                        ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[7]                        ; 1       ;
 ; MOUSE:inst4|SHIFTOUT[8]                        ; 1       ;
-; Total number of inverted registers = 12        ;         ;
+; Total number of inverted registers = 16        ;         ;
 +------------------------------------------------+---------+
 
 
@@ -558,14 +568,18 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Block1|MOUSE:inst4|new_cursor_row[5]           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Block1|VGA_SYNC:inst1|v_count[7]               ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[0]               ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[6]               ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |Block1|bouncy_ball:inst2|point[28]             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Block1|MOUSE:inst4|new_cursor_row[4]           ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |Block1|VGA_SYNC:inst1|v_count[4]               ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[2]               ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Block1|MOUSE:inst4|cursor_row[4]               ;
+; 7:1                ; 30 bits   ; 120 LEs       ; 0 LEs                ; 120 LEs                ; Yes        ; |Block1|bouncy_ball:inst2|lives[11]             ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 0 LEs                ; 128 LEs                ; Yes        ; |Block1|bouncy_ball:inst2|point[10]             ;
+; 8:1                ; 30 bits   ; 150 LEs       ; 0 LEs                ; 150 LEs                ; Yes        ; |Block1|bouncy_ball:inst2|invin_counter[3]      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |Block1|bouncy_ball:inst2|lives[1]              ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Block1|bouncy_ball:inst2|invin_counter[31]     ;
 ; 8:1                ; 7 bits    ; 35 LEs        ; 35 LEs               ; 0 LEs                  ; No         ; |Block1|display_text:inst9|char_rom:char7|Mux0  ;
 ; 8:1                ; 5 bits    ; 25 LEs        ; 25 LEs               ; 0 LEs                  ; No         ; |Block1|display_lives:inst8|char_rom:char5|Mux0 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Block1|BCD_to_SevenSeg:inst7|SevenSeg_out[0]   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |Block1|BCD_to_SevenSeg:inst7|SevenSeg_out[2]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -1726,6 +1740,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: bouncy_ball:inst2|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                  ;
+; LPM_WIDTHD             ; 32             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_uio ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: display_text:inst9|lpm_divide:Mod0 ;
 +------------------------+----------------+-------------------------------------------+
@@ -2118,35 +2155,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 233                         ;
+; arriav_ff             ; 298                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 128                         ;
+;     ENA               ; 163                         ;
 ;     ENA CLR           ; 15                          ;
-;     ENA SCLR          ; 10                          ;
+;     ENA SCLR          ; 40                          ;
 ;     ENA SLD           ; 42                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 27                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 2597                        ;
-;     arith             ; 1250                        ;
-;         0 data inputs ; 123                         ;
-;         1 data inputs ; 295                         ;
-;         2 data inputs ; 201                         ;
-;         3 data inputs ; 297                         ;
-;         4 data inputs ; 334                         ;
+; arriav_lcell_comb     ; 4027                        ;
+;     arith             ; 1920                        ;
+;         0 data inputs ; 180                         ;
+;         1 data inputs ; 386                         ;
+;         2 data inputs ; 235                         ;
+;         3 data inputs ; 535                         ;
+;         4 data inputs ; 584                         ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
-;     normal            ; 1324                        ;
+;     normal            ; 2079                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 695                         ;
-;         3 data inputs ; 96                          ;
-;         4 data inputs ; 289                         ;
-;         5 data inputs ; 80                          ;
-;         6 data inputs ; 153                         ;
-;     shared            ; 20                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 9                           ;
+;         1 data inputs ; 12                          ;
+;         2 data inputs ; 1193                        ;
+;         3 data inputs ; 130                         ;
+;         4 data inputs ; 491                         ;
+;         5 data inputs ; 65                          ;
+;         6 data inputs ; 187                         ;
+;     shared            ; 25                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 13                          ;
 ;         2 data inputs ; 9                           ;
 ; arriav_mac            ; 6                           ;
 ; boundary_port         ; 19                          ;
@@ -2154,7 +2191,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 96                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 86.60                       ;
-; Average LUT depth     ; 48.24                       ;
+; Average LUT depth     ; 56.88                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2163,7 +2200,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -2173,67 +2210,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Tue May 14 18:04:31 2024
+    Info: Processing started: Thu May 16 13:13:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 305-Mini-Project -c bouncy_ball
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bird_rom.vhd
-    Info (12022): Found design unit 1: bird_rom-SYN File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 20
-    Info (12023): Found entity 1: bird_rom File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 9
+    Info (12022): Found design unit 1: bird_rom-SYN File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 20
+    Info (12023): Found entity 1: bird_rom File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file display_lives.vhd
-    Info (12022): Found design unit 1: display_lives-display File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 18
-    Info (12023): Found entity 1: display_lives File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 6
+    Info (12022): Found design unit 1: display_lives-display File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 18
+    Info (12023): Found entity 1: display_lives File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file minute_counter.vhd
-    Info (12022): Found design unit 1: minute_counter-rtl File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/minute_counter.vhd Line: 17
-    Info (12023): Found entity 1: minute_counter File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/minute_counter.vhd Line: 5
+    Info (12022): Found design unit 1: minute_counter-rtl File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/minute_counter.vhd Line: 17
+    Info (12023): Found entity 1: minute_counter File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/minute_counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd Line: 10
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd Line: 5
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd Line: 10
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/BCD_to_7Seg.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_counter.vhd
-    Info (12022): Found design unit 1: BCD_counter-rtl File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_Counter.vhd Line: 15
-    Info (12023): Found entity 1: BCD_counter File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/BCD_Counter.vhd Line: 5
+    Info (12022): Found design unit 1: BCD_counter-rtl File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/BCD_Counter.vhd Line: 15
+    Info (12023): Found entity 1: BCD_counter File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/BCD_Counter.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file pipe.vhd
-    Info (12022): Found design unit 1: pipe-pipe_gen File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 17
-    Info (12023): Found entity 1: pipe File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 7
+    Info (12022): Found design unit 1: pipe-pipe_gen File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 17
+    Info (12023): Found entity 1: pipe File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file block1.bdf
     Info (12023): Found entity 1: Block1
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/ball.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file pll.v
-    Info (12023): Found entity 1: PLL File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL.v Line: 8
+    Info (12023): Found entity 1: PLL File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/PLL.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: PLL_0002 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/PLL/PLL_0002.v Line: 2
+    Info (12023): Found entity 1: PLL_0002 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/PLL/PLL_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 17
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 18
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file pll2.vhd
-    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 20
-    Info (12023): Found entity 1: pll2 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 11
+    Info (12022): Found design unit 1: pll2-rtl File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 20
+    Info (12023): Found entity 1: pll2 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll2/pll2_0002.v
-    Info (12023): Found entity 1: pll2_0002 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 2
+    Info (12023): Found entity 1: pll2_0002 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file display_text.vhd
-    Info (12022): Found design unit 1: display_text-display File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 19
-    Info (12023): Found entity 1: display_text File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 6
+    Info (12022): Found design unit 1: display_text-display File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 19
+    Info (12023): Found entity 1: display_text File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 6
 Info (12127): Elaborating entity "Block1" for the top level hierarchy
 Warning (275011): Block or symbol "display_lives" of instance "inst8" overlaps another block or symbol
 Warning (275011): Block or symbol "OR3" of instance "inst10" overlaps another block or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "pll2" for hierarchy "pll2:inst"
-Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst|pll2_0002:pll2_inst" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
+Info (12128): Elaborating entity "pll2_0002" for hierarchy "pll2:inst|pll2_0002:pll2_inst" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pll2/pll2_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -2295,10 +2332,10 @@ Info (12133): Instantiated megafunction "pll2:inst|pll2_0002:pll2_inst|altera_pl
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "display_lives" for hierarchy "display_lives:inst8"
-Info (12128): Elaborating entity "char_rom" for hierarchy "display_lives:inst8|char_rom:char1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 62
-Info (12128): Elaborating entity "altsyncram" for hierarchy "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
+Info (12128): Elaborating entity "char_rom" for hierarchy "display_lives:inst8|char_rom:char1" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_lives.vhd Line: 62
+Info (12128): Elaborating entity "altsyncram" for hierarchy "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -2314,17 +2351,18 @@ Info (12133): Instantiated megafunction "display_lives:inst8|char_rom:char1|alts
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "display_text" for hierarchy "display_text:inst9"
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst2"
-Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(26): object "ball_on1" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 26
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(127): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 127
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(183): signal "point" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 183
-Info (12128): Elaborating entity "bird_rom" for hierarchy "bouncy_ball:inst2|bird_rom:bird1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 84
-Info (12128): Elaborating entity "altsyncram" for hierarchy "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
+Warning (10036): Verilog HDL or VHDL warning at bouncy_ball.vhd(27): object "ball_on1" assigned a value but never read File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(136): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 136
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(209): signal "point" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 209
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(210): signal "lives" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 210
+Info (12128): Elaborating entity "bird_rom" for hierarchy "bouncy_ball:inst2|bird_rom:bird1" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 93
+Info (12128): Elaborating entity "altsyncram" for hierarchy "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bird_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -2340,82 +2378,90 @@ Info (12133): Instantiated megafunction "bouncy_ball:inst2|bird_rom:bird1|altsyn
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_hvf1.tdf
-    Info (12023): Found entity 1: altsyncram_hvf1 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_hvf1 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_hvf1" for hierarchy "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst2|pipe:pipe1" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 88
-Warning (10540): VHDL Signal Declaration warning at pipe.vhd(27): used explicit default value for signal "pipe_x_interval" because signal was never assigned a value File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at pipe.vhd(62): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 62
+Info (12128): Elaborating entity "pipe" for hierarchy "bouncy_ball:inst2|pipe:pipe1" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 97
+Warning (10540): VHDL Signal Declaration warning at pipe.vhd(27): used explicit default value for signal "pipe_x_interval" because signal was never assigned a value File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at pipe.vhd(62): signal "start_flag" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/pipe.vhd Line: 62
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst4"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 157
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 157
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst7"
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[0]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 34
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[1]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 55
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[2]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 76
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[3]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 97
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[4]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 118
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[5]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 139
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[6]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 160
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[7]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 181
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[8]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 202
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[9]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 223
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[10]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 244
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[11]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 265
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[12]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 286
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[13]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 307
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[14]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 328
-        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[15]" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 349
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_text:inst9|Mod0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_text:inst9|Div0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
-Info (12130): Elaborated megafunction instantiation "display_text:inst9|lpm_divide:Mod0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
-Info (12133): Instantiated megafunction "display_text:inst9|lpm_divide:Mod0" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[0]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 34
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[1]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 55
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[2]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 76
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[3]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 97
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[4]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 118
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[5]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 139
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[6]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 160
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[7]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 181
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[8]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 202
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[9]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 223
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[10]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 244
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[11]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 265
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[12]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 286
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[13]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 307
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[14]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 328
+        Warning (14320): Synthesized away node "bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_hvf1:auto_generated|q_a[15]" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_hvf1.tdf Line: 349
+Info (278001): Inferred 3 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "bouncy_ball:inst2|Mod0" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 125
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_text:inst9|Mod0" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_text:inst9|Div0" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
+Info (12130): Elaborated megafunction instantiation "bouncy_ball:inst2|lpm_divide:Mod0" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 125
+Info (12133): Instantiated megafunction "bouncy_ball:inst2|lpm_divide:Mod0" with the following parameter: File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/bouncy_ball.vhd Line: 125
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "32"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_uio.tdf
-    Info (12023): Found entity 1: lpm_divide_uio File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_uio.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_uio File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_divide_uio.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_4dg.tdf Line: 26
+    Info (12023): Found entity 1: abs_divider_4dg File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/abs_divider_4dg.tdf Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
-    Info (12023): Found entity 1: alt_u_div_o2f File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_o2f.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_o2f File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/alt_u_div_o2f.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_4p9.tdf
-    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_4p9.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "display_text:inst9|lpm_divide:Div0" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
-Info (12133): Instantiated megafunction "display_text:inst9|lpm_divide:Div0" with the following parameter: File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
+    Info (12023): Found entity 1: lpm_abs_4p9 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_abs_4p9.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "display_text:inst9|lpm_divide:Mod0" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+Info (12133): Instantiated megafunction "display_text:inst9|lpm_divide:Mod0" with the following parameter: File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 44
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info (12130): Elaborated megafunction instantiation "display_text:inst9|lpm_divide:Div0" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
+Info (12133): Instantiated megafunction "display_text:inst9|lpm_divide:Div0" with the following parameter: File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/display_text.vhd Line: 45
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "5"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
     Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_bpo.tdf
-    Info (12023): Found entity 1: lpm_divide_bpo File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_divide_bpo.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_bpo File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_divide_bpo.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_kbg.tdf
-    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/abs_divider_kbg.tdf Line: 28
+    Info (12023): Found entity 1: abs_divider_kbg File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/abs_divider_kbg.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ove.tdf
-    Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/alt_u_div_ove.tdf Line: 22
+    Info (12023): Found entity 1: alt_u_div_ove File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/alt_u_div_ove.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_kn9.tdf
-    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/lpm_abs_kn9.tdf Line: 22
-Info (13000): Registers with preset signals will power-up high File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 146
+    Info (12023): Found entity 1: lpm_abs_kn9 File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/lpm_abs_kn9.tdf Line: 22
+Info (13000): Registers with preset signals will power-up high File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_lives:inst8|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char4|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char5|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char1|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char2|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "display_text:inst9|char_rom:char3|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE0_CV_Default -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity DE0_CV_Default -section_id Top was ignored
@@ -2450,18 +2496,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll2:inst|pll2_0002:pll2_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 2807 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4237 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 2685 logic cells
+    Info (21061): Implemented 4115 logic cells
     Info (21064): Implemented 96 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Peak virtual memory: 5021 megabytes
-    Info: Processing ended: Tue May 14 18:04:48 2024
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 5029 megabytes
+    Info: Processing ended: Thu May 16 13:13:57 2024
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:07
 
 
