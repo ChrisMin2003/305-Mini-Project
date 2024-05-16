@@ -135,6 +135,13 @@ refer to the applicable agreement for further details.
 		(text "start" (rect 194 107 211 119)(font "Arial" ))
 		(line (pt 232 112)(pt 216 112)(line_width 1))
 	)
+	(port
+		(pt 232 128)
+		(output)
+		(text "destroyed" (rect 0 0 40 12)(font "Arial" ))
+		(text "destroyed" (rect 171 123 211 135)(font "Arial" ))
+		(line (pt 232 128)(pt 216 128)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 216 192)(line_width 1))
 	)

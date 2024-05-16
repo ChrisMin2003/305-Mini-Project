@@ -13,7 +13,7 @@ ENTITY bouncy_ball IS
 			 cur_point      : OUT integer;
 			 cur_lives      : OUT integer;
           left_button : IN std_logic;
-			 start       : OUT std_logic);      
+			 start, destroyed       : OUT std_logic);      
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -211,6 +211,7 @@ begin
 		  cur_point <= point;
 		  cur_lives <= lives;
 		  start <= start_flag;
+		  destroyed <= ball_destroyed;
     
 end process Move_Ball;
 
