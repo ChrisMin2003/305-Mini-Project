@@ -1,11 +1,12 @@
 |Block1
 red_out <= VGA_SYNC:inst1.red_out
 clk => pll2:inst.refclk
-pb1 => bouncy_ball:inst2.pb1
-pb2 => bouncy_ball:inst2.pb2
-SW[0] => bouncy_ball:inst2.sw1
+pb1 => bouncy_ball:inst8.pb1
+pb2 => bouncy_ball:inst8.pb2
+SW[0] => bouncy_ball:inst8.sw1
 PS2_DAT <> MOUSE:inst4.mouse_data
 PS2_CLK <> MOUSE:inst4.mouse_clk
+KEY[3] => bouncy_ball:inst8.reset
 green_out <= VGA_SYNC:inst1.green_out
 blue_out <= VGA_SYNC:inst1.blue_out
 horiz_sync_out <= VGA_SYNC:inst1.horiz_sync_out
@@ -286,7 +287,7 @@ cascade_out[0] <= <GND>
 zdbfbclk <> <GND>
 
 
-|Block1|bouncy_ball:inst2
+|Block1|bouncy_ball:inst8
 clk => bird_rom:bird1.clock
 clk => start_flag.CLK
 clk => pipe:pipe1.clk
@@ -730,9 +731,10 @@ left_button => move_up_counter.OUTPUTSELECT
 left_button => move_up_counter.OUTPUTSELECT
 start <= start_flag.DB_MAX_OUTPUT_PORT_TYPE
 destroyed <= ball_destroyed.DB_MAX_OUTPUT_PORT_TYPE
+reset => Move_Ball.IN1
 
 
-|Block1|bouncy_ball:inst2|bird_rom:bird1
+|Block1|bouncy_ball:inst8|bird_rom:bird1
 bird_address[0] => altsyncram:altsyncram_component.address_a[3]
 bird_address[1] => altsyncram:altsyncram_component.address_a[4]
 bird_address[2] => altsyncram:altsyncram_component.address_a[5]
@@ -749,7 +751,7 @@ clock => altsyncram:altsyncram_component.clock0
 rom_mux_output <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component
+|Block1|bouncy_ball:inst8|bird_rom:bird1|altsyncram:altsyncram_component
 wren_a => ~NO_FANOUT~
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -815,7 +817,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|Block1|bouncy_ball:inst2|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_n1g1:auto_generated
+|Block1|bouncy_ball:inst8|bird_rom:bird1|altsyncram:altsyncram_component|altsyncram_n1g1:auto_generated
 address_a[0] => ram_block1a0.PORTAADDR
 address_a[0] => ram_block1a1.PORTAADDR
 address_a[0] => ram_block1a2.PORTAADDR
@@ -919,7 +921,7 @@ q_a[14] <= ram_block1a14.PORTADATAOUT
 q_a[15] <= ram_block1a15.PORTADATAOUT
 
 
-|Block1|bouncy_ball:inst2|pipe:pipe1
+|Block1|bouncy_ball:inst8|pipe:pipe1
 clk => ~NO_FANOUT~
 vert_sync => pipe_le_x_edge[0].CLK
 vert_sync => pipe_le_x_edge[1].CLK
@@ -1109,7 +1111,7 @@ left_x_pos[9] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 left_x_pos[10] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|bouncy_ball:inst2|pipe:pipe2
+|Block1|bouncy_ball:inst8|pipe:pipe2
 clk => ~NO_FANOUT~
 vert_sync => pipe_le_x_edge[0].CLK
 vert_sync => pipe_le_x_edge[1].CLK
@@ -1299,7 +1301,7 @@ left_x_pos[9] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 left_x_pos[10] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|bouncy_ball:inst2|pipe:pipe3
+|Block1|bouncy_ball:inst8|pipe:pipe3
 clk => ~NO_FANOUT~
 vert_sync => pipe_le_x_edge[0].CLK
 vert_sync => pipe_le_x_edge[1].CLK
@@ -1489,7 +1491,7 @@ left_x_pos[9] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 left_x_pos[10] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|bouncy_ball:inst2|pipe:pipe4
+|Block1|bouncy_ball:inst8|pipe:pipe4
 clk => ~NO_FANOUT~
 vert_sync => pipe_le_x_edge[0].CLK
 vert_sync => pipe_le_x_edge[1].CLK
@@ -1679,7 +1681,7 @@ left_x_pos[9] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 left_x_pos[10] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|bouncy_ball:inst2|pipe:pipe5
+|Block1|bouncy_ball:inst8|pipe:pipe5
 clk => ~NO_FANOUT~
 vert_sync => pipe_le_x_edge[0].CLK
 vert_sync => pipe_le_x_edge[1].CLK
@@ -1869,7 +1871,7 @@ left_x_pos[9] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 left_x_pos[10] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Block1|bouncy_ball:inst2|pipe:pipe6
+|Block1|bouncy_ball:inst8|pipe:pipe6
 clk => ~NO_FANOUT~
 vert_sync => pipe_le_x_edge[0].CLK
 vert_sync => pipe_le_x_edge[1].CLK

@@ -68,6 +68,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "KEY[3]",
+					"strict" : false
+				},
+				{
 					"name" : "pb2",
 					"strict" : false
 				},

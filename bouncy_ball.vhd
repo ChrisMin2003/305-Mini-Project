@@ -13,7 +13,8 @@ ENTITY bouncy_ball IS
 			 cur_point      : OUT integer;
 			 cur_lives      : OUT integer;
           left_button : IN std_logic;
-			 start, destroyed       : OUT std_logic);      
+			 start, destroyed       : OUT std_logic;
+			 reset                  : IN std_logic);      
 END bouncy_ball;
 
 architecture behavior of bouncy_ball is
@@ -74,7 +75,7 @@ BEGIN
     -- Set start_flag to 1 when pb1 is 0, and keep it at 1 forever after that
     process(clk)
     begin
-        if rising_edge(clk) then
+			if rising_edge(clk) then
             if pb1 = '0' then
                 start_flag <= '1';
             end if;
@@ -83,7 +84,6 @@ BEGIN
 				end if;
 				if (pb2 = '0') then
                 start_flag <= '0';
-
             end if;
         end if;
     end process;
@@ -113,17 +113,17 @@ pipe5: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_fla
 pipe6: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, 
                             green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
 
-size <= CONV_STD_LOGIC_VECTOR(100,10);
+size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
 
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size)   -- x_pos - size <= pixel_column <= x_pos + size
-                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0') and (ball_on1 = '1'))  else -- y_pos - size <= pixel_row <= y_pos + size
+                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0'))  else -- y_pos - size <= pixel_row <= y_pos + size
             '0';
             
             
-Red <= ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 10), 1)(0));
+Red <= ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0));
 Green <= ((ball_on or not ball_on) and not sw1) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
 Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not sw1;
 
@@ -134,8 +134,8 @@ Move_Ball: process (vert_sync)
 begin
 
             -- Move ball once every vertical sync
-        if (rising_edge(vert_sync) and start_flag = '1') then
-			
+        if (rising_edge(vert_sync)) then
+			if (start_flag = '1') then
 			if (invin_counter > 200) then
 				invin_counter <= 0;
 				invin_flag <= '0';
@@ -205,7 +205,17 @@ begin
                 else
                         ball_y_pos <= ball_y_pos + ball_y_motion;
                 end if;
-
+					 
+					 
+				elsif (ball_destroyed = '1' and reset = '0') then
+					ball_destroyed <= '0';  -- Reset ball_destroyed
+					ball_y_pos <= CONV_STD_LOGIC_VECTOR(240, 10);  -- Reset ball_y_pos
+					point <= 0;  -- Reset point
+					lives <= 3;  -- Reset lives
+					invin_flag <= '0';  -- Reset invincibility flag
+					invin_counter <= 0;  -- Reset invincibility counter
+					pipe_score_flag <= (others => FALSE);  -- Reset pipe score flags
+				end if;
         end if;
 		  
 		  cur_point <= point;
