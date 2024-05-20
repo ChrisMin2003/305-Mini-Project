@@ -265,6 +265,7 @@ set_location_assignment PIN_J8 -to VGA_G[3]
 set_location_assignment PIN_H8 -to VGA_HS
 set_location_assignment PIN_A5 -to VGA_R[3]
 set_location_assignment PIN_G8 -to VGA_VS
+set_global_assignment -name VHDL_FILE highest_score.vhd
 set_global_assignment -name VHDL_FILE display_start.vhd
 set_global_assignment -name VHDL_FILE display_gameover.vhd
 set_global_assignment -name VHDL_FILE bird_rom.vhd
