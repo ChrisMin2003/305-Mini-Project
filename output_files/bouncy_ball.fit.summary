@@ -1,12 +1,12 @@
-Fitter Status : Successful - Mon May 20 13:11:21 2024
+Fitter Status : Successful - Mon May 20 14:49:37 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : bouncy_ball
 Top-level Entity Name : Block1
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 2,227 / 18,480 ( 12 % )
-Total registers : 326
+Logic utilization (in ALMs) : 2,176 / 18,480 ( 12 % )
+Total registers : 344
 Total pins : 27 / 224 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 14,272 / 3,153,920 ( < 1 % )

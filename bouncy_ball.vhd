@@ -47,16 +47,20 @@ SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6  
 SIGNAL invin_flag : std_logic;
 SIGNAL invin_counter : integer;
 
+-- Mode selector
+SIGNAL difficulty_on : std_logic;
+SIGNAL cur_difficulty: integer := 0;
+
 -- Pipe generation
 component pipe is 
-    port(clk, vert_sync : IN std_logic;
-            start_flag : IN std_logic;
-          pixel_row, pixel_column   : IN std_logic_vector(9 DOWNTO 0);
-             pipe_num  : IN integer;
-
-          green             : OUT std_logic;
-          top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
-          left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));
+    port(clk, vert_sync, start_flag	: IN std_logic;
+          pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+			 pipe_num : IN integer;
+			 reset : IN std_logic;
+			 difficulty: IN integer;
+		  green 			: OUT std_logic;
+		  top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
+		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));
 end component;
 
 component bird_rom is
@@ -78,6 +82,11 @@ BEGIN
 			if rising_edge(clk) then
             if pb1 = '0' then
                 start_flag <= '1';
+					 if (sw1 = '1') then
+							difficulty_on  <= '1';
+					 else
+							difficulty_on  <= '0';
+					end if;
             end if;
 				if ball_destroyed = '1' then
 					start_flag <= '0';
@@ -95,22 +104,22 @@ bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_
 
 
 --Pipe generation
-pipe1: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 0, 
+pipe1: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 0, reset => reset, difficulty => cur_difficulty, 
                             green => green_pipe1, top_y_pos => y_pos_up(0), bottom_y_pos => y_pos_down(0), left_x_pos => x_pos(0));
                             
-pipe2: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 1, 
+pipe2: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 1, reset => reset, difficulty => cur_difficulty, 
                             green => green_pipe2, top_y_pos => y_pos_up(1), bottom_y_pos => y_pos_down(1), left_x_pos => x_pos(1));
                             
-pipe3: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 2, 
+pipe3: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 2, reset => reset, difficulty => cur_difficulty, 
                             green => green_pipe3, top_y_pos => y_pos_up(2), bottom_y_pos => y_pos_down(2), left_x_pos => x_pos(2));
                             
-pipe4: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 3, 
+pipe4: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 3, reset => reset, difficulty => cur_difficulty, 
                             green => green_pipe4, top_y_pos => y_pos_up(3), bottom_y_pos => y_pos_down(3), left_x_pos => x_pos(3));
                             
-pipe5: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 4, 
+pipe5: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 4, reset => reset, difficulty => cur_difficulty, 
                             green => green_pipe5, top_y_pos => y_pos_up(4), bottom_y_pos => y_pos_down(4), left_x_pos => x_pos(4));
                             
-pipe6: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, 
+pipe6: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, reset => reset, difficulty => cur_difficulty, 
                             green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
@@ -124,8 +133,8 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
             
             
 Red <= ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0));
-Green <= ((ball_on or not ball_on) and not sw1) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
-Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not sw1;
+Green <= ((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
+Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on;
 
 
 Move_Ball: process (vert_sync)
@@ -136,7 +145,7 @@ begin
             -- Move ball once every vertical sync
         if (rising_edge(vert_sync)) then
 			if (start_flag = '1') then
-			if (invin_counter > 200) then
+			if (invin_counter > 100) then
 				invin_counter <= 0;
 				invin_flag <= '0';
 			elsif (invin_flag  = '1') then 
@@ -158,11 +167,12 @@ begin
 								lives <= lives - 1; 
 								ball_destroyed <= '1';
 							end if;
-
                end if;
+				end loop;
 					
+            for i in 0 to 5 loop
                 -- Check if the left side of the ball has passed through the right edge of the pipe
-                if ball_x_pos - size <= x_pos(i) + 15 and ball_x_pos + ball_y_motion > x_pos(i) + 15 then
+                if ball_x_pos - size <= x_pos(i) + 15 and ball_x_pos + size > x_pos(i) + 15 then
                    if not pipe_score_flag(i) then
                         point <= point + 1; -- Increment point
                         pipe_score_flag(i) <= true; -- Set flag to true
@@ -173,7 +183,6 @@ begin
 								end if;
                     end if;
                 end if;
-					 
             end loop;
 				
             -- Check if the left button is clicked
@@ -185,8 +194,8 @@ begin
             -- Move the ball upwards for 1 second if the flag is set and the bird is not destroyed
             if (move_up_flag = '1' and ball_destroyed = '0') then
                 move_up_counter := move_up_counter + 1; -- Increment the counter
-                ball_y_motion <= - CONV_STD_LOGIC_VECTOR(5, 10); -- Move upwards
-					 if (move_up_counter >= 15) then
+                ball_y_motion <= - CONV_STD_LOGIC_VECTOR(8, 10); -- Move upwards
+					 if (move_up_counter >= 5) then
                     move_up_flag := '0'; -- Reset the flag
                 end if;
             else
@@ -195,7 +204,7 @@ begin
                     ball_y_motion <= "0000000000";
                      else
                     -- If the bird is not destroyed, keep falling
-                    ball_y_motion <= CONV_STD_LOGIC_VECTOR(4, 10);
+                    ball_y_motion <= CONV_STD_LOGIC_VECTOR(5, 10);
                 end if;
             end if;
 
@@ -216,6 +225,15 @@ begin
 					invin_counter <= 0;  -- Reset invincibility counter
 					pipe_score_flag <= (others => FALSE);  -- Reset pipe score flags
 				end if;
+				
+				if(difficulty_on = '1') then
+					if (point < 31) then
+						cur_difficulty <= INTEGER(point/10);
+					else 
+						cur_difficulty <= 3;
+					end if;
+				end if;	
+				
         end if;
 		  
 		  cur_point <= point;

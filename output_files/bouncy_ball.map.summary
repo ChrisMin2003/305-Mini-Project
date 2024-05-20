@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon May 20 13:09:19 2024
+Analysis & Synthesis Status : Successful - Mon May 20 14:47:39 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : bouncy_ball
 Top-level Entity Name : Block1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 311
+Total registers : 333
 Total pins : 27
 Total virtual pins : 0
 Total block memory bits : 14,272

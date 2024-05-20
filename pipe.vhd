@@ -8,7 +8,9 @@ ENTITY pipe IS
 	PORT
 		( clk, vert_sync, start_flag	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
-			 pipe_num  : IN integer;
+			 pipe_num : IN integer;
+			 reset : IN std_logic;
+			 difficulty: IN integer;
 		  green 			: OUT std_logic;
 		  top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
 		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));		
@@ -59,11 +61,13 @@ Green <= pipe_up_on or pipe_down_on;
 
 Move_pipe : process(vert_sync)
 begin
-	if (rising_edge(vert_sync) and start_flag = '1') then
-		pipe_x_motion <= - CONV_STD_LOGIC_VECTOR(2, 10);
-
-		pipe_le_x_edge <= pipe_le_x_edge + pipe_x_motion;
-
+	if (rising_edge(vert_sync)) then
+		if (start_flag = '1') then
+			pipe_x_motion <= - CONV_STD_LOGIC_VECTOR(2 + difficulty, 10);
+			pipe_le_x_edge <= pipe_le_x_edge + pipe_x_motion;
+		elsif (reset = '0') then
+			pipe_le_x_edge <= CONV_STD_LOGIC_VECTOR(640, 11);
+		end if;
     end if;
 end process Move_pipe;
 
