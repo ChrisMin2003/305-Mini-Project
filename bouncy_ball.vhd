@@ -26,7 +26,8 @@ SIGNAL y_pos_up, y_pos_down            : y_pos_array;
 SIGNAL x_pos                           : x_pos_array;
 
 --Signals for the bird
-SIGNAL ball_on, ball_on1 : std_logic;
+SIGNAL ball_on : std_logic;
+SIGNAL ball_on1: std_logic_vector(15 downto 0);
 SIGNAL ball_destroyed : std_logic := '0';
 SIGNAL start_flag : std_logic := '0';
 SIGNAL size                                 : std_logic_vector(9 DOWNTO 0);  
@@ -100,7 +101,7 @@ BEGIN
 
 	 
      
-bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_col => font_col, clock => clk, rom_mux_output => ball_on1);
+--bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_col => font_col, clock => clk, rgba_output => ball_on1);
 
 
 --Pipe generation
@@ -155,8 +156,8 @@ begin
 		  -- The for loop for detecting collision
 
             for i in 0 to 5 loop
-					if (ball_y_pos + size >= y_pos_down(i) or ball_y_pos - size <= y_pos_up(i)) 
-					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15)
+					if ((ball_y_pos + size >= y_pos_down(i) or ball_y_pos - size <= y_pos_up(i)) 
+					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15))
 					and (invin_flag = '0') then
 							if (lives > 1) then 
 								lives <= lives - 1; 
@@ -168,6 +169,9 @@ begin
 								ball_destroyed <= '1';
 							end if;
                end if;
+					if ((ball_y_pos - size <= CONV_STD_LOGIC_VECTOR(0, 10)) or (ball_y_pos + size >= CONV_STD_LOGIC_VECTOR(480, 10))) then
+							ball_destroyed <= '1';
+					end if;
 				end loop;
 					
             for i in 0 to 5 loop
@@ -227,11 +231,7 @@ begin
 				end if;
 				
 				if(difficulty_on = '1') then
-					if (point < 31) then
-						cur_difficulty <= INTEGER(point/10);
-					else 
-						cur_difficulty <= 3;
-					end if;
+						cur_difficulty <= INTEGER(point/3);
 				end if;	
 				
         end if;

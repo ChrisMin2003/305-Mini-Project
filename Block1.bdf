@@ -1940,18 +1940,6 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "pixel_row[2..0]" (rect 50 480 119 497)(font "Intel Clear" ))
-	(pt 168 496)
-	(pt 40 496)
-	(bus)
-)
-(connector
-	(text "pixel_column[2..0]" (rect 34 496 121 513)(font "Intel Clear" ))
-	(pt 168 512)
-	(pt 40 512)
-	(bus)
-)
-(connector
 	(pt 432 432)
 	(pt 400 432)
 	(bus)
@@ -2161,6 +2149,18 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1360 704)
 	(pt 1360 888)
+	(bus)
+)
+(connector
+	(text "pixel_row[2..0]" (rect 50 480 119 497)(font "Intel Clear" ))
+	(pt 168 496)
+	(pt 40 496)
+	(bus)
+)
+(connector
+	(text "pixel_column[2..0]" (rect 34 496 121 513)(font "Intel Clear" ))
+	(pt 168 512)
+	(pt 40 512)
 	(bus)
 )
 (junction (pt 504 344))
