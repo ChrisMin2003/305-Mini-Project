@@ -54,14 +54,15 @@ SIGNAL cur_difficulty: integer := 0;
 
 -- Pipe generation
 component pipe is 
-    port(clk, vert_sync, start_flag	: IN std_logic;
+    port( clk, vert_sync, start_flag	: IN std_logic;
           pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
 			 pipe_num : IN integer;
 			 reset : IN std_logic;
 			 difficulty: IN integer;
+			 ypos : IN std_logic_vector(9 downto 0);
 		  green 			: OUT std_logic;
 		  top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
-		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));
+		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));	
 end component;
 
 component bird_rom is
@@ -106,22 +107,22 @@ BEGIN
 
 --Pipe generation
 pipe1: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 0, reset => reset, difficulty => cur_difficulty, 
-                            green => green_pipe1, top_y_pos => y_pos_up(0), bottom_y_pos => y_pos_down(0), left_x_pos => x_pos(0));
+                            ypos => y_pos_up(0), green => green_pipe1, top_y_pos => y_pos_up(0), bottom_y_pos => y_pos_down(0), left_x_pos => x_pos(0));
                             
 pipe2: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 1, reset => reset, difficulty => cur_difficulty, 
-                            green => green_pipe2, top_y_pos => y_pos_up(1), bottom_y_pos => y_pos_down(1), left_x_pos => x_pos(1));
+                            ypos => y_pos_up(1), green => green_pipe2, top_y_pos => y_pos_up(1), bottom_y_pos => y_pos_down(1), left_x_pos => x_pos(1));
                             
 pipe3: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 2, reset => reset, difficulty => cur_difficulty, 
-                            green => green_pipe3, top_y_pos => y_pos_up(2), bottom_y_pos => y_pos_down(2), left_x_pos => x_pos(2));
+                            ypos => y_pos_up(2), green => green_pipe3, top_y_pos => y_pos_up(2), bottom_y_pos => y_pos_down(2), left_x_pos => x_pos(2));
                             
 pipe4: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 3, reset => reset, difficulty => cur_difficulty, 
-                            green => green_pipe4, top_y_pos => y_pos_up(3), bottom_y_pos => y_pos_down(3), left_x_pos => x_pos(3));
+                            ypos => y_pos_up(3), green => green_pipe4, top_y_pos => y_pos_up(3), bottom_y_pos => y_pos_down(3), left_x_pos => x_pos(3));
                             
 pipe5: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 4, reset => reset, difficulty => cur_difficulty, 
-                            green => green_pipe5, top_y_pos => y_pos_up(4), bottom_y_pos => y_pos_down(4), left_x_pos => x_pos(4));
+                            ypos => y_pos_up(4), green => green_pipe5, top_y_pos => y_pos_up(4), bottom_y_pos => y_pos_down(4), left_x_pos => x_pos(4));
                             
 pipe6: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, reset => reset, difficulty => cur_difficulty, 
-                            green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
+                            ypos => y_pos_up(5), green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball

@@ -1,5 +1,5 @@
 Flow report for bouncy_ball
-Tue May 21 17:54:20 2024
+Sat May 25 17:21:21 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Tue May 21 17:54:14 2024           ;
+; Flow Status                     ; Successful - Sat May 25 17:21:15 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CEBA4F23C7                                     ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 2,308 / 18,480 ( 12 % )                         ;
-; Total registers                 ; 345                                             ;
+; Logic utilization (in ALMs)     ; 2,448 / 18,480 ( 13 % )                         ;
+; Total registers                 ; 478                                             ;
 ; Total pins                      ; 27 / 224 ( 12 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 14,272 / 3,153,920 ( < 1 % )                    ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/21/2024 17:52:02 ;
+; Start date & time ; 05/25/2024 17:19:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; bouncy_ball         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948462350277.171627072226108        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948461338921.171661434917504        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; MISC_FILE                           ; PLL.cmp                                ; --            ; --             ; --         ;
@@ -107,11 +107,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 5001 MB             ; 00:00:05                           ;
-; Fitter               ; 00:01:54     ; 1.2                     ; 7749 MB             ; 00:01:23                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4855 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:06     ; 3.2                     ; 5325 MB             ; 00:00:07                           ;
-; Total                ; 00:02:16     ; --                      ; --                  ; 00:01:36                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 5043 MB             ; 00:00:08                           ;
+; Fitter               ; 00:01:48     ; 1.2                     ; 7705 MB             ; 00:02:27                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4854 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:05     ; 3.3                     ; 5330 MB             ; 00:00:11                           ;
+; Total                ; 00:02:08     ; --                      ; --                  ; 00:02:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -120,10 +120,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; EN453044         ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; EN453044         ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; EN453044         ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; EN453044         ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EN441287         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; EN441287         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; EN441287         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; EN441287         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
