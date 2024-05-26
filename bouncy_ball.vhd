@@ -9,7 +9,7 @@ ENTITY bouncy_ball IS
         ( clk, vert_sync, pb1, pb2, sw1 : IN std_logic;
           pixel_row, pixel_column   : IN std_logic_vector(9 DOWNTO 0);
             font_row, font_col        : IN STD_LOGIC_VECTOR(2 downto 0);
-          red, green, blue          : OUT std_logic;
+          red, green, blue          : OUT std_logic_vector(3 downto 0);
 			 cur_point      : OUT integer;
 			 cur_lives      : OUT integer;
           left_button : IN std_logic;
@@ -158,9 +158,9 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
             '0';
             
             
-Red <= (ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0))) or medic_out;
-Green <= ((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) or medic_out;
-Blue <= ((not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on) or medic_out;
+Red <= "000" & ((ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0))) or medic_out);
+Green <= "000" & (((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) or medic_out);
+Blue <= "000" & (((not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on) or medic_out);
 
 
 Move_Ball: process (vert_sync)
