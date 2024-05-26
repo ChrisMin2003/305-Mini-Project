@@ -31,7 +31,7 @@ SIGNAL medic_destroyed : std_logic := '0';
 
 --Signals for the bird
 SIGNAL ball_on : std_logic;
-SIGNAL ball_on1: std_logic_vector(15 downto 0);
+SIGNAL ball_red, ball_green, ball_blue: std_logic_vector(3 downto 0);
 SIGNAL ball_destroyed : std_logic := '0';
 SIGNAL start_flag : std_logic := '0';
 SIGNAL size                                 : std_logic_vector(9 DOWNTO 0);  
@@ -90,7 +90,7 @@ component bird_rom is
         bird_address    :   IN STD_LOGIC_VECTOR (5 DOWNTO 0);
         font_row, font_col  :   IN STD_LOGIC_VECTOR (2 DOWNTO 0);
         clock               :   IN STD_LOGIC ;
-        rom_mux_output      :   OUT STD_LOGIC
+        red, green, blue      :   OUT STD_LOGIC_VECTOR(3 downto 0)
     );
 end component;
 
@@ -121,7 +121,7 @@ BEGIN
 
 	 
      
---bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_col => font_col, clock => clk, rgba_output => ball_on1);
+bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_col => font_col, clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
 
 
 --Pipe generation
@@ -156,12 +156,11 @@ ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size)   -- x_pos - size <= pixel_column <= x_pos + size
                     and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0'))  else -- y_pos - size <= pixel_row <= y_pos + size
             '0';
-            
-            
-Red <= "000" & ((ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0))) or medic_out);
-Green <= "000" & (((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) or medic_out);
-Blue <= "000" & (((not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on) or medic_out);
 
+            
+--Red <= "000" & ((ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0))) or medic_out);
+--Green <= "000" & (((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) or medic_out);
+--Blue <= "000" & (((not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on) or medic_out);
 
 Move_Ball: process (vert_sync)
         variable move_up_flag : std_logic;
@@ -170,6 +169,13 @@ begin
 
             -- Move ball once every vertical sync
         if (rising_edge(vert_sync)) then
+				if ball_on = '1' then
+					Red <= ball_red;
+					Green <= ball_green;
+					Blue <= ball_blue;
+				end if;
+
+		  
 			if (start_flag = '1') then
 			if (invin_counter > 100) then
 				invin_counter <= 0;

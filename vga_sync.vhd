@@ -87,9 +87,11 @@ BEGIN
 		green_out <= "0101";
 		blue_out <= "1010";
 	else
-		red_out <= "000" & (red(0) AND video_on);
-		green_out <= "000" & (green(0) AND video_on);
-		blue_out <= "000" & (blue(0) AND video_on);
+		if (video_on = '1') then
+			red_out <= red;
+			green_out <= green;
+			blue_out <= blue;
+		end if; 
 	end if;
 		horiz_sync_out <= horiz_sync;
 		vert_sync_out <= vert_sync;
