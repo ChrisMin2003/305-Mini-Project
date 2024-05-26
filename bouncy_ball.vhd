@@ -24,6 +24,10 @@ type x_pos_array is array (0 to 5) of std_logic_vector(10 DOWNTO 0);
 -- Signal for detecting collisions
 SIGNAL y_pos_up, y_pos_down            : y_pos_array;
 SIGNAL x_pos                           : x_pos_array;
+SIGNAL medic_y_pos			: std_logic_vector(9 DOWNTO 0);
+SIGNAL medic_x_pos         : std_logic_vector(10 DOWNTO 0);
+SIGNAL medic_destroyed : std_logic := '0';
+
 
 --Signals for the bird
 SIGNAL ball_on : std_logic;
@@ -43,6 +47,7 @@ SIGNAL pipe_score_flag       : pipe_score_flag_array := (others => FALSE);
 
 -- Portmap output instances
 SIGNAL green_pipe1,green_pipe2,green_pipe3,green_pipe4,green_pipe5,green_pipe6   : std_logic;
+SIGNAL medic_out : std_logic;
 
 -- Invincibility tracker
 SIGNAL invin_flag : std_logic;
@@ -63,6 +68,20 @@ component pipe is
 		  green 			: OUT std_logic;
 		  top_y_pos, bottom_y_pos  : OUT std_logic_vector(9 downto 0);
 		  left_x_pos  : OUT std_logic_vector(10 DOWNTO 0));	
+end component;
+
+-- Medic_pack generation
+component medic_pack is 
+		PORT
+        ( clk, vert_sync, start_flag	: IN std_logic;
+          pixel_row, pixel_column	: IN std_logic_vector(9 DOWNTO 0);
+			 reset : IN std_logic;
+			 difficulty: IN integer;
+			 destroyed: IN std_logic;
+			 ypos : IN std_logic_vector(9 downto 0);
+		  medic_out 			: OUT std_logic;
+		  y_pos  : OUT std_logic_vector(9 downto 0);
+		  x_pos  : OUT std_logic_vector(10 DOWNTO 0));	
 end component;
 
 component bird_rom is
@@ -124,6 +143,11 @@ pipe5: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_fla
 pipe6: pipe port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, pipe_num => 5, reset => reset, difficulty => cur_difficulty, 
                             ypos => y_pos_up(5), green => green_pipe6, top_y_pos => y_pos_up(5), bottom_y_pos => y_pos_down(5), left_x_pos => x_pos(5));
 
+--Medic Pack generation
+medic1: medic_pack port map(clk => clk, vert_sync => vert_sync, start_flag => start_flag, pixel_row => pixel_row, pixel_column => pixel_column, reset => reset, difficulty => cur_difficulty, 
+                            destroyed => medic_destroyed, ypos => medic_y_pos, medic_out => medic_out, y_pos => medic_y_pos, x_pos => medic_x_pos);							 
+									 
+									 
 size <= CONV_STD_LOGIC_VECTOR(8,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
@@ -134,9 +158,9 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
             '0';
             
             
-Red <= ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0));
-Green <= ((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6);
-Blue <= (not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on;
+Red <= (ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0))) or medic_out;
+Green <= ((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) or medic_out;
+Blue <= ((not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on) or medic_out;
 
 
 Move_Ball: process (vert_sync)
@@ -155,7 +179,6 @@ begin
 			end if;
 		  
 		  -- The for loop for detecting collision
-
             for i in 0 to 5 loop
 					if ((ball_y_pos + size >= y_pos_down(i) or ball_y_pos - size <= y_pos_up(i)) 
 					and (ball_x_pos + size >= x_pos(i) and ball_x_pos - size <= x_pos(i) + 15))
@@ -174,7 +197,17 @@ begin
 							ball_destroyed <= '1';
 					end if;
 				end loop;
-					
+			-- Detecting if collided with medical pack
+				if ((ball_y_pos + size >= medic_y_pos - 15 and ball_y_pos - size <= medic_y_pos + 15) 
+					and (ball_x_pos + size >= medic_x_pos - 15 and ball_x_pos - size <= medic_x_pos + 15) and (medic_destroyed = '0')) then
+						if (lives < 5) then
+							lives <= lives + 1;
+						end if;
+					medic_destroyed <= '1';
+				elsif (medic_x_pos > CONV_STD_LOGIC_VECTOR(800, 11)) then
+					medic_destroyed <= '0';
+				end if;
+
             for i in 0 to 5 loop
                 -- Check if the left side of the ball has passed through the right edge of the pipe
                 if ball_x_pos - size <= x_pos(i) + 15 and ball_x_pos + size > x_pos(i) + 15 then

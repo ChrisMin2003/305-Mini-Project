@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 entity lfsr is 
 generic(
-  G_M             : integer           := 10          ;
-  G_POLY          : std_logic_vector  := "1001000000") ;  -- x^7+x^6+1 
+  G_M             : integer           := 8          ;
+  G_POLY          : std_logic_vector  := "10111000") ; 
 port (
   i_clk           : in  std_logic;
     i_en            : in  std_logic;
