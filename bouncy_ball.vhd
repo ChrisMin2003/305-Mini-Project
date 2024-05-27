@@ -219,21 +219,21 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 bg_on <= '1' when (pixel_row >= CONV_STD_LOGIC_VECTOR(464, 11)) else '0';
 
 panel1_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(257, 10))
-                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(256, 10)) else '0';
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(256, 10)) and start_flag = '0' else '0';
 						  
 panel2_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(320, 10))
-                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(256, 10)) else '0';
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(256, 10)) and start_flag = '0' else '0';
 						  
 panel3_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(257, 10))
-                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(320, 10)) else '0';
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(320, 10)) and start_flag = '0' else '0';
 						  
 panel4_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(320, 10))
-                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(320, 10)) else '0';
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(320, 10)) and start_flag = '0' else '0';
 				
 red <= panel_red1 when panel1_on = '1'
 		else panel_red2 when panel2_on = '1'
 		else panel_red3 when panel3_on = '1'
-		else panel_red4 when panel4_on = '1'
+		else panel_red4 when panel4_on = '1' 
 		else ball_red when ball_on = '1' -- Layer 1: ball
 		else (others => '1') when medic_out = '1' -- Layer 2: medical pack and pipes
 		else bg_red when bg_on = '1' -- Layer 3: background sprites
