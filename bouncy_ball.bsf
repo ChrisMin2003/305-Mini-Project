@@ -20,9 +20,9 @@ refer to the applicable agreement for further details.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 248 256)
+	(rect 16 16 248 224)
 	(text "bouncy_ball" (rect 5 0 52 12)(font "Arial" ))
-	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(text "inst" (rect 8 192 20 204)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -75,30 +75,16 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 144)
 		(input)
-		(text "font_row[3..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "font_row[3..0]" (rect 21 139 76 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
+		(text "left_button" (rect 0 0 41 12)(font "Arial" ))
+		(text "left_button" (rect 21 139 62 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
 	)
 	(port
 		(pt 0 160)
 		(input)
-		(text "font_col[3..0]" (rect 0 0 51 12)(font "Arial" ))
-		(text "font_col[3..0]" (rect 21 155 72 167)(font "Arial" ))
-		(line (pt 0 160)(pt 16 160)(line_width 3))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "left_button" (rect 0 0 41 12)(font "Arial" ))
-		(text "left_button" (rect 21 171 62 183)(font "Arial" ))
-		(line (pt 0 176)(pt 16 176)(line_width 1))
-	)
-	(port
-		(pt 0 192)
-		(input)
 		(text "reset" (rect 0 0 20 12)(font "Arial" ))
-		(text "reset" (rect 21 187 41 199)(font "Arial" ))
-		(line (pt 0 192)(pt 16 192)(line_width 1))
+		(text "reset" (rect 21 155 41 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 1))
 	)
 	(port
 		(pt 232 32)
@@ -150,6 +136,6 @@ refer to the applicable agreement for further details.
 		(line (pt 232 128)(pt 216 128)(line_width 1))
 	)
 	(drawing
-		(rectangle (rect 16 16 216 224)(line_width 1))
+		(rectangle (rect 16 16 216 192)(line_width 1))
 	)
 )

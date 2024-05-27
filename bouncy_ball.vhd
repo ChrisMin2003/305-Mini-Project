@@ -8,7 +8,6 @@ ENTITY bouncy_ball IS
     PORT
         ( clk, vert_sync, pb1, pb2, sw1 : IN std_logic;
           pixel_row, pixel_column   : IN std_logic_vector(9 DOWNTO 0);
-            font_row, font_col        : IN STD_LOGIC_VECTOR(3 downto 0);
           red, green, blue          : OUT std_logic_vector(3 downto 0);
 			 cur_point      : OUT integer;
 			 cur_lives      : OUT integer;
@@ -27,6 +26,7 @@ SIGNAL x_pos                           : x_pos_array;
 SIGNAL medic_y_pos			: std_logic_vector(9 DOWNTO 0);
 SIGNAL medic_x_pos         : std_logic_vector(10 DOWNTO 0);
 SIGNAL medic_destroyed : std_logic := '0';
+SIGNAL font_row_bird, font_column_bird : STD_LOGIC_VECTOR(9 downto 0);
 
 
 --Signals for the bird
@@ -129,8 +129,8 @@ BEGIN
     end process;
 	 
      
-bird1 : bird_rom port map (bird_address => "0000", font_row => pixel_row(6 downto 1), font_col => pixel_column(5 downto 0), clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
-rock : bg_rom port map (bg_address => "00000000", font_row => font_row, font_col => font_col, clock => clk, red => bg_red, green => bg_green, blue => bg_blue);
+bird1 : bird_rom port map (bird_address => "0000", font_row => font_row_bird(6 downto 1), font_col => font_column_bird(5 downto 0), clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
+rock : bg_rom port map (bg_address => "00000000", font_row => pixel_row(3 downto 0), font_col => pixel_column(3 downto 0), clock => clk, red => bg_red, green => bg_green, blue => bg_blue);
 
 
 --Pipe generation
@@ -157,7 +157,7 @@ medic1: medic_pack port map(clk => clk, vert_sync => vert_sync, start_flag => st
                             destroyed => medic_destroyed, ypos => medic_y_pos, medic_out => medic_out, y_pos => medic_y_pos, x_pos => medic_x_pos);							 
 									 
 									 
-size <= CONV_STD_LOGIC_VECTOR(16,10);
+size <= CONV_STD_LOGIC_VECTOR(15,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
 
@@ -182,6 +182,8 @@ blue <= ball_blue when ball_on = '1'
 		else "0000" when (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) = '1'
 		else "1111";
 
+		font_column_bird <= pixel_column - (ball_x_pos(9 downto 0) - size);
+		font_row_bird <= pixel_row - (ball_y_pos - size);
 
 
 Move_Ball: process (vert_sync)

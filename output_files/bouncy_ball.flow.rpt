@@ -1,5 +1,5 @@
 Flow report for bouncy_ball
-Mon May 27 16:37:31 2024
+Mon May 27 17:42:11 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Mon May 27 16:37:24 2024           ;
+; Flow Status                     ; Successful - Mon May 27 17:42:04 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; bouncy_ball                                     ;
 ; Top-level Entity Name           ; Block1                                          ;
 ; Family                          ; Cyclone V                                       ;
 ; Device                          ; 5CEBA4F23C7                                     ;
 ; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 2,521 / 18,480 ( 14 % )                         ;
-; Total registers                 ; 495                                             ;
+; Logic utilization (in ALMs)     ; 2,562 / 18,480 ( 14 % )                         ;
+; Total registers                 ; 499                                             ;
 ; Total pins                      ; 36 / 224 ( 16 % )                               ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 29,632 / 3,153,920 ( < 1 % )                    ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/27/2024 16:35:22 ;
+; Start date & time ; 05/27/2024 17:39:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; bouncy_ball         ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 224948462350335.171678452203724        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948462350335.171678838426268        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; MISC_FILE                           ; PLL.cmp                                ; --            ; --             ; --         ;
@@ -107,11 +107,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 5048 MB             ; 00:00:07                           ;
-; Fitter               ; 00:01:41     ; 1.2                     ; 7751 MB             ; 00:01:05                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4860 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:07     ; 3.0                     ; 5335 MB             ; 00:00:09                           ;
-; Total                ; 00:02:05     ; --                      ; --                  ; 00:01:22                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 5044 MB             ; 00:00:05                           ;
+; Fitter               ; 00:01:54     ; 1.2                     ; 7748 MB             ; 00:01:42                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4858 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:06     ; 3.1                     ; 5332 MB             ; 00:00:09                           ;
+; Total                ; 00:02:24     ; --                      ; --                  ; 00:01:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
