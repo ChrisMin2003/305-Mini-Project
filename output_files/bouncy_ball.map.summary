@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Mon May 27 15:36:53 2024
+Analysis & Synthesis Status : Successful - Mon May 27 16:35:35 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 Revision Name : bouncy_ball
 Top-level Entity Name : Block1
@@ -7,7 +7,7 @@ Logic utilization (in ALMs) : N/A
 Total registers : 477
 Total pins : 36
 Total virtual pins : 0
-Total block memory bits : 20,416
+Total block memory bits : 29,632
 Total DSP Blocks : 6
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

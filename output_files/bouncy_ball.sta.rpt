@@ -1,5 +1,5 @@
 Timing Analyzer report for bouncy_ball
-Mon May 27 15:39:04 2024
+Mon May 27 16:37:31 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -101,26 +101,26 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 3.08        ;
+; Average used               ; 3.02        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  17.1%      ;
-;     Processor 3            ;  16.9%      ;
+;     Processor 2            ;  16.9%      ;
+;     Processor 3            ;  16.7%      ;
 ;     Processor 4            ;  16.6%      ;
-;     Processor 5            ;  13.2%      ;
-;     Processor 6            ;  13.2%      ;
-;     Processor 7            ;  13.2%      ;
-;     Processor 8            ;  13.2%      ;
-;     Processor 9            ;  13.2%      ;
-;     Processor 10           ;  13.2%      ;
-;     Processor 11           ;  13.0%      ;
-;     Processor 12           ;  13.0%      ;
-;     Processor 13           ;  13.0%      ;
-;     Processor 14           ;  12.9%      ;
-;     Processor 15           ;  12.9%      ;
-;     Processor 16           ;  12.9%      ;
+;     Processor 5            ;  12.8%      ;
+;     Processor 6            ;  12.8%      ;
+;     Processor 7            ;  12.8%      ;
+;     Processor 8            ;  12.8%      ;
+;     Processor 9            ;  12.8%      ;
+;     Processor 10           ;  12.6%      ;
+;     Processor 11           ;  12.6%      ;
+;     Processor 12           ;  12.6%      ;
+;     Processor 13           ;  12.6%      ;
+;     Processor 14           ;  12.6%      ;
+;     Processor 15           ;  12.6%      ;
+;     Processor 16           ;  12.6%      ;
 +----------------------------+-------------+
 
 
@@ -142,9 +142,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+-----------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                            ; Note ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
-; 15.8 MHz   ; 15.8 MHz        ; VGA_SYNC:inst1|vert_sync_out                                          ;      ;
-; 60.92 MHz  ; 60.92 MHz       ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 277.55 MHz ; 277.55 MHz      ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ;      ;
+; 15.87 MHz  ; 15.87 MHz       ; VGA_SYNC:inst1|vert_sync_out                                          ;      ;
+; 59.74 MHz  ; 59.74 MHz       ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 265.18 MHz ; 265.18 MHz      ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ;      ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -160,9 +160,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                 ; Slack   ; End Point TNS ;
 +-----------------------------------------------------------------------+---------+---------------+
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -74.321 ; -2867.028     ;
-; VGA_SYNC:inst1|vert_sync_out                                          ; -62.301 ; -3754.025     ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -8.494  ; -271.667      ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -74.934 ; -2889.519     ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -61.999 ; -3664.301     ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -8.092  ; -271.231      ;
 +-----------------------------------------------------------------------+---------+---------------+
 
 
@@ -171,9 +171,9 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+-------+---------------+
 ; Clock                                                                 ; Slack ; End Point TNS ;
 +-----------------------------------------------------------------------+-------+---------------+
-; VGA_SYNC:inst1|vert_sync_out                                          ; 0.173 ; 0.000         ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.191 ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.397 ; 0.000         ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; 0.191 ; 0.000         ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.205 ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.566 ; 0.000         ;
 +-----------------------------------------------------------------------+-------+---------------+
 
 
@@ -182,7 +182,7 @@ HTML report is unavailable in plain text report export.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; -7.124 ; -104.313      ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; -7.003 ; -109.994      ;
 +------------------------------+--------+---------------+
 
 
@@ -191,7 +191,7 @@ HTML report is unavailable in plain text report export.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; 5.316 ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; 5.852 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -200,11 +200,11 @@ HTML report is unavailable in plain text report export.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; VGA_SYNC:inst1|vert_sync_out                                          ; -0.585 ; -334.181      ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.538 ; -28.366       ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -0.616 ; -312.667      ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.538 ; -28.625       ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; clk                                                                   ; 9.949  ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.594 ; 0.000         ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.595 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -219,9 +219,9 @@ No synchronizer chains to report.
 +------------+-----------------+-----------------------------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                                            ; Note ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
-; 15.06 MHz  ; 15.06 MHz       ; VGA_SYNC:inst1|vert_sync_out                                          ;      ;
-; 61.93 MHz  ; 61.93 MHz       ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
-; 283.45 MHz ; 283.45 MHz      ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ;      ;
+; 15.05 MHz  ; 15.05 MHz       ; VGA_SYNC:inst1|vert_sync_out                                          ;      ;
+; 59.84 MHz  ; 59.84 MHz       ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ;      ;
+; 281.69 MHz ; 281.69 MHz      ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ;      ;
 +------------+-----------------+-----------------------------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -231,21 +231,21 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                 ; Slack   ; End Point TNS ;
 +-----------------------------------------------------------------------+---------+---------------+
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -78.136 ; -2940.810     ;
-; VGA_SYNC:inst1|vert_sync_out                                          ; -65.401 ; -3750.042     ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -8.402  ; -267.062      ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -78.648 ; -2969.442     ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -65.425 ; -3662.827     ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -8.119  ; -266.291      ;
 +-----------------------------------------------------------------------+---------+---------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Slow 1100mV 0C Model Hold Summary                                                             ;
-+-----------------------------------------------------------------------+-------+---------------+
-; Clock                                                                 ; Slack ; End Point TNS ;
-+-----------------------------------------------------------------------+-------+---------------+
-; VGA_SYNC:inst1|vert_sync_out                                          ; 0.162 ; 0.000         ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.168 ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.250 ; 0.000         ;
-+-----------------------------------------------------------------------+-------+---------------+
++------------------------------------------------------------------------------------------------+
+; Slow 1100mV 0C Model Hold Summary                                                              ;
++-----------------------------------------------------------------------+--------+---------------+
+; Clock                                                                 ; Slack  ; End Point TNS ;
++-----------------------------------------------------------------------+--------+---------------+
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.266 ; -0.377        ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; 0.179  ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.636  ; 0.000         ;
++-----------------------------------------------------------------------+--------+---------------+
 
 
 +-------------------------------------------------------+
@@ -253,7 +253,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; -7.039 ; -103.532      ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; -6.935 ; -109.471      ;
 +------------------------------+--------+---------------+
 
 
@@ -262,7 +262,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; 5.480 ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; 6.004 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -271,8 +271,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; VGA_SYNC:inst1|vert_sync_out                                          ; -0.545 ; -327.515      ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.538 ; -28.052       ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -0.606 ; -312.660      ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.538 ; -27.646       ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; clk                                                                   ; 9.980  ; 0.000         ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.555 ; 0.000         ;
@@ -290,21 +290,21 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                 ; Slack   ; End Point TNS ;
 +-----------------------------------------------------------------------+---------+---------------+
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -34.635 ; -1428.736     ;
-; VGA_SYNC:inst1|vert_sync_out                                          ; -27.564 ; -1860.644     ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -4.247  ; -129.483      ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -34.716 ; -1416.101     ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -26.951 ; -1816.914     ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -3.795  ; -124.852      ;
 +-----------------------------------------------------------------------+---------+---------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Fast 1100mV 85C Model Hold Summary                                                             ;
-+-----------------------------------------------------------------------+--------+---------------+
-; Clock                                                                 ; Slack  ; End Point TNS ;
-+-----------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.022 ; -0.218        ;
-; VGA_SYNC:inst1|vert_sync_out                                          ; 0.029  ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.198  ; 0.000         ;
-+-----------------------------------------------------------------------+--------+---------------+
++-----------------------------------------------------------------------------------------------+
+; Fast 1100mV 85C Model Hold Summary                                                            ;
++-----------------------------------------------------------------------+-------+---------------+
+; Clock                                                                 ; Slack ; End Point TNS ;
++-----------------------------------------------------------------------+-------+---------------+
+; VGA_SYNC:inst1|vert_sync_out                                          ; 0.039 ; 0.000         ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.189 ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.303 ; 0.000         ;
++-----------------------------------------------------------------------+-------+---------------+
 
 
 +-------------------------------------------------------+
@@ -312,7 +312,7 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; -3.502 ; -49.818       ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; -3.239 ; -50.369       ;
 +------------------------------+--------+---------------+
 
 
@@ -321,7 +321,7 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; 2.785 ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; 2.967 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -330,11 +330,11 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; VGA_SYNC:inst1|vert_sync_out                                          ; -0.182 ; -41.264       ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.014 ; -0.184        ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -0.204 ; -34.870       ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.073  ; 0.000         ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; clk                                                                   ; 9.643  ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.887 ; 0.000         ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.888 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -349,9 +349,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------+---------+---------------+
 ; Clock                                                                 ; Slack   ; End Point TNS ;
 +-----------------------------------------------------------------------+---------+---------------+
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -32.646 ; -1304.816     ;
-; VGA_SYNC:inst1|vert_sync_out                                          ; -25.811 ; -1669.114     ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -4.059  ; -124.651      ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -32.690 ; -1293.245     ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -25.355 ; -1635.034     ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -3.650  ; -119.422      ;
 +-----------------------------------------------------------------------+---------+---------------+
 
 
@@ -360,9 +360,9 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.007 ; -0.061        ;
-; VGA_SYNC:inst1|vert_sync_out                                          ; 0.015  ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 0.182  ; 0.000         ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -0.001 ; -0.001        ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; 0.022  ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.286  ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -371,7 +371,7 @@ No synchronizer chains to report.
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; -3.383 ; -48.675       ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; -3.124 ; -48.745       ;
 +------------------------------+--------+---------------+
 
 
@@ -380,7 +380,7 @@ No synchronizer chains to report.
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MOUSE:inst4|MOUSE_CLK_FILTER ; 2.798 ; 0.000         ;
+; MOUSE:inst4|MOUSE_CLK_FILTER ; 2.929 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -389,11 +389,11 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------+--------+---------------+
 ; Clock                                                                 ; Slack  ; End Point TNS ;
 +-----------------------------------------------------------------------+--------+---------------+
-; VGA_SYNC:inst1|vert_sync_out                                          ; -0.108 ; -21.727       ;
-; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -0.003 ; -0.033        ;
+; VGA_SYNC:inst1|vert_sync_out                                          ; -0.140 ; -22.366       ;
+; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0.074  ; 0.000         ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; 1.666  ; 0.000         ;
 ; clk                                                                   ; 9.632  ; 0.000         ;
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.888 ; 0.000         ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 18.889 ; 0.000         ;
 +-----------------------------------------------------------------------+--------+---------------+
 
 
@@ -408,18 +408,18 @@ No synchronizer chains to report.
 +------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 ; Clock                                                                  ; Setup     ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
-; Worst-case Slack                                                       ; -78.136   ; -0.022 ; -7.124   ; 2.785   ; -0.585              ;
-;  MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -8.494    ; -0.022 ; -7.124   ; 2.785   ; -0.538              ;
-;  VGA_SYNC:inst1|vert_sync_out                                          ; -65.401   ; 0.015  ; N/A      ; N/A     ; -0.585              ;
+; Worst-case Slack                                                       ; -78.648   ; -0.266 ; -7.003   ; 2.929   ; -0.616              ;
+;  MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -8.119    ; 0.286  ; -7.003   ; 2.929   ; -0.538              ;
+;  VGA_SYNC:inst1|vert_sync_out                                          ; -65.425   ; 0.022  ; N/A      ; N/A     ; -0.616              ;
 ;  clk                                                                   ; N/A       ; N/A    ; N/A      ; N/A     ; 9.632               ;
 ;  inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 1.666               ;
-;  inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -78.136   ; 0.182  ; N/A      ; N/A     ; 18.555              ;
-; Design-wide TNS                                                        ; -6957.914 ; -0.218 ; -104.313 ; 0.0     ; -362.547            ;
-;  MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -271.667  ; -0.218 ; -104.313 ; 0.000   ; -28.366             ;
-;  VGA_SYNC:inst1|vert_sync_out                                          ; -3754.025 ; 0.000  ; N/A      ; N/A     ; -334.181            ;
+;  inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -78.648   ; -0.266 ; N/A      ; N/A     ; 18.555              ;
+; Design-wide TNS                                                        ; -6898.56  ; -0.377 ; -109.994 ; 0.0     ; -341.292            ;
+;  MOUSE:inst4|MOUSE_CLK_FILTER                                          ; -271.231  ; 0.000  ; -109.994 ; 0.000   ; -28.625             ;
+;  VGA_SYNC:inst1|vert_sync_out                                          ; -3664.301 ; 0.000  ; N/A      ; N/A     ; -312.667            ;
 ;  clk                                                                   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
 ;  inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]   ; N/A       ; N/A    ; N/A      ; N/A     ; 0.000               ;
-;  inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -2940.810 ; 0.000  ; N/A      ; N/A     ; 0.000               ;
+;  inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; -2969.442 ; -0.377 ; N/A      ; N/A     ; 0.000               ;
 +------------------------------------------------------------------------+-----------+--------+----------+---------+---------------------+
 
 
@@ -638,7 +638,7 @@ No synchronizer chains to report.
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                            ; To Clock                                                              ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+----------+----------+----------+
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30535        ; 0        ; 0        ; 0        ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21825        ; 0        ; 0        ; 0        ;
 ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1            ; 5        ; 0        ; 0        ;
 ; VGA_SYNC:inst1|vert_sync_out                                          ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 0        ; 0        ; 0        ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0            ; 0        ; 35       ; 0        ;
@@ -655,7 +655,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+----------+----------+----------+
 ; From Clock                                                            ; To Clock                                                              ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------+--------------+----------+----------+----------+
-; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 30535        ; 0        ; 0        ; 0        ;
+; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 21825        ; 0        ; 0        ; 0        ;
 ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; 1            ; 5        ; 0        ; 0        ;
 ; VGA_SYNC:inst1|vert_sync_out                                          ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; > 2147483647 ; 0        ; 0        ; 0        ;
 ; inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk ; MOUSE:inst4|MOUSE_CLK_FILTER                                          ; 0            ; 0        ; 35       ; 0        ;
@@ -838,7 +838,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon May 27 15:38:58 2024
+    Info: Processing started: Mon May 27 16:37:24 2024
 Info: Command: quartus_sta 305-Mini-Project -c bouncy_ball
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -895,34 +895,34 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -74.321
+Info (332146): Worst-case setup slack is -74.934
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -74.321           -2867.028 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):   -62.301           -3754.025 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -8.494            -271.667 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is 0.173
+    Info (332119):   -74.934           -2889.519 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   -61.999           -3664.301 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):    -8.092            -271.231 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is 0.191
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.173               0.000 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):     0.191               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
-    Info (332119):     0.397               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -7.124
+    Info (332119):     0.191               0.000 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):     0.205               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.566               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case recovery slack is -7.003
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.124            -104.313 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 5.316
+    Info (332119):    -7.003            -109.994 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 5.852
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     5.316               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case minimum pulse width slack is -0.585
+    Info (332119):     5.852               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case minimum pulse width slack is -0.616
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.585            -334.181 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -0.538             -28.366 MOUSE:inst4|MOUSE_CLK_FILTER 
+    Info (332119):    -0.616            -312.667 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):    -0.538             -28.625 MOUSE:inst4|MOUSE_CLK_FILTER 
     Info (332119):     1.666               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.949               0.000 clk 
-    Info (332119):    18.594               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.595               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -933,31 +933,31 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -78.136
+Info (332146): Worst-case setup slack is -78.648
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -78.136           -2940.810 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):   -65.401           -3750.042 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -8.402            -267.062 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is 0.162
+    Info (332119):   -78.648           -2969.442 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   -65.425           -3662.827 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):    -8.119            -266.291 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is -0.266
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.162               0.000 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):     0.168               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
-    Info (332119):     0.250               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -7.039
+    Info (332119):    -0.266              -0.377 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.179               0.000 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):     0.636               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case recovery slack is -6.935
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -7.039            -103.532 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 5.480
+    Info (332119):    -6.935            -109.471 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 6.004
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     5.480               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case minimum pulse width slack is -0.545
+    Info (332119):     6.004               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case minimum pulse width slack is -0.606
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.545            -327.515 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -0.538             -28.052 MOUSE:inst4|MOUSE_CLK_FILTER 
+    Info (332119):    -0.606            -312.660 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):    -0.538             -27.646 MOUSE:inst4|MOUSE_CLK_FILTER 
     Info (332119):     1.666               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.980               0.000 clk 
     Info (332119):    18.555               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
@@ -971,34 +971,34 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -34.635
+Info (332146): Worst-case setup slack is -34.716
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -34.635           -1428.736 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):   -27.564           -1860.644 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -4.247            -129.483 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is -0.022
+    Info (332119):   -34.716           -1416.101 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   -26.951           -1816.914 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):    -3.795            -124.852 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is 0.039
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.022              -0.218 MOUSE:inst4|MOUSE_CLK_FILTER 
-    Info (332119):     0.029               0.000 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):     0.198               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -3.502
+    Info (332119):     0.039               0.000 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):     0.189               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.303               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case recovery slack is -3.239
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.502             -49.818 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 2.785
+    Info (332119):    -3.239             -50.369 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 2.967
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.785               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case minimum pulse width slack is -0.182
+    Info (332119):     2.967               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case minimum pulse width slack is -0.204
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.182             -41.264 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -0.014              -0.184 MOUSE:inst4|MOUSE_CLK_FILTER 
+    Info (332119):    -0.204             -34.870 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):     0.073               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
     Info (332119):     1.666               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.643               0.000 clk 
-    Info (332119):    18.887               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.888               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL  from: refclkin  to: fbclk
@@ -1007,40 +1007,40 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -32.646
+Info (332146): Worst-case setup slack is -32.690
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -32.646           -1304.816 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-    Info (332119):   -25.811           -1669.114 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -4.059            -124.651 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case hold slack is -0.007
+    Info (332119):   -32.690           -1293.245 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):   -25.355           -1635.034 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):    -3.650            -119.422 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case hold slack is -0.001
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.007              -0.061 MOUSE:inst4|MOUSE_CLK_FILTER 
-    Info (332119):     0.015               0.000 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):     0.182               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
-Info (332146): Worst-case recovery slack is -3.383
+    Info (332119):    -0.001              -0.001 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):     0.022               0.000 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):     0.286               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case recovery slack is -3.124
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.383             -48.675 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case removal slack is 2.798
+    Info (332119):    -3.124             -48.745 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case removal slack is 2.929
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.798               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
-Info (332146): Worst-case minimum pulse width slack is -0.108
+    Info (332119):     2.929               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
+Info (332146): Worst-case minimum pulse width slack is -0.140
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.108             -21.727 VGA_SYNC:inst1|vert_sync_out 
-    Info (332119):    -0.003              -0.033 MOUSE:inst4|MOUSE_CLK_FILTER 
+    Info (332119):    -0.140             -22.366 VGA_SYNC:inst1|vert_sync_out 
+    Info (332119):     0.074               0.000 MOUSE:inst4|MOUSE_CLK_FILTER 
     Info (332119):     1.666               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0] 
     Info (332119):     9.632               0.000 clk 
-    Info (332119):    18.888               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
+    Info (332119):    18.889               0.000 inst|pll2_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 36 warnings
     Info: Peak virtual memory: 5335 megabytes
-    Info: Processing ended: Mon May 27 15:39:04 2024
-    Info: Elapsed time: 00:00:06
+    Info: Processing ended: Mon May 27 16:37:31 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:09
 
 

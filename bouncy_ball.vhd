@@ -36,7 +36,7 @@ SIGNAL ball_destroyed : std_logic := '0';
 SIGNAL start_flag : std_logic := '0';
 SIGNAL size                                 : std_logic_vector(9 DOWNTO 0);  
 SIGNAL ball_y_pos                      : std_logic_vector(9 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(240, 10);
-SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(220, 11);
+SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_STD_LOGIC_VECTOR(216, 11);
 SIGNAL ball_y_motion                        : std_logic_vector(9 DOWNTO 0);
 SIGNAL point : integer := 0;
 SIGNAL lives : integer := 3;
@@ -88,10 +88,10 @@ end component;
 component bird_rom is
     PORT
     (
-        bird_address    :   IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-        font_row, font_col  :   IN STD_LOGIC_VECTOR (3 DOWNTO 0);
-        clock               :   IN STD_LOGIC ;
-        red, green, blue      :   OUT STD_LOGIC_VECTOR(3 downto 0)
+        bird_address    : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        font_row, font_col : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        clock               : IN STD_LOGIC ;
+        red, green, blue    : OUT STD_LOGIC_vector (3 DOWNTO 0)
     );
 end component;
 
@@ -129,7 +129,7 @@ BEGIN
     end process;
 	 
      
-bird1 : bird_rom port map (bird_address => "00000000", font_row => font_row, font_col => font_col, clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
+bird1 : bird_rom port map (bird_address => "0000", font_row => pixel_row(6 downto 1), font_col => pixel_column(5 downto 0), clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
 rock : bg_rom port map (bg_address => "00000000", font_row => font_row, font_col => font_col, clock => clk, red => bg_red, green => bg_green, blue => bg_blue);
 
 

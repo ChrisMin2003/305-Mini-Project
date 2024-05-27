@@ -9,8 +9,8 @@ USE altera_mf.all;
 ENTITY bird_rom IS
     PORT
     (
-        bird_address    : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-        font_row, font_col : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        bird_address    : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        font_row, font_col : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
         clock               : IN STD_LOGIC ;
         red, green, blue    : OUT STD_LOGIC_vector (3 DOWNTO 0)
     );
@@ -56,7 +56,7 @@ BEGIN
         intended_device_family => "Cyclone III",
         lpm_hint => "ENABLE_RUNTIME_MOD=NO",
         lpm_type => "altsyncram",
-        numwords_a => 256,
+        numwords_a => 1024,
         operation_mode => "ROM",
         outdata_aclr_a => "NONE",
         outdata_reg_a => "UNREGISTERED",
