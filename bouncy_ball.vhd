@@ -30,7 +30,7 @@ SIGNAL font_row_bird, font_column_bird : STD_LOGIC_VECTOR(9 downto 0);
 
 
 --Signals for the bird
-SIGNAL ball_on, bg_on : std_logic;
+SIGNAL ball_on, bg_on, panel1_on, panel2_on, panel3_on, panel4_on : std_logic;
 SIGNAL ball_red, ball_green, ball_blue: std_logic_vector(3 downto 0);
 SIGNAL ball_destroyed : std_logic := '0';
 SIGNAL start_flag : std_logic := '0';
@@ -41,6 +41,10 @@ SIGNAL ball_y_motion                        : std_logic_vector(9 DOWNTO 0);
 SIGNAL point : integer := 0;
 SIGNAL lives : integer := 3;
 SIGNAL bg_red, bg_green, bg_blue : std_logic_vector(3 downto 0);
+SIGNAL panel_red1, panel_green1, panel_blue1 : std_logic_vector(3 downto 0);
+SIGNAL panel_red2, panel_green2, panel_blue2 : std_logic_vector(3 downto 0);
+SIGNAL panel_red3, panel_green3, panel_blue3 : std_logic_vector(3 downto 0);
+SIGNAL panel_red4, panel_green4, panel_blue4 : std_logic_vector(3 downto 0);
 
 -- Flags for tracking score increment
 TYPE pipe_score_flag_array IS ARRAY (0 TO 5) OF BOOLEAN;
@@ -105,6 +109,46 @@ component bg_rom is
     );
 end component;
 
+component panel_rom IS
+    PORT
+    (
+        panel_address    : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        font_row, font_col : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        clock               : IN STD_LOGIC ;
+        red, green, blue    : OUT STD_LOGIC_vector (3 DOWNTO 0)
+    );
+END component;
+
+component panel_rom_right IS
+    PORT
+    (
+        panel_address    : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        font_row, font_col : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        clock               : IN STD_LOGIC ;
+        red, green, blue    : OUT STD_LOGIC_vector (3 DOWNTO 0)
+    );
+END component;
+
+component panel_rom1 IS
+    PORT
+    (
+        panel_address    : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        font_row, font_col : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        clock               : IN STD_LOGIC ;
+        red, green, blue    : OUT STD_LOGIC_vector (3 DOWNTO 0)
+    );
+END component;
+
+component panel_rom_right1 IS
+    PORT
+    (
+        panel_address    : IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        font_row, font_col : IN STD_LOGIC_VECTOR (5 DOWNTO 0);
+        clock               : IN STD_LOGIC ;
+        red, green, blue    : OUT STD_LOGIC_vector (3 DOWNTO 0)
+    );
+END component;
+
 BEGIN 
 
     -- Set start_flag to 1 when pb1 is 0, and keep it at 1 forever after that
@@ -131,6 +175,12 @@ BEGIN
      
 bird1 : bird_rom port map (bird_address => "0000", font_row => font_row_bird(6 downto 1), font_col => font_column_bird(5 downto 0), clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
 rock : bg_rom port map (bg_address => "00000000", font_row => pixel_row(3 downto 0), font_col => pixel_column(3 downto 0), clock => clk, red => bg_red, green => bg_green, blue => bg_blue);
+
+panel1 : panel_rom port map (panel_address => "0000", font_row => pixel_row(5 downto 0), font_col => pixel_column(5 downto 0), clock => clk, red => panel_red1, green => panel_green1, blue => panel_blue1);
+panel2 : panel_rom_right port map (panel_address => "0000", font_row => pixel_row(5 downto 0), font_col => pixel_column(5 downto 0), clock => clk, red => panel_red2, green => panel_green2, blue => panel_blue2);
+panel3 : panel_rom1 port map (panel_address => "0000", font_row => pixel_row(5 downto 0), font_col => pixel_column(5 downto 0), clock => clk, red => panel_red3, green => panel_green3, blue => panel_blue3);
+panel4 : panel_rom_right1 port map (panel_address => "0000", font_row => pixel_row(5 downto 0), font_col => pixel_column(5 downto 0), clock => clk, red => panel_red4, green => panel_green4, blue => panel_blue4);
+
 
 
 --Pipe generation
@@ -167,16 +217,42 @@ ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' &
 						  and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0)) = '1')  else -- y_pos - size <= pixel_row <= y_pos + size
             '0';
 bg_on <= '1' when (pixel_row >= CONV_STD_LOGIC_VECTOR(464, 11)) else '0';
+
+panel1_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(257, 10))
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(256, 10)) else '0';
+						  
+panel2_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(320, 10))
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(256, 10)) else '0';
+						  
+panel3_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(320, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(257, 10))
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(320, 10)) else '0';
+						  
+panel4_on <= '1' when  (pixel_column <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_column >= CONV_STD_LOGIC_VECTOR(320, 10))
+                    and (pixel_row <= CONV_STD_LOGIC_VECTOR(384, 11)) and (pixel_row >= CONV_STD_LOGIC_VECTOR(320, 10)) else '0';
 				
-red <= ball_red when ball_on = '1' -- Layer 1: ball
+red <= panel_red1 when panel1_on = '1'
+		else panel_red2 when panel2_on = '1'
+		else panel_red3 when panel3_on = '1'
+		else panel_red4 when panel4_on = '1'
+		else ball_red when ball_on = '1' -- Layer 1: ball
 		else (others => '1') when medic_out = '1' -- Layer 2: medical pack and pipes
 		else bg_red when bg_on = '1' -- Layer 3: background sprites
 		else "0000"; -- Layer 4: sky
-green <= ball_green when ball_on = '1'  
+		
+green <= panel_green1 when panel1_on = '1'
+		else panel_green2 when panel2_on = '1'
+		else panel_green3 when panel3_on = '1'
+		else panel_green4 when panel4_on = '1'
+		else ball_green when ball_on = '1'  
 		else bg_green when bg_on = '1'
 		else (others => '1') when (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6 or medic_out) = '1'
 		else "1111";
-blue <= ball_blue when ball_on = '1' 
+		
+blue <= panel_blue1 when panel1_on = '1'
+		else panel_blue2 when panel2_on = '1'
+		else panel_blue3 when panel3_on = '1'
+		else panel_blue4 when panel4_on = '1'
+		else ball_blue when ball_on = '1' 
 		else (others => '1') when (medic_out) = '1' 
 		else bg_blue when bg_on = '1'
 		else "0000" when (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) = '1'
