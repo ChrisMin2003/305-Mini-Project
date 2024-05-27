@@ -291,7 +291,7 @@ begin
 								ball_destroyed <= '1';
 							end if;
                end if;
-					if ((ball_y_pos - size <= CONV_STD_LOGIC_VECTOR(0, 10)) or (ball_y_pos + size >= CONV_STD_LOGIC_VECTOR(480, 10))) then
+					if ((ball_y_pos - size <= CONV_STD_LOGIC_VECTOR(0, 10)) or (ball_y_pos + size >= CONV_STD_LOGIC_VECTOR(464, 10))) then
 							ball_destroyed <= '1';
 					end if;
 				end loop;
@@ -336,7 +336,7 @@ begin
                 end if;
             else
                 -- Reach bottom of screen and destroy or keep falling
-                if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(479, 10) - size)) then
+                if (('0' & ball_y_pos >= CONV_STD_LOGIC_VECTOR(463, 10) - size)) then
                     ball_y_motion <= "0000000000";
                      else
                     -- If the bird is not destroyed, keep falling
