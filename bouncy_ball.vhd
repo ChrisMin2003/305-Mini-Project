@@ -8,7 +8,7 @@ ENTITY bouncy_ball IS
     PORT
         ( clk, vert_sync, pb1, pb2, sw1 : IN std_logic;
           pixel_row, pixel_column   : IN std_logic_vector(9 DOWNTO 0);
-            font_row, font_col        : IN STD_LOGIC_VECTOR(2 downto 0);
+            font_row, font_col        : IN STD_LOGIC_VECTOR(3 downto 0);
           red, green, blue          : OUT std_logic_vector(3 downto 0);
 			 cur_point      : OUT integer;
 			 cur_lives      : OUT integer;
@@ -30,7 +30,7 @@ SIGNAL medic_destroyed : std_logic := '0';
 
 
 --Signals for the bird
-SIGNAL ball_on : std_logic;
+SIGNAL ball_on, bg_on : std_logic;
 SIGNAL ball_red, ball_green, ball_blue: std_logic_vector(3 downto 0);
 SIGNAL ball_destroyed : std_logic := '0';
 SIGNAL start_flag : std_logic := '0';
@@ -40,6 +40,7 @@ SiGNAL ball_x_pos                      : std_logic_vector(10 DOWNTO 0) := CONV_S
 SIGNAL ball_y_motion                        : std_logic_vector(9 DOWNTO 0);
 SIGNAL point : integer := 0;
 SIGNAL lives : integer := 3;
+SIGNAL bg_red, bg_green, bg_blue : std_logic_vector(3 downto 0);
 
 -- Flags for tracking score increment
 TYPE pipe_score_flag_array IS ARRAY (0 TO 5) OF BOOLEAN;
@@ -87,13 +88,22 @@ end component;
 component bird_rom is
     PORT
     (
-        bird_address    :   IN STD_LOGIC_VECTOR (5 DOWNTO 0);
-        font_row, font_col  :   IN STD_LOGIC_VECTOR (2 DOWNTO 0);
+        bird_address    :   IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+        font_row, font_col  :   IN STD_LOGIC_VECTOR (3 DOWNTO 0);
         clock               :   IN STD_LOGIC ;
         red, green, blue      :   OUT STD_LOGIC_VECTOR(3 downto 0)
     );
 end component;
 
+component bg_rom is
+    PORT
+    (
+        bg_address    :   IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+        font_row, font_col  :   IN STD_LOGIC_VECTOR (3 DOWNTO 0);
+        clock               :   IN STD_LOGIC ;
+        red, green, blue      :   OUT STD_LOGIC_VECTOR(3 downto 0)
+    );
+end component;
 
 BEGIN 
 
@@ -118,10 +128,9 @@ BEGIN
         end if;
     end process;
 	 
-
-	 
      
-bird1 : bird_rom port map (bird_address => "000000", font_row => font_row, font_col => font_col, clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
+bird1 : bird_rom port map (bird_address => "00000000", font_row => font_row, font_col => font_col, clock => clk, red => ball_red, green => ball_green, blue => ball_blue);
+rock : bg_rom port map (bg_address => "00000000", font_row => font_row, font_col => font_col, clock => clk, red => bg_red, green => bg_green, blue => bg_blue);
 
 
 --Pipe generation
@@ -148,33 +157,39 @@ medic1: medic_pack port map(clk => clk, vert_sync => vert_sync, start_flag => st
                             destroyed => medic_destroyed, ypos => medic_y_pos, medic_out => medic_out, y_pos => medic_y_pos, x_pos => medic_x_pos);							 
 									 
 									 
-size <= CONV_STD_LOGIC_VECTOR(8,10);
+size <= CONV_STD_LOGIC_VECTOR(16,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(240,11);
 
 
 ball_on <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size)   -- x_pos - size <= pixel_column <= x_pos + size
-                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0'))  else -- y_pos - size <= pixel_row <= y_pos + size
+                    and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (ball_destroyed = '0')
+						  and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0)) = '1')  else -- y_pos - size <= pixel_row <= y_pos + size
             '0';
+bg_on <= '1' when (pixel_row >= CONV_STD_LOGIC_VECTOR(464, 11)) else '0';
+				
+red <= ball_red when ball_on = '1' -- Layer 1: ball
+		else (others => '1') when medic_out = '1' -- Layer 2: medical pack and pipes
+		else bg_red when bg_on = '1' -- Layer 3: background sprites
+		else "0000"; -- Layer 4: sky
+green <= ball_green when ball_on = '1'  
+		else bg_green when bg_on = '1'
+		else (others => '1') when (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6 or medic_out) = '1'
+		else "1111";
+blue <= ball_blue when ball_on = '1' 
+		else (others => '1') when (medic_out) = '1' 
+		else bg_blue when bg_on = '1'
+		else "0000" when (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) = '1'
+		else "1111";
 
-            
---Red <= "000" & ((ball_on and (not invin_flag or CONV_STD_LOGIC_VECTOR(INTEGER(invin_counter MOD 20), 1)(0))) or medic_out);
---Green <= "000" & (((ball_on or not ball_on) and not difficulty_on) or (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6) or medic_out);
---Blue <= "000" & (((not ball_on and not (green_pipe1 or green_pipe2 or green_pipe3 or green_pipe4 or green_pipe5 or green_pipe6)) and not difficulty_on) or medic_out);
+
 
 Move_Ball: process (vert_sync)
         variable move_up_flag : std_logic;
         variable move_up_counter : unsigned(31 downto 0);
 begin
-
             -- Move ball once every vertical sync
         if (rising_edge(vert_sync)) then
-				if ball_on = '1' then
-					Red <= ball_red;
-					Green <= ball_green;
-					Blue <= ball_blue;
-				end if;
-
 		  
 			if (start_flag = '1') then
 			if (invin_counter > 100) then
@@ -193,7 +208,6 @@ begin
 								lives <= lives - 1; 
 								invin_flag <= '1';
 								invin_counter <= 1;
-								
 							else 
 								lives <= lives - 1; 
 								ball_destroyed <= '1';

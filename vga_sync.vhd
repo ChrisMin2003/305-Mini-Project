@@ -83,15 +83,31 @@ BEGIN
 
 -- Put all video signals through DFFs to elminate any delays that cause a blurry image
 	if (text_in = '1') then
-		red_out <= "1010";
-		green_out <= "0101";
-		blue_out <= "1010";
+		red_out(3) <= '1' and video_on;
+		red_out(2) <= '1' and video_on;
+		red_out(1) <= '1' and video_on;
+		red_out(0) <= '1' and video_on;
+		green_out(3) <= '1' and video_on;
+		green_out(2) <= '1' and video_on;
+		green_out(1) <= '1' and video_on;
+		green_out(0) <= '1' and video_on;
+		blue_out(3) <= '1' and video_on;
+		blue_out(2) <= '1' and video_on;
+		blue_out(1) <= '1' and video_on;
+		blue_out(0) <= '1' and video_on;
 	else
-		if (video_on = '1') then
-			red_out <= red;
-			green_out <= green;
-			blue_out <= blue;
-		end if; 
+		red_out(3) <= red(3) and video_on;
+		red_out(2) <= red(2) and video_on;
+		red_out(1) <= red(1)  and video_on;
+		red_out(0) <= red(0)  and video_on;
+		green_out(3) <= green(3) and video_on;
+		green_out(2) <= green(2) and video_on;
+		green_out(1) <= green(1) and video_on;
+		green_out(0) <= green(0) and video_on;
+		blue_out(3) <= blue(3) and video_on;
+		blue_out(2) <= blue(2) and video_on;
+		blue_out(1) <= blue(1) and video_on;
+		blue_out(0) <= blue(0) and video_on;
 	end if;
 		horiz_sync_out <= horiz_sync;
 		vert_sync_out <= vert_sync;

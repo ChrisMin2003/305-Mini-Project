@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/tmin636/OneDrive - The University of Auckland/Documents/GitHub/305-Mini-Project/output_files/") File("bouncy_ball.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/tmin636/Documents/GitHub/305-Mini-Project/output_files/") File("bouncy_ball.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
